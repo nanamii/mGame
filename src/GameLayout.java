@@ -18,21 +18,19 @@ public class GameLayout{
 	
 	public void createLayout()
 	{
-		wModel.panel.setLayout(new BorderLayout (5,5));
-		
 		gameField = new JPanel();
 		gameField.setPreferredSize(new Dimension(600,800));
-		gameField.setLayout(new GridLayout(4,4));
 		wModel.panel.add(gameField, BorderLayout.LINE_START);
+		gameField.setLayout(new GridLayout(4,4,5,5));
 		
 		dates = new JPanel();
 		wModel.panel.add(dates, BorderLayout.LINE_END);
+		dates.setLayout(new GridLayout(1,1));	
 	}
 	
 	
 	public void addButton(JButton button)
 	{
-		System.out.println("hellojj");
 		gameField.add(button);
 	}
 	

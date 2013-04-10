@@ -14,7 +14,6 @@ public class GameField{
 	{
 		this.layout = layout;
 		createDates(); 
-		
 		createPlayField(8);			
 	}
 	
@@ -25,7 +24,7 @@ public class GameField{
 	
 		for(int i=0; i<cards; i++)
 		{	
-			String num = (i+1)+".png";
+			String num = "../gfx/"+(i+1)+".png";
 			Card card = new Card(num);
 			Card card2 = new Card(num);
 			aList.add(card);
@@ -39,21 +38,16 @@ public class GameField{
 		
 		for(int i=0; i<cards*2; i++)
 		{
-			layout.gameField.add(aList.get(i).getButton());
-			System.out.println("test");
-			//newCard.setBackground(Color.WHITE);
-			//newCard.setIcon(new ImageIcon("1.png"));
-			//border = new LineBorder(Color.black,3, false);			
-			//newCard.setBorder(border);
+			layout.gameField.add(aList.get(i).getButton());	
 		}		
 	}	
 	
 	
 	public void createDates()
 	{
-		JButton button = new JButton("Lala");
-		layout.dates.add(button);
-		System.out.println("Test2");
+		JButton button2 = new JButton("Lala");
+		layout.dates.add(button2);
+		
 	}
 	
 }
