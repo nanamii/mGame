@@ -39,7 +39,10 @@ public class GameField{
 		for(int i=0; i<cards*2; i++)
 		{
 			layout.gameField.add(aList.get(i).getButton());	
-		}		
+		}
+		
+		//TEST
+		//aList.get(0).getButton().setVisible(false);		
 	}	
 	
 	

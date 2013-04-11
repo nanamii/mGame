@@ -24,8 +24,10 @@ public class GameLayout{
 		gameField.setLayout(new GridLayout(4,4,5,5));
 		
 		dates = new JPanel();
+		dates.setPreferredSize(new Dimension(180,800));
 		wModel.panel.add(dates, BorderLayout.LINE_END);
-		dates.setLayout(new GridLayout(1,1));	
+		dates.setLayout(new GridLayout(1,1));
+			
 	}
 	
 	
