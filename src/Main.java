@@ -4,9 +4,10 @@ public class Main{
 	{
 		
 		WindowModel wModel = new WindowModel();
-		wModel.setVisible(true);
+		
 		GameLayout layout = new GameLayout(wModel);
 		GameField field = new GameField(layout);
+		wModel.setVisible(true);
 		
 		//Menue menue = new Menue();
 	 	

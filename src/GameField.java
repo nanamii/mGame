@@ -28,9 +28,7 @@ public class GameField{
 			Card card = new Card(num);
 			Card card2 = new Card(num);
 			aList.add(card);
-			aList.add(card2);
-			System.out.println(aList.size()); //TEST-Print
-			System.out.println(num);		//TEST-Print
+			aList.add(card2);			
 		}
 		
 		// ArrayList mischen
@@ -49,8 +47,7 @@ public class GameField{
 	public void createDates()
 	{
 		JButton button2 = new JButton("Lala");
-		layout.dates.add(button2);
-		
+		//layout.dates.add(button2);	
 	}
 	
 }
