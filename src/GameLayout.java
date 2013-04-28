@@ -54,10 +54,12 @@ public class GameLayout extends JPanel{
 		dates = new JPanel();
 		dates.setPreferredSize(new Dimension(180,800));
 		wModel.panel.add(dates, BorderLayout.EAST);
-		dates.setLayout(new GridLayout(0,1,0,0));
+		dates.setLayout(new GridLayout(5,0,0,0));
 		
 		disPic = new DisplayCanvas();
 		dates.add(disPic);
+		
+		dates.add(new JButton ("halli"));
 		
 		//image = new ImageIcon(this.getClass().getResource("../gfx/8.png")).getImage();
 		//URL imgUrl = getClass().getClassLoader().getResource("/home/susi/github/mGame/gfx");

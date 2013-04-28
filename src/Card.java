@@ -16,6 +16,7 @@ public class Card implements ActionListener{
 	JButton button;
 	ImageIcon image_front;
 	ImageIcon image_back;
+	GameController game;
 	
 	public Card(String name)
 	{
@@ -39,8 +40,18 @@ public class Card implements ActionListener{
 	{
          button.setIcon(image_front);
          button.setBackground(Color.WHITE);
+         game = new GameController();
+         game.playGame(this);
+         
         
 	}
+	
+	
+	public ImageIcon getImage()
+	{
+		return image_back;
+	}
+	
 	
 	public JButton getButton()
 	{

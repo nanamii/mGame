@@ -1,10 +1,10 @@
-public class Spieler{
+public class Player{
 	
 	private String name;
 	private int points;
 	private int highscorePosition;
 	
-	public Spieler(String name)
+	public Player(String name)
 	{
 		this.name = name;
 		this.points = 0;		
