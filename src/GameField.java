@@ -6,9 +6,10 @@ import javax.swing.border.LineBorder;
 import java.util.*;
 
 
-public class GameField{
+public class GameField {
 	
 	GameLayout layout;
+	ArrayList <Card> aList;
 	
 	public GameField(GameLayout layout)
 	{
@@ -20,7 +21,7 @@ public class GameField{
 	
 	public void createPlayField(int cards)
 	{		
-		ArrayList <Card> aList = new ArrayList<Card>(cards);
+		aList = new ArrayList<Card>(cards);
 	
 		for(int i=0; i<cards; i++)
 		{	

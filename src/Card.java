@@ -9,18 +9,20 @@ import java.io.*;
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.net.URL;
+import java.util.Observable;
 
 
-public class Card implements ActionListener{
+public class Card extends Observable implements ActionListener {
 	
 	JButton button;
 	ImageIcon image_front;
 	ImageIcon image_back;
 	GameController game;
+	String name;
 	
 	public Card(String name)
 	{
-		
+		this.name = name;
     	button = new JButton();
     	image_front = new ImageIcon(name);
     	image_back = new ImageIcon();
@@ -32,7 +34,6 @@ public class Card implements ActionListener{
 		button.addActionListener(this);
 		
 		//border = new LineBorder(Color.black,3, false);
-		
 	}
 	
 	
@@ -40,15 +41,20 @@ public class Card implements ActionListener{
 	{
          button.setIcon(image_front);
          button.setBackground(Color.WHITE);
-         game = new GameController();
-         game.playGame(this);
-         
-        
+         informController(this);
+	}
+	
+	
+	public void informController(Card card)
+	{
+		setChanged();
+		notifyObservers(card);
 	}
 	
 	
 	public ImageIcon getImage()
 	{
+		button.setBackground(Color.GRAY);
 		return image_back;
 	}
 	
