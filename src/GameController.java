@@ -12,6 +12,8 @@ import java.io.IOException;
 import java.util.Observer;
 import java.util.Observable;
 import java.lang.Thread;
+import java.util.Scanner;
+
 
 public class GameController implements Observer{
 	
@@ -21,7 +23,7 @@ public class GameController implements Observer{
 	private Player secondPlayer;
 	private int counter = 0;
 	
-	private Card firstCard;
+	private Card firstCard ;
 	private Card secondCard;
 	
 	
@@ -49,25 +51,46 @@ public class GameController implements Observer{
 		{
 			System.out.println("Counter von 1 auf 2 hochgesetzt");
 			secondCard = selectedCard;
+			//secondCard.button.revalidate();
+            counter = 0;
 
-			compareCards();
-			counter = 0;
+            Thread queryThread = new Thread() 
+            {
+                public void run() 
+                {
+                    compareCards();
+                }
+            };
+            queryThread.start();	
 		}
 	}
 	
 	
 	public void compareCards()
 	{
-		if(firstCard.name.equals(secondCard.name) && firstCard!=secondCard)
+	    if(firstCard.compareTo(secondCard) == 0)
 		{
-			System.out.println("compareCards if-Teil");
+			
+			try
+			{
+		        Thread.sleep(1000);
+		    }
+		    catch(Exception e){}
+			
 			firstCard.button.setVisible(false);
 			secondCard.button.setVisible(false);
 		}
 		
 		else
 		{	
-			System.out.println("compareCards else-Teil");
+			//System.out.println("compareCards else-Teil");
+			
+			try
+			{
+		        Thread.sleep(2000);
+		    }
+		    catch(Exception e){}
+		   
 			firstCard.button.setIcon(firstCard.getImage());
 			secondCard.button.setIcon(secondCard.getImage());
 		}
@@ -78,11 +101,10 @@ public class GameController implements Observer{
 	 public void update( Observable o, Object arg ) 
   	{ 
   		Card temp = (Card)arg;
-    	System.out.println("im GameController gelandet, karte"+temp.name);
+  		//System.out.println("im GameController gelandet, karte"+temp.name);
+    	//System.out.println(temp.button.getIcon());
     	
     	playGame(temp);
-    	 
  	} 
-	
 	
 }

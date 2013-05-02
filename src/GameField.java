@@ -47,7 +47,7 @@ public class GameField {
 	
 	public void createDates()
 	{
-		JButton button2 = new JButton("Lala");
+		//JButton button2 = new JButton("Lala");
 		//layout.dates.add(button2);	
 	}
 	

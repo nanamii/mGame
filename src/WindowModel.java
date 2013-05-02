@@ -18,7 +18,7 @@ public class WindowModel extends JFrame{
 		panel.setLayout(new BorderLayout (0,0));
 	
 		setTitle("myMemo");
-		setSize(800,800);
+		setSize(800,550);
 		setLocationRelativeTo(null);
 		//setResizable(false);
 		
