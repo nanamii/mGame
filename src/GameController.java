@@ -19,9 +19,11 @@ public class GameController implements Observer{
 	
 	private GameField gameField;
 	
-	private Player firstPlayer;
+	private Player firstPlayer; 
 	private Player secondPlayer;
-	private int counter = 0;
+	private Player currentPlayer;
+	private boolean firstCardSet = false;
+	private boolean pairs = false;
 	
 	private Card firstCard ;
 	private Card secondCard;
@@ -36,23 +38,26 @@ public class GameController implements Observer{
 		{
 			gameField.aList.get(i).addObserver(this);
 		}
+		
+		Player currentPlayer = new Player();
+		currentPlayer = firstPlayer;
 	}
+	
+	
+
 	
 	
 	public void playGame(Card selectedCard)
 	{
-		if(counter == 0)
+		if(firstCardSet == false)
 		{
-			counter++;
-			System.out.println("Counter von 0 auf 1 hochgesetzt");
 			firstCard = selectedCard;
+			firstCardSet = true;
 		}
-		else if (counter == 1)
+		else if (firstCardSet == true)
 		{
-			System.out.println("Counter von 1 auf 2 hochgesetzt");
 			secondCard = selectedCard;
-			//secondCard.button.revalidate();
-            counter = 0;
+            firstCardSet = false;
 
             Thread queryThread = new Thread() 
             {
@@ -83,7 +88,6 @@ public class GameController implements Observer{
 		
 		else
 		{	
-			//System.out.println("compareCards else-Teil");
 			
 			try
 			{
@@ -93,7 +97,22 @@ public class GameController implements Observer{
 		   
 			firstCard.button.setIcon(firstCard.getImage());
 			secondCard.button.setIcon(secondCard.getImage());
+			
+			currentPlayer = switchPlayer(currentPlayer);
 		}
+	}
+	
+	
+	public Player switchPlayer(Player currentPlayer)
+	{
+	   if (currentPlayer.equals(firstPlayer))
+        {
+            return secondPlayer;
+        }
+        else
+        {
+            return firstPlayer;
+        }
 	}
 	
 	

@@ -22,5 +22,10 @@ public class Player{
 		this.name = name;
 	}
 	
+	public void addPoints()
+	{
+	    points =+ 10;
+	}
+	
 		
 }
