@@ -9,9 +9,10 @@ import javax.swing.ImageIcon;
 import javax.imageio.ImageIO;
 import java.net.URL;
 import java.io.IOException;
+import java.util.Observer;
+import java.util.Observable;
 
-
-public class GameLayout extends JPanel{
+public class GameLayout extends JPanel implements Observer{
 	
 	JPanel gameField;
 	JPanel dates;
@@ -21,12 +22,21 @@ public class GameLayout extends JPanel{
 	WindowModel wModel;
 	Image image;
 	DisplayCanvas disPic;
-	//JLayeredPane dates;
 	
-	public GameLayout(WindowModel wModel)
+	JLabel points1;
+	JLabel points2;
+	JLabel l1;
+	JLabel l2;
+	
+	String name1;
+	String name2;
+	
+	public GameLayout(WindowModel wModel, String name1, String name2)
 	{
 		this.wModel = wModel;
 		createLayout();	
+		this.name1 = name1;
+		this.name2 = name2;
 	}
 	
 	
@@ -79,14 +89,14 @@ public class GameLayout extends JPanel{
         GridBagLayout gbl = new GridBagLayout();
         background.setLayout(gbl);
         
-        JLabel l1 = new JLabel("Spieler 1");
-        JLabel points1 = new JLabel ("points");
-        JLabel l2 = new JLabel("Spieler 2");
-        JLabel points2 = new JLabel ("points");
+        l1 = new JLabel(new ImageIcon("../gfx/spieler1.png"));
+        points1 = new JLabel ("points");
+        l2 = new JLabel(new ImageIcon("../gfx/spieler2.png"));
+        points2 = new JLabel ("points");
         
         JButton b1 = new JButton("Menue");
         JButton b2 = new JButton("Beenden");
-        JButton b3 = new JButton("Pause");
+        //JButton b3 = new JButton("Pause");
        
         
         demo.addComponent( background, gbl, l1, 0, 2, 1, 1, 1.0, 1.0 );
@@ -95,7 +105,7 @@ public class GameLayout extends JPanel{
         demo.addComponent( background, gbl, points2, 0, 5, 1, 1, 1.0, 1.0 );
         demo.addComponent( background, gbl, b1, 2, 6, 1, 1, 0.0, 0.0 );
 		demo.addComponent( background, gbl, b2, 2, 7, 1, 1, 0.0, 0.0 );
-		demo.addComponent( background, gbl, b3, 2, 8, 1, 1, 0.0, 0.0 );
+		//demo.addComponent( background, gbl, b3, 2, 8, 1, 1, 0.0, 0.0 );
 		
 		wModel.panel.add(dates, BorderLayout.EAST);
 						
@@ -107,5 +117,43 @@ public class GameLayout extends JPanel{
 		gameField.add(button);
 	}
 	
-	
+	 @Override 
+	 public void update( Observable o, Object arg ) 
+  	{ 
+  		if(arg instanceof Player)
+  		{
+  		    Player player = (Player)arg;
+  		    int points = player.getPoints();
+  		    System.out.println("Spieler" + player.getNum() + "an der Reihe");
+  		    if(player.getNum()==1)
+  		    {   
+  		        System.out.println("Spieler1 punkte++");
+  		        points1.setText("Punkte: "+points);
+  		    }
+  		    else if (player.getNum()==2)
+  		    {
+  		        System.out.println("Spieler2 punkte++");
+  		        points2.setText("Punkte: "+points);
+  		    }
+  		}
+  		else
+  		{
+  		    GameController controller = (GameController)arg;
+  		    if(controller.getPlayer().getNum()==1)
+  		    {
+  		        ImageIcon image = new ImageIcon("../gfx/spieler1_play.png");
+  		        l1.setIcon(image);
+  		        ImageIcon imageOld = new ImageIcon("../gfx/spieler2.png");
+  		        l2.setIcon(imageOld);
+  		        System.out.println("spieler gewechselt");
+  		    }
+  		    else
+  		    {
+  		        ImageIcon imageI = new ImageIcon("../gfx/spieler2_play.png");
+  		        l2.setIcon(imageI);
+  		        ImageIcon imageOldI = new ImageIcon("../gfx/spieler1.png");
+  		        l1.setIcon(imageOldI);
+  		    }
+  		}
+ 	} 
 }

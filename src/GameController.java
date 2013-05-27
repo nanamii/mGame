@@ -13,24 +13,25 @@ import java.util.Observer;
 import java.util.Observable;
 import java.lang.Thread;
 import java.util.Scanner;
+import java.util.LinkedList;
 
 
-public class GameController implements Observer{
+public class GameController extends Observable implements Observer{
 	
 	private GameField gameField;
 	
 	private Player firstPlayer; 
 	private Player secondPlayer;
 	private Player currentPlayer;
+	
 	private boolean firstCardSet = false;
 	private boolean pairs = false;
+	private int count = 0;
 	
-	private Card firstCard ;
-	private Card secondCard;
+	private LinkedList <Card> list;
 	
 	
-	
-	public GameController(GameField gameField)
+	public GameController(GameField gameField, GameLayout layout, String name1, String name2)
 	{
 		this.gameField = gameField;
 		
@@ -39,66 +40,93 @@ public class GameController implements Observer{
 			gameField.aList.get(i).addObserver(this);
 		}
 		
-		Player currentPlayer = new Player();
+		firstPlayer = new Player(name1, 1);
+		secondPlayer = new Player(name2, 2);
+		
+		currentPlayer = new Player("currPl", 0);
 		currentPlayer = firstPlayer;
+		
+		//currentPlayer.addObserver(layout);
+		firstPlayer.addObserver(layout);
+		secondPlayer.addObserver(layout);
+		this.addObserver(layout);
+		
+		list = new LinkedList<Card>();
+		
 	}
 	
 	
-
-	
-	
-	public void playGame(Card selectedCard)
-	{
-		if(firstCardSet == false)
-		{
-			firstCard = selectedCard;
-			firstCardSet = true;
-		}
-		else if (firstCardSet == true)
-		{
-			secondCard = selectedCard;
-            firstCardSet = false;
-
+    public void playGame()
+    {
+       
+        if(twoClicked() == true)
+        {
             Thread queryThread = new Thread() 
             {
                 public void run() 
                 {
+                    //boolean pairs = 
                     compareCards();
                 }
             };
-            queryThread.start();	
+            queryThread.start();
+               
+               if(count == 16)
+                {
+                    System.out.println("Spiel vorbei");
+                }
+        }
+    }
+	
+	
+	public boolean twoClicked()
+	{
+		if(list.size() == 2 )
+		{   
+			return true;
+		}
+		else 
+		{
+            return false;
 		}
 	}
 	
 	
-	public void compareCards()
+	public boolean compareCards()
 	{
-	    if(firstCard.compareTo(secondCard) == 0)
+	    System.out.println(currentPlayer.getNum());
+	    if(list.get(0).compareTo(list.get(1)) == 0)
 		{
-			
 			try
 			{
 		        Thread.sleep(1000);
 		    }
 		    catch(Exception e){}
 			
-			firstCard.button.setVisible(false);
-			secondCard.button.setVisible(false);
+			list.get(0).button.setVisible(false);
+			list.get(1).button.setVisible(false);
+			list.clear();
+			currentPlayer.addPoints();
+			System.out.println(currentPlayer.getPoints());
+			count = count+2;
+			return true;
 		}
 		
 		else
 		{	
-			
 			try
 			{
 		        Thread.sleep(2000);
 		    }
 		    catch(Exception e){}
 		   
-			firstCard.button.setIcon(firstCard.getImage());
-			secondCard.button.setIcon(secondCard.getImage());
-			
+			list.get(0).button.setIcon(list.get(0).getImage());
+			list.get(1).button.setIcon(list.get(1).getImage());
+			list.clear();
 			currentPlayer = switchPlayer(currentPlayer);
+			setChanged();
+			notifyObservers(this);
+			return false;
 		}
 	}
 	
@@ -120,10 +148,16 @@ public class GameController implements Observer{
 	 public void update( Observable o, Object arg ) 
   	{ 
   		Card temp = (Card)arg;
-  		//System.out.println("im GameController gelandet, karte"+temp.name);
-    	//System.out.println(temp.button.getIcon());
-    	
-    	playGame(temp);
+  		
+  		list.push(temp);
+  		playGame();
  	} 
+ 	
+ 	public Player getPlayer()
+ 	{
+ 	    return currentPlayer;
+ 	}
+ 	    
+ 	
 	
 }

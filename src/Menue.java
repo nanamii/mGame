@@ -5,6 +5,7 @@ import java.awt.event.*;
 import javax.swing.border.EmptyBorder;
 import javax.swing.ButtonGroup;
 import java.util.Observer;
+import java.util.Observable;
 
 
 public class Menue extends JPanel{
@@ -18,6 +19,9 @@ public class Menue extends JPanel{
     JRadioButton radio2;
     JTextField textName1;
     JTextField textName2;
+    
+    String name1;
+    String name2;
 	
 	public Menue()
 	{
@@ -98,7 +102,7 @@ public class Menue extends JPanel{
 	    
 	    JPanel bottom = new JPanel(); //per default FlowLayout
 	    
-	    JLabel numPlayer = new JLabel("Anzahl der Spieler");
+	    JLabel numPlayer = new JLabel(new ImageIcon("../gfx/newGame.png"));
 	    JLabel namePlayer = new JLabel("Name Spieler 1");
 	    JLabel namePlayer2 = new JLabel("Name Spieler 2");
 	    JLabel chooseName = new JLabel("Gespeicherten Namen wählen");
@@ -150,8 +154,11 @@ public class Menue extends JPanel{
         buttonNext.addActionListener(new ActionListener(){
 		  public void actionPerformed( ActionEvent e )
         {   
+            name1 = textName1.getText();
+            name2 = textName2.getText();
             newGameWindow.setVisible(false);
             newGameMenueNEXT();
+            
         }});
 	    
 	}
@@ -223,7 +230,7 @@ public class Menue extends JPanel{
 		  public void actionPerformed( ActionEvent e )
         {   
             nextWindow.setVisible(false);
-            start();
+            startGame();
         }});
 	    
 	}
@@ -244,14 +251,19 @@ public class Menue extends JPanel{
         button.addMouseListener(new RolloverListener(button)); 
 	}
 	
-	public void start()
+	public void startGame()
 	{
+	    //String name1 = textName1.getText();
+		//String name2 = textName2.getText();
+	   
 	    WindowModel wModel = new WindowModel();
-		GameLayout layout = new GameLayout(wModel);
+		GameLayout layout = new GameLayout(wModel, name1, name2);
 		GameField field = new GameField(layout);
 		wModel.setVisible(true);
 		
-		Observer obs = new GameController(field);
+		
+		GameController obs = new GameController(field, layout,name1, name2);
+		
 	}
 	
 }
