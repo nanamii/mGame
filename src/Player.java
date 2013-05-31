@@ -1,6 +1,7 @@
 import java.util.Observable;
+import java.io.Serializable;
 
-public class Player extends Observable{
+public class Player extends Observable implements Serializable{
 	
 	private String name;
 	private int num;

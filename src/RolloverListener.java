@@ -15,21 +15,30 @@ public final class RolloverListener extends MouseInputAdapter{
 
        
        JButton button;
+       String picNormal;
+       String picRoll;
        
-       public RolloverListener(JButton button)
+       public RolloverListener()
+       {
+           
+       }
+       
+       public RolloverListener(JButton button, String picNormal, String picRoll)
        {
            this.button=button;
+           this.picNormal = picNormal;
+           this.picRoll = picRoll;
        }
        
        
         public void mouseEntered(MouseEvent e) 
         {  
-            button.setIcon(new ImageIcon("../gfx/newGameRoll.png"));
+            button.setIcon(new ImageIcon(picRoll));
         }  
    
         public void mouseExited(MouseEvent e) 
         {
-            button.setIcon(new ImageIcon("../gfx/newGame.png"));
+            button.setIcon(new ImageIcon(picNormal));
         }  
       
 	

@@ -39,16 +39,12 @@ public class GameField {
 		{
 			layout.gameField.add(aList.get(i).getButton());	
 		}
-		
-		//TEST
-		//aList.get(0).getButton().setVisible(false);		
 	}	
 	
 	
 	public void createDates()
 	{
-		//JButton button2 = new JButton("Lala");
-		//layout.dates.add(button2);	
+			
 	}
 	
 }

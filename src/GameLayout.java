@@ -11,6 +11,8 @@ import java.net.URL;
 import java.io.IOException;
 import java.util.Observer;
 import java.util.Observable;
+import java.awt.event.*;
+import javax.swing.border.EmptyBorder;
 
 public class GameLayout extends JPanel implements Observer{
 	
@@ -24,7 +26,9 @@ public class GameLayout extends JPanel implements Observer{
 	DisplayCanvas disPic;
 	
 	JLabel points1;
+	JLabel points1Num;
 	JLabel points2;
+	JLabel points2Num;
 	JLabel l1;
 	JLabel l2;
 	
@@ -90,24 +94,37 @@ public class GameLayout extends JPanel implements Observer{
         background.setLayout(gbl);
         
         l1 = new JLabel(new ImageIcon("../gfx/spieler1.png"));
-        points1 = new JLabel ("points");
+        points1 = new JLabel (new ImageIcon("../gfx/punkte.png"));
+        points1Num = new JLabel("0");
         l2 = new JLabel(new ImageIcon("../gfx/spieler2.png"));
-        points2 = new JLabel ("points");
+        points2 = new JLabel (new ImageIcon("../gfx/punkte.png"));
+        points2Num = new JLabel("0");
+        
+        JLabel l3 = new JLabel(name1);
+        JLabel l4 = new JLabel(name2);
         
         JButton b1 = new JButton("Menue");
-        JButton b2 = new JButton("Beenden");
-        //JButton b3 = new JButton("Pause");
+        JButton end = new JButton("Beenden");
        
+        //background.setBorder(new EmptyBorder(5,5,100,5));
         
-        demo.addComponent( background, gbl, l1, 0, 2, 1, 1, 1.0, 1.0 );
-        demo.addComponent( background, gbl, points1, 0, 3, 1, 1, 1.0, 1.0 );
+        demo.addComponent( background, gbl, l1, 0, 2, 1, 1, 1.0, 0.5 );
+        demo.addComponent( background, gbl, points1, 0, 3, 1, 1, 1.0, 0.2 );
+        demo.addComponent( background, gbl, points1Num, 1, 3, 1, 1, 1.0, 0.2 );
         demo.addComponent( background, gbl, l2, 0, 4, 1, 1, 1.0, 1.0 );
-        demo.addComponent( background, gbl, points2, 0, 5, 1, 1, 1.0, 1.0 );
-        demo.addComponent( background, gbl, b1, 2, 6, 1, 1, 0.0, 0.0 );
-		demo.addComponent( background, gbl, b2, 2, 7, 1, 1, 0.0, 0.0 );
-		//demo.addComponent( background, gbl, b3, 2, 8, 1, 1, 0.0, 0.0 );
+        demo.addComponent( background, gbl, points2, 0, 5, 1, 1, 1.0, 0.2 );
+        demo.addComponent( background, gbl, points2Num, 1, 5, 1, 1, 1.0, 0.2 );
+        demo.addComponent( background, gbl, b1, 1, 6, 1, 1, 0.0, 0.2 );
+		demo.addComponent( background, gbl, end, 1, 7, 1, 1, 0.0, 0.2 );
 		
 		wModel.panel.add(dates, BorderLayout.EAST);
+		
+		
+		end.addActionListener(new ActionListener(){
+		  public void actionPerformed( ActionEvent e )
+        {
+            System.exit(0);
+        }});
 						
     }
 
@@ -116,6 +133,7 @@ public class GameLayout extends JPanel implements Observer{
 	{
 		gameField.add(button);
 	}
+	
 	
 	 @Override 
 	 public void update( Observable o, Object arg ) 
@@ -128,12 +146,12 @@ public class GameLayout extends JPanel implements Observer{
   		    if(player.getNum()==1)
   		    {   
   		        System.out.println("Spieler1 punkte++");
-  		        points1.setText("Punkte: "+points);
+  		        points1Num.setText(""+points);
   		    }
   		    else if (player.getNum()==2)
   		    {
   		        System.out.println("Spieler2 punkte++");
-  		        points2.setText("Punkte: "+points);
+  		        points2Num.setText(""+points);
   		    }
   		}
   		else

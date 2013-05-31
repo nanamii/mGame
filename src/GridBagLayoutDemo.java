@@ -13,7 +13,7 @@ class GridBagLayoutDemo
                             double weightx, double weighty )
   {
     GridBagConstraints gbc = new GridBagConstraints();
-    gbc.fill = GridBagConstraints.BOTH;
+    gbc.fill = GridBagConstraints.HORIZONTAL;
     gbc.gridx = x; gbc.gridy = y;
     gbc.gridwidth = width; gbc.gridheight = height;
     gbc.weightx = weightx; gbc.weighty = weighty;

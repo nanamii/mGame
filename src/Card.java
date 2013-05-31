@@ -57,7 +57,6 @@ public class Card extends Observable implements ActionListener, Comparable {
     
     public ImageIcon getImage()
     {
-        
         return image_back;
     }
     
@@ -67,7 +66,8 @@ public class Card extends Observable implements ActionListener, Comparable {
         return button;
     }
     
-     public int compareTo(Object o1) 
+    
+    public int compareTo(Object o1) 
      {
      
         if (this.name.equals(((Card)o1).name) && this != o1)
