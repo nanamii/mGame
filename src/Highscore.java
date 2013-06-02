@@ -1,0 +1,15 @@
+puclic class Highscore{
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
