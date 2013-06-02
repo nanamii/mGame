@@ -18,14 +18,24 @@ public class Menue extends JPanel{
     WindowModel nextWindow;
     JRadioButton radio1;
     JRadioButton radio2;
+    JRadioButton newNameRB1;
+    JRadioButton savedNameRB1;
+    JRadioButton newNameRB2;
+    JRadioButton savedNameRB2;
     JTextField textName1;
     JTextField textName2;
     JComboBox selectList1;
     JComboBox selectList2;
     
+    ArrayList <Player> playerList;
     Playerpool playerPool;
     String name1;
     String name2;
+    boolean createNewPlayer1 = false;
+    boolean createNewPlayer2 = false;
+    Player player1;
+    Player player2;
+    
 	
 	public Menue(Playerpool playerPool)
 	{
@@ -122,18 +132,19 @@ public class Menue extends JPanel{
 	    JLabel namePlayer2 = new JLabel(new ImageIcon("../gfx/name2.png"));
 	    
 	    radio1 = new JRadioButton("Alleine vs. Computer");
+	    radio1.doClick();
 	    radio2 = new JRadioButton("2 Spieler");
-	    ButtonGroup bG = new ButtonGroup();
-	    bG.add(radio1);
-	    bG.add(radio2);
+	    ButtonGroup bg_playerQuantity = new ButtonGroup();
+	    bg_playerQuantity.add(radio1);
+	    bg_playerQuantity.add(radio2);
 	    
-	    textName1 = new JTextField(20);
-	    textName2 = new JTextField(20);
+	    textName1 = new JTextField(10);
+	    textName2 = new JTextField(10);
 	    
 	    
 	    // CompoBox füllen
 	    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-	    ArrayList <Player> playerList = new ArrayList <Player>();
+	    playerList = new ArrayList <Player>();
 	    playerList = playerPool.getPlayerList();
 	    String [] stringArray = new String [playerList.size()];
 	    
@@ -143,16 +154,24 @@ public class Menue extends JPanel{
 	        stringArray[i] = name;
 	    }
 	    
-	    //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-	    
 	    selectList1 = new JComboBox(stringArray);
 	    selectList2 = new JComboBox(stringArray);
+	    //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	    
-	    JLabel newNameLabel = new JLabel("Spieler neu erstellen:");
-	    JLabel savedNameLabel = new JLabel("Spieler laden:");
-	    JLabel newNameLabel2 = new JLabel("Spieler neu erstellen:");
-	    JLabel savedNameLabel2 = new JLabel("Spieler laden:");
 	    
+	    newNameRB1 = new JRadioButton("Spieler neu erstellen:");
+	    savedNameRB1 = new JRadioButton("Spieler laden:");
+	    newNameRB2 = new JRadioButton("Spieler neu erstellen:");
+	    savedNameRB2 = new JRadioButton("Spieler laden:");
+	    ButtonGroup bg_playerChoose1 = new ButtonGroup();
+	    ButtonGroup bg_playerChoose2 = new ButtonGroup();
+	    bg_playerChoose1.add(newNameRB1);
+	    bg_playerChoose1.add(savedNameRB1);
+	    bg_playerChoose2.add(newNameRB2);
+	    bg_playerChoose2.add(savedNameRB2);
+	    newNameRB1.doClick();
+	    newNameRB2.doClick();
+	    	    
 	    JButton buttonNext = new JButton("WEITER");
 	    JButton buttonBack = new JButton("zurück");
 	    
@@ -166,19 +185,19 @@ public class Menue extends JPanel{
 	    east.add(radio1);
 	    east.add(radio2);
 	    east.add(Box.createRigidArea(new Dimension(0,90)));
-	    east.add(newNameLabel);
+	    east.add(newNameRB1);
 	    east.add(Box.createRigidArea(new Dimension(0,5)));
 	    east.add(textName1);
 	    east.add(Box.createRigidArea(new Dimension(0,20)));
-	    east.add(savedNameLabel);
+	    east.add(savedNameRB1);
 	    east.add(Box.createRigidArea(new Dimension(0,5)));
 	    east.add(selectList1);
 	    east.add(Box.createRigidArea(new Dimension(0,70)));
-	    east.add(newNameLabel2);
+	    east.add(newNameRB2);
 	    east.add(Box.createRigidArea(new Dimension(0,5)));
 	    east.add(textName2);
 	    east.add(Box.createRigidArea(new Dimension(0,20)));
-	    east.add(savedNameLabel2);
+	    east.add(savedNameRB2);
 	    east.add(Box.createRigidArea(new Dimension(0,5)));
 	    east.add(selectList2);
 	    east.add(Box.createRigidArea(new Dimension(0,200)));
@@ -199,17 +218,60 @@ public class Menue extends JPanel{
 	    //ActionListener
 	    //***********************************************************
 	    
-	     radio1.addActionListener(new ActionListener(){
+	   radio1.addActionListener(new ActionListener(){
 		  public void actionPerformed( ActionEvent e )
         {   
             textName2.setEnabled(false);
+            selectList2.setEnabled(false);
+            newNameRB2.setEnabled(false);
+            savedNameRB2.setEnabled(false);
         }});
         
-         radio2.addActionListener(new ActionListener(){
+        radio2.addActionListener(new ActionListener(){
 		  public void actionPerformed( ActionEvent e )
         {   
             textName2.setEnabled(true);
+            selectList2.setEnabled(true);
+            newNameRB2.setEnabled(true);
+            savedNameRB2.setEnabled(true);
         }});
+        
+        newNameRB1.addActionListener(new ActionListener(){
+		  public void actionPerformed( ActionEvent e )
+        {   
+            selectList1.setEnabled(false);
+            textName1.setEnabled(true);
+            createNewPlayer1 = true;
+        }});
+        
+        newNameRB2.addActionListener(new ActionListener(){
+		  public void actionPerformed( ActionEvent e )
+        {   
+            selectList2.setEnabled(false);
+            textName2.setEnabled(true);
+            createNewPlayer2 = true;
+        }});
+        
+        savedNameRB1.addActionListener(new ActionListener(){
+		  public void actionPerformed( ActionEvent e )
+        {   
+            selectList1.setEnabled(true);
+            textName1.setEnabled(false);
+            createNewPlayer1 = false;
+           
+        }});
+        
+        savedNameRB2.addActionListener(new ActionListener(){
+		  public void actionPerformed( ActionEvent e )
+        {   
+            selectList2.setEnabled(true);
+            textName2.setEnabled(false);
+            createNewPlayer2 = false;
+           
+        }});
+        
+        
+        
 	    
 	    buttonBack.addActionListener(new ActionListener(){
 		  public void actionPerformed( ActionEvent e )
@@ -224,6 +286,31 @@ public class Menue extends JPanel{
             name1 = textName1.getText();
             name2 = textName2.getText();
             System.out.println(name1+name2);
+            
+            
+            String savedName1 = (String)selectList1.getSelectedItem();
+            System.out.println(savedName1);
+            
+            for(int i=0; i<playerList.size(); i++ )
+            {
+                if(playerList.get(i).getName().equals(savedName1))
+                {
+                    player1 = playerList.get(i);
+                }
+            }
+            
+            
+            String savedName2 = (String)selectList2.getSelectedItem();
+            System.out.println(savedName2);
+            
+            for(int i=0; i<playerList.size(); i++ )
+            {
+                if(playerList.get(i).getName().equals(savedName2))
+                {
+                    player2 = playerList.get(i);
+                }
+            }
+            
             newGameWindow.setVisible(false);
             newGameMenueNEXT();
             
@@ -324,10 +411,11 @@ public class Menue extends JPanel{
 	{
 	    WindowModel wModel = new WindowModel();
 		GameLayout layout = new GameLayout(wModel, name1, name2);
+		System.out.println("startGame-Methode, Namen:"+name1+name2);
 		GameField field = new GameField(layout);
 		wModel.setVisible(true);
 		
-		GameController obs = new GameController(field, layout,name1, name2);
+		GameController obs = new GameController(field, layout,name1, name2, playerPool, createNewPlayer1, createNewPlayer2, player1, player2);
 	}
 	
 }

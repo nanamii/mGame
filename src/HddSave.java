@@ -41,7 +41,7 @@ public class HddSave {
 		}
 		catch(Exception e)
 		{
-			System.out.print("Termindatenbank nicht gefunden,\nwird beim 1. Start des Programms als termine.dat angelegt.\n\n");
+			System.out.print("Fehler beim Lesen");
 			return null;
 		}
 	}

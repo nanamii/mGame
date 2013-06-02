@@ -23,7 +23,6 @@ public class GameLayout extends JPanel implements Observer{
 	JPanel center;
 	WindowModel wModel;
 	Image image;
-	DisplayCanvas disPic;
 	
 	JLabel points1;
 	JLabel points1Num;
@@ -38,9 +37,9 @@ public class GameLayout extends JPanel implements Observer{
 	public GameLayout(WindowModel wModel, String name1, String name2)
 	{
 		this.wModel = wModel;
-		createLayout();	
 		this.name1 = name1;
 		this.name2 = name2;
+		createLayout();	
 	}
 	
 	
@@ -73,17 +72,6 @@ public class GameLayout extends JPanel implements Observer{
 		Sidebar
 		**************************************************************/
 		
-		/*dates.setPreferredSize(new Dimension(250,800));
-		wModel.panel.add(dates, BorderLayout.EAST);
-		dates.setLayout(new GridLayout(5,2,0,0));
-		
-		disPic = new DisplayCanvas();
-		//dates.add(disPic);
-		
-		dates.add(new JButton ("halli"));
-		dates.setBackground(disPic);
-		*/
-		
 		dates = new JPanel();
 		dates.setLayout(new BorderLayout());
         JLabel background = new JLabel(new ImageIcon("../gfx/datesBack.png"));
@@ -100,8 +88,9 @@ public class GameLayout extends JPanel implements Observer{
         points2 = new JLabel (new ImageIcon("../gfx/punkte.png"));
         points2Num = new JLabel("0");
         
-        JLabel l3 = new JLabel(name1);
-        JLabel l4 = new JLabel(name2);
+        JLabel namePlayer1 = new JLabel(name1);
+        JLabel namePlayer2 = new JLabel(name2);
+        System.out.println("NAME in GameLayout:"+name1);
         
         JButton b1 = new JButton("Menue");
         JButton end = new JButton("Beenden");
@@ -109,9 +98,11 @@ public class GameLayout extends JPanel implements Observer{
         //background.setBorder(new EmptyBorder(5,5,100,5));
         
         demo.addComponent( background, gbl, l1, 0, 2, 1, 1, 1.0, 0.5 );
+        demo.addComponent( background, gbl, namePlayer2, 1, 2, 1, 1, 1.0, 0.5 );
         demo.addComponent( background, gbl, points1, 0, 3, 1, 1, 1.0, 0.2 );
         demo.addComponent( background, gbl, points1Num, 1, 3, 1, 1, 1.0, 0.2 );
         demo.addComponent( background, gbl, l2, 0, 4, 1, 1, 1.0, 1.0 );
+        demo.addComponent( background, gbl, namePlayer1, 1, 4, 1, 1, 1.0, 1.0 );
         demo.addComponent( background, gbl, points2, 0, 5, 1, 1, 1.0, 0.2 );
         demo.addComponent( background, gbl, points2Num, 1, 5, 1, 1, 1.0, 0.2 );
         demo.addComponent( background, gbl, b1, 1, 6, 1, 1, 0.0, 0.2 );
@@ -125,7 +116,6 @@ public class GameLayout extends JPanel implements Observer{
         {
             System.exit(0);
         }});
-						
     }
 
 	

@@ -49,5 +49,4 @@ public class Player extends Observable implements Serializable{
 	    return num;
 	}
 	
-		
 }

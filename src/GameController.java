@@ -24,14 +24,16 @@ public class GameController extends Observable implements Observer{
 	private Player secondPlayer;
 	private Player currentPlayer;
 	
-	private Playerpool pool;
+	private Playerpool playerpool;
+	private boolean createNewPlayer1;
+	private boolean createNewPlayer2;
 	
 	private int count = 0;
 	
 	private LinkedList <Card> list;
 	
 	
-	public GameController(GameField gameField, GameLayout layout, String name1, String name2)
+	public GameController(GameField gameField, GameLayout layout, String name1, String name2, Playerpool playerpool, boolean createNewPlayer1, boolean createNewPlayer2, Player player1, Player player2)
 	{
 		this.gameField = gameField;
 		
@@ -40,18 +42,40 @@ public class GameController extends Observable implements Observer{
 			gameField.aList.get(i).addObserver(this);
 		}
 		
-		firstPlayer = new Player(name1, 1);
-		secondPlayer = new Player(name2, 2);
+		this.playerpool = playerpool;
+		this.createNewPlayer1 = createNewPlayer1;
+		this.createNewPlayer2 = createNewPlayer2;
+		
+		if(createNewPlayer1 == true)
+		{
+		    firstPlayer = new Player(name1, 1);
+		    playerpool.addPlayer(firstPlayer);
+		}
+		else
+		{
+		    this.firstPlayer = player1;
+		    System.out.println("Else-Teil");
+		}
+		
+		
+		if(createNewPlayer2 == true)
+		{
+		    secondPlayer = new Player(name2, 2);
+		    playerpool.addPlayer(secondPlayer);
+		}
+		else
+		{
+		    this.secondPlayer = player2;
+		    System.out.println("Else-Teil");
+		}
+		
 		System.out.println("nameplayer1"+firstPlayer.getName());
 		System.out.println("nameplayer2"+secondPlayer.getName());
 		
 		currentPlayer = new Player("currPl", 0);
 		currentPlayer = firstPlayer;
 		
-		pool = new Playerpool();
-		pool.addPlayer(firstPlayer);
-		pool.addPlayer(secondPlayer);
-		pool.saveToDisk();
+		playerpool.saveToDisk();
 		
 		firstPlayer.addObserver(layout);
 		secondPlayer.addObserver(layout);
@@ -114,10 +138,52 @@ public class GameController extends Observable implements Observer{
 			count = count+2;
 			System.out.println("Counter:"+count);
 			
+			
+			
 			if(gameEnd()==true)
             {
+                
+                //*****************************************
+                //Dialog - The Winner is ......
+                
+                Object[] options = {"Revanche",
+                    "Neues Spiel",
+                    "Hauptmenue"};
+                
                 System.out.println("ITS OVER");
-                System.out.println("Gewinner:"+checkWinner().getName());
+                int winner = checkWinner();
+                if(winner == 1)
+                {
+                    System.out.println("Gewinner:"+firstPlayer.getName());
+                    
+                    int n = JOptionPane.showOptionDialog(null,
+                                                    firstPlayer.getName()+"hat gewonnen",
+                                                    "The Winner is ...",
+                                                    JOptionPane.YES_NO_CANCEL_OPTION,
+                                                    JOptionPane.QUESTION_MESSAGE,
+                                                    null,
+                                                    options,
+                                                    options[2]);
+                    
+                }
+                else if (winner == 2)
+                {
+                     System.out.println("Gewinner:"+secondPlayer.getName());
+                     
+                     int n = JOptionPane.showOptionDialog(null,
+                                                    secondPlayer.getName()+"hat gewonnen",
+                                                    "The Winner is ...",
+                                                    JOptionPane.YES_NO_CANCEL_OPTION,
+                                                    JOptionPane.QUESTION_MESSAGE,
+                                                    null,
+                                                    options,
+                                                    options[2]);
+                    
+                }
+                else if (winner == 0)
+                {
+                    System.out.println("Unentschieden");
+                }
             }
             
 			return true;
@@ -168,15 +234,19 @@ public class GameController extends Observable implements Observer{
 	    }
 	}
 	
-	public Player checkWinner()
+	public int checkWinner()
 	{
 	    if(firstPlayer.getPoints() > secondPlayer.getPoints())
 	    {
-	        return firstPlayer;
+	        return 1;
+	    }
+	    else if (firstPlayer.getPoints() != secondPlayer.getPoints())
+	    {
+	        return 2;
 	    }
 	    else
 	    {
-	        return secondPlayer;
+	        return 0;
 	    }
 	}
 	

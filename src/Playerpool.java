@@ -5,6 +5,8 @@ public class Playerpool {
 	private ArrayList <Player> playerList;
 	private HddSave hdd;
 	
+	
+	
 	public Playerpool()
 	{
 	    hdd = new HddSave();
