@@ -35,6 +35,7 @@ public class Menue extends JPanel{
     boolean createNewPlayer2 = false;
     Player player1;
     Player player2;
+    boolean isComputer = false;
     
 	
 	public Menue(Playerpool playerPool)
@@ -225,6 +226,8 @@ public class Menue extends JPanel{
             selectList2.setEnabled(false);
             newNameRB2.setEnabled(false);
             savedNameRB2.setEnabled(false);
+            isComputer = true;
+            
         }});
         
         radio2.addActionListener(new ActionListener(){
@@ -234,6 +237,9 @@ public class Menue extends JPanel{
             selectList2.setEnabled(true);
             newNameRB2.setEnabled(true);
             savedNameRB2.setEnabled(true);
+            isComputer = false;
+            name1 = "Computer";
+            createNewPlayer2 = true;
         }});
         
         newNameRB1.addActionListener(new ActionListener(){
@@ -279,6 +285,7 @@ public class Menue extends JPanel{
             newGameWindow.setVisible(false);
             mainMenueWindow.setVisible(true);
         }});
+        
         
         buttonNext.addActionListener(new ActionListener(){
 		  public void actionPerformed( ActionEvent e )
@@ -415,7 +422,7 @@ public class Menue extends JPanel{
 		GameField field = new GameField(layout);
 		wModel.setVisible(true);
 		
-		GameController obs = new GameController(field, layout,name1, name2, playerPool, createNewPlayer1, createNewPlayer2, player1, player2);
+		GameController obs = new GameController(field, layout,name1, name2, playerPool, createNewPlayer1, createNewPlayer2, player1, player2, isComputer);
 	}
 	
 }

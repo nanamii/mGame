@@ -14,6 +14,8 @@ import java.util.Observable;
 import java.lang.Thread;
 import java.util.Scanner;
 import java.util.LinkedList;
+import java.lang.Math;
+import java.util.*;
 
 
 public class GameController extends Observable implements Observer{
@@ -31,9 +33,13 @@ public class GameController extends Observable implements Observer{
 	private int count = 0;
 	
 	private LinkedList <Card> list;
+	private ArrayList <Card> PCchoiceList;
+	boolean isComputer;
 	
 	
-	public GameController(GameField gameField, GameLayout layout, String name1, String name2, Playerpool playerpool, boolean createNewPlayer1, boolean createNewPlayer2, Player player1, Player player2)
+	public GameController(GameField gameField, GameLayout layout, String name1, 
+	String name2, Playerpool playerpool, boolean createNewPlayer1, 
+	boolean createNewPlayer2, Player player1, Player player2, boolean isComputer)
 	{
 		this.gameField = gameField;
 		
@@ -83,6 +89,16 @@ public class GameController extends Observable implements Observer{
 		
 		list = new LinkedList<Card>();
 		
+		//Kopie von aList aus Class GameField
+		PCchoiceList = new ArrayList <Card>();
+		for(int i=0; i<gameField.aList.size(); i++)
+		{
+		    Card card = gameField.aList.get(i);
+		    PCchoiceList.add(card);
+		}
+		
+		this.isComputer = isComputer;
+		
 	}
 	
 	
@@ -102,7 +118,6 @@ public class GameController extends Observable implements Observer{
             queryThread.start();
         }
         
-      
     }
 	
 	
@@ -188,8 +203,8 @@ public class GameController extends Observable implements Observer{
             
 			return true;
 		}
-		
-		else
+		// Cards doesn't match
+		else 
 		{	
 			try
 			{
@@ -213,12 +228,39 @@ public class GameController extends Observable implements Observer{
 	{
 	   if (currentPlayer.equals(firstPlayer))
         {
-            return secondPlayer;
+            if( isComputer == true)
+            {
+                computerMove();
+                return secondPlayer;
+            }
+            else
+            {
+                return secondPlayer;
+            }
         }
         else
         {
             return firstPlayer;
         }
+	}
+	
+	public void computerMove()
+	{
+	  // Karten not clickable --> gesperrt für Spieler 1
+	  double random1 = (Math.random()*(PCchoiceList.size())-1);
+	  int randLong1 =(int) Math.round(random1);
+	  double random2 = (Math.random()*(PCchoiceList.size()-2));
+      int randLong2 = (int) Math.round(random2); 
+      Card card1 = gameField.aList.get(randLong1);
+      Card card2 = gameField.aList.get(randLong2);
+      card1.turnCard();
+      card2.turnCard();
+      // Karten LinkedList hinzufügen, compareCards() bedient sich daraus
+      list.push(card1);
+      list.push(card2);
+      compareCards();
+      	  
+	    
 	}
 	
 	public boolean gameEnd()
@@ -233,6 +275,7 @@ public class GameController extends Observable implements Observer{
 	        return false;
 	    }
 	}
+	
 	
 	public int checkWinner()
 	{

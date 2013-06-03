@@ -7,6 +7,7 @@ public class Player extends Observable implements Serializable{
 	private int num;
 	private int points;
 	private int highscorePosition;
+	private boolean isComputer = false;
 	
 	
 	public Player()

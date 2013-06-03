@@ -55,6 +55,13 @@ public class Card extends Observable implements ActionListener, Comparable {
     }
     
     
+    public void turnCard()
+    {
+        button.setIcon(image_front);
+        button.setBackground(Color.WHITE);
+    }
+    
+    
     public ImageIcon getImage()
     {
         return image_back;

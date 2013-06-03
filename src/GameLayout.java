@@ -98,11 +98,11 @@ public class GameLayout extends JPanel implements Observer{
         //background.setBorder(new EmptyBorder(5,5,100,5));
         
         demo.addComponent( background, gbl, l1, 0, 2, 1, 1, 1.0, 0.5 );
-        demo.addComponent( background, gbl, namePlayer2, 1, 2, 1, 1, 1.0, 0.5 );
+        demo.addComponent( background, gbl, namePlayer1, 1, 2, 1, 1, 1.0, 0.5 );
         demo.addComponent( background, gbl, points1, 0, 3, 1, 1, 1.0, 0.2 );
         demo.addComponent( background, gbl, points1Num, 1, 3, 1, 1, 1.0, 0.2 );
         demo.addComponent( background, gbl, l2, 0, 4, 1, 1, 1.0, 1.0 );
-        demo.addComponent( background, gbl, namePlayer1, 1, 4, 1, 1, 1.0, 1.0 );
+        demo.addComponent( background, gbl, namePlayer2, 1, 4, 1, 1, 1.0, 1.0 );
         demo.addComponent( background, gbl, points2, 0, 5, 1, 1, 1.0, 0.2 );
         demo.addComponent( background, gbl, points2Num, 1, 5, 1, 1, 1.0, 0.2 );
         demo.addComponent( background, gbl, b1, 1, 6, 1, 1, 0.0, 0.2 );
