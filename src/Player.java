@@ -6,19 +6,14 @@ public class Player extends Observable implements Serializable{
 	private String name;
 	private int num;
 	private int points;
-	private int highscorePosition;
 	private boolean isComputer = false;
-	
-	
-	public Player()
-	{}
 	
 	
 	public Player(String name, int num)
 	{
 		this.name = name;
 		this.num = num;
-		this.points = 0;		
+		this.points = 0;
 	}
 	
 

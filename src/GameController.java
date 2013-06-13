@@ -27,6 +27,7 @@ public class GameController extends Observable implements Observer{
 	private Player currentPlayer;
 	
 	private Playerpool playerpool;
+	private Highscore highscore;
 	private boolean createNewPlayer1;
 	private boolean createNewPlayer2;
 	
@@ -38,7 +39,7 @@ public class GameController extends Observable implements Observer{
 	
 	
 	public GameController(GameField gameField, GameLayout layout, String name1, 
-	String name2, Playerpool playerpool, boolean createNewPlayer1, 
+	String name2, SaveObject saveObject, boolean createNewPlayer1, 
 	boolean createNewPlayer2, Player player1, Player player2, boolean isComputer)
 	{
 		this.gameField = gameField;
@@ -48,7 +49,8 @@ public class GameController extends Observable implements Observer{
 			gameField.aList.get(i).addObserver(this);
 		}
 		
-		this.playerpool = playerpool;
+		this.highscore = saveObject.getHighscore();
+		this.playerpool = saveObject.getPlayerpool();
 		this.createNewPlayer1 = createNewPlayer1;
 		this.createNewPlayer2 = createNewPlayer2;
 		
@@ -81,7 +83,8 @@ public class GameController extends Observable implements Observer{
 		currentPlayer = new Player("currPl", 0);
 		currentPlayer = firstPlayer;
 		
-		playerpool.saveToDisk();
+		//playerpool.saveToDisk();
+		saveObject.saveToDisk();
 		
 		firstPlayer.addObserver(layout);
 		secondPlayer.addObserver(layout);
@@ -104,8 +107,6 @@ public class GameController extends Observable implements Observer{
 	
     public void playGame()
     {
-        
-        
         if(twoClicked() == true)
         {
             Thread queryThread = new Thread() 
@@ -117,7 +118,6 @@ public class GameController extends Observable implements Observer{
             };
             queryThread.start();
         }
-        
     }
 	
 	
@@ -267,7 +267,17 @@ public class GameController extends Observable implements Observer{
 	{
 	    if(count==16)
 	    {
-	        System.out.println("spiel vorbei");
+	        System.out.println("Spiel vorbei");
+	        HighscoreData data1 = new HighscoreData(firstPlayer, firstPlayer.getPoints());
+	        HighscoreData data2 = new HighscoreData(secondPlayer, secondPlayer.getPoints());
+	        highscore.addToHighscore(data1);
+	        highscore.addToHighscore(data2);
+	        highscore.sortHighscore();
+	        
+	        for(int i=0; i<highscore.gethighscoreList().size(); i++)
+	        {
+	            System.out.println("1.Platz: " + highscore.gethighscoreList().get(i).getPlayer().getName());
+	        }
 	        return true;
 	    }
 	    else
@@ -293,6 +303,7 @@ public class GameController extends Observable implements Observer{
 	    }
 	}
 	
+	
 	 @Override 
 	 public void update( Observable o, Object arg ) 
   	{ 
@@ -306,7 +317,5 @@ public class GameController extends Observable implements Observer{
  	{
  	    return currentPlayer;
  	}
- 	    
- 	
 	
 }

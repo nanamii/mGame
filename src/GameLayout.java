@@ -77,7 +77,7 @@ public class GameLayout extends JPanel implements Observer{
         JLabel background = new JLabel(new ImageIcon("../gfx/datesBack.png"));
         dates.add(background);
         
-        GridBagLayoutDemo demo = new GridBagLayoutDemo();
+        GridBagLayoutModel gblModel = new GridBagLayoutModel();
         GridBagLayout gbl = new GridBagLayout();
         background.setLayout(gbl);
         
@@ -97,16 +97,16 @@ public class GameLayout extends JPanel implements Observer{
        
         //background.setBorder(new EmptyBorder(5,5,100,5));
         
-        demo.addComponent( background, gbl, l1, 0, 2, 1, 1, 1.0, 0.5 );
-        demo.addComponent( background, gbl, namePlayer1, 1, 2, 1, 1, 1.0, 0.5 );
-        demo.addComponent( background, gbl, points1, 0, 3, 1, 1, 1.0, 0.2 );
-        demo.addComponent( background, gbl, points1Num, 1, 3, 1, 1, 1.0, 0.2 );
-        demo.addComponent( background, gbl, l2, 0, 4, 1, 1, 1.0, 1.0 );
-        demo.addComponent( background, gbl, namePlayer2, 1, 4, 1, 1, 1.0, 1.0 );
-        demo.addComponent( background, gbl, points2, 0, 5, 1, 1, 1.0, 0.2 );
-        demo.addComponent( background, gbl, points2Num, 1, 5, 1, 1, 1.0, 0.2 );
-        demo.addComponent( background, gbl, b1, 1, 6, 1, 1, 0.0, 0.2 );
-		demo.addComponent( background, gbl, end, 1, 7, 1, 1, 0.0, 0.2 );
+        gblModel.addComponent( background, gbl, l1, 0, 2, 1, 1, 1.0, 0.5 );
+        gblModel.addComponent( background, gbl, namePlayer1, 1, 2, 1, 1, 1.0, 0.5 );
+        gblModel.addComponent( background, gbl, points1, 0, 3, 1, 1, 1.0, 0.2 );
+        gblModel.addComponent( background, gbl, points1Num, 1, 3, 1, 1, 1.0, 0.2 );
+        gblModel.addComponent( background, gbl, l2, 0, 4, 1, 1, 1.0, 1.0 );
+        gblModel.addComponent( background, gbl, namePlayer2, 1, 4, 1, 1, 1.0, 1.0 );
+        gblModel.addComponent( background, gbl, points2, 0, 5, 1, 1, 1.0, 0.2 );
+        gblModel.addComponent( background, gbl, points2Num, 1, 5, 1, 1, 1.0, 0.2 );
+        gblModel.addComponent( background, gbl, b1, 1, 6, 1, 1, 0.0, 0.2 );
+		gblModel.addComponent( background, gbl, end, 1, 7, 1, 1, 0.0, 0.2 );
 		
 		wModel.panel.add(dates, BorderLayout.EAST);
 		

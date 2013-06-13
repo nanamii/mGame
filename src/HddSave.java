@@ -3,51 +3,49 @@ import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
+import java.io.Serializable;
 
 
-public class HddSave {
+public class HddSave implements Serializable{
 	
 	
-	public void saveToDisk (ArrayList<Player> tosave)
+	public void saveToDisk (SaveObject tosave)
 	{
-		try
-		{
-			FileOutputStream fs = new FileOutputStream("./player.dat");
-			ObjectOutputStream os = new ObjectOutputStream(fs);
+		    try
+		    {
+			    FileOutputStream fs = new FileOutputStream("./saveObject.dat");
+			    ObjectOutputStream os = new ObjectOutputStream(fs);
 			
-			os.writeObject(tosave);
-			os.close();
-		}
-		catch(Exception e)
-		{
-			System.err.print("Fehler beim Schreiben.");
-			e.printStackTrace();
-		}
+			    os.writeObject(tosave);
+			    os.close();
+		    }
+		    catch(Exception e)
+		    {
+			    System.err.print("Fehler beim Schreiben.");
+			    e.printStackTrace();
+		    }
+		    
 	}
 	
 	
-	public ArrayList<Player> loadFromDisk ()
+	public SaveObject loadFromDisk ()
 	{
-		try
-		{
-			FileInputStream fs = new FileInputStream("./player.dat");
-			ObjectInputStream os = new ObjectInputStream(fs);
+		    try
+		    {
+			    FileInputStream fs = new FileInputStream("./saveObject.dat");
+			    ObjectInputStream os = new ObjectInputStream(fs);
 			
-	
-			ArrayList<Player> toload = (ArrayList<Player>) os.readObject();
-			os.close();
+			    SaveObject toload = (SaveObject)os.readObject();
+			    os.close();
 			
-			return toload;
-		}
-		catch(Exception e)
-		{
-			System.out.print("Fehler beim Lesen");
-			return null;
-		}
+			    return toload;
+		    }
+		    catch(Exception e)
+		    {
+			    System.out.print("Fehler beim Lesen");
+			    return null;
+		    }
+	}
 	}
 	
-	
-	
-	
 
-}

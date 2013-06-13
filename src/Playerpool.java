@@ -1,21 +1,13 @@
 import java.util.*;
+import java.io.Serializable;
 
-public class Playerpool {
+public class Playerpool implements Serializable{
 	
 	private ArrayList <Player> playerList;
-	private HddSave hdd;
-	
-	
 	
 	public Playerpool()
 	{
-	    hdd = new HddSave();
-	    playerList = hdd.loadFromDisk();
-	    
-	    if(playerList == null)
-	    {
-	        playerList = new ArrayList<Player>();
-	    }
+	    playerList = new ArrayList <Player>();
 	}
 	
 	
@@ -28,13 +20,7 @@ public class Playerpool {
 	public void addPlayer(Player player)
 	{
 	    playerList.add(player);
-	    System.out.println("Player dem Pool inzugefügt"+player.getName());
+	    System.out.println("Player dem Pool hinzugefügt"+player.getName());
 	}
-	
-	public void saveToDisk()
-	{
-	    hdd.saveToDisk(playerList);
-	}
-	
 	
 }

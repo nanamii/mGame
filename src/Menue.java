@@ -28,7 +28,8 @@ public class Menue extends JPanel{
     JComboBox selectList2;
     
     ArrayList <Player> playerList;
-    Playerpool playerPool;
+    SaveObject saveObject;
+   
     String name1;
     String name2;
     boolean createNewPlayer1 = false;
@@ -38,7 +39,7 @@ public class Menue extends JPanel{
     boolean isComputer = false;
     
 	
-	public Menue(Playerpool playerPool)
+	public Menue(SaveObject saveObject)
 	{
 		mainMenueWindow = new WindowModel();
 	    mainMenueWindow.add(this);
@@ -51,8 +52,9 @@ public class Menue extends JPanel{
         this.loadMainMenue();
         repaint();
         
-        this.playerPool = playerPool;	
+        this.saveObject = saveObject;
 	}
+	
 	
 	public void loadMainMenue()
 	{
@@ -146,7 +148,7 @@ public class Menue extends JPanel{
 	    // CompoBox füllen
 	    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	    playerList = new ArrayList <Player>();
-	    playerList = playerPool.getPlayerList();
+	    playerList = saveObject.getPlayerpool().getPlayerList();
 	    String [] stringArray = new String [playerList.size()];
 	    
 	    for(int i=0; i<playerList.size(); i++)
@@ -325,6 +327,7 @@ public class Menue extends JPanel{
 	    
 	}
 	
+	
 	public void newGameMenueNEXT()
 	{
 	    nextWindow = new WindowModel();
@@ -405,6 +408,7 @@ public class Menue extends JPanel{
         g2D.drawImage(bg, 0, 0, null); 
 	}
 	
+	
 	public void modifyButton(JButton button, String picNormal, String picRoll)
 	{
 	    button.setBorderPainted(false);  
@@ -414,6 +418,7 @@ public class Menue extends JPanel{
         button.addMouseListener(new RolloverListener(button,picNormal,picRoll)); 
 	}
 	
+	
 	public void startGame()
 	{
 	    WindowModel wModel = new WindowModel();
@@ -422,7 +427,7 @@ public class Menue extends JPanel{
 		GameField field = new GameField(layout);
 		wModel.setVisible(true);
 		
-		GameController obs = new GameController(field, layout,name1, name2, playerPool, createNewPlayer1, createNewPlayer2, player1, player2, isComputer);
+		GameController obs = new GameController(field, layout,name1, name2, saveObject, createNewPlayer1, createNewPlayer2, player1, player2, isComputer);
 	}
 	
 }
