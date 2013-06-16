@@ -16,6 +16,7 @@ public class Menue extends JPanel{
     WindowModel mainMenueWindow;
     WindowModel newGameWindow;
     WindowModel nextWindow;
+    WindowModel highscoreWindow;
     JRadioButton radio1;
     JRadioButton radio2;
     JRadioButton newNameRB1;
@@ -103,7 +104,8 @@ public class Menue extends JPanel{
         highscore.addActionListener(new ActionListener(){
 		  public void actionPerformed( ActionEvent e )
         {
-            System.out.println("Highscore");
+            mainMenueWindow.setVisible(false);
+            showHighscore();
         }});
         
 		
@@ -416,6 +418,30 @@ public class Menue extends JPanel{
         button.setFocusPainted(false);  
         button.setOpaque(false);  
         button.addMouseListener(new RolloverListener(button,picNormal,picRoll)); 
+	}
+	
+	
+	public void showHighscore()
+	{
+	    String [] colNames = {"Platz","Name","Punkte"};
+	    Object [][] data = new Object [10][3];
+	    
+	    for(int i=0; i<2; i++)
+	    {   
+	        data [i][0] = i;
+	        data [i][1] = saveObject.getHighscore().gethighscoreList().get(i).getPlayer().getName();
+	        data [i][2] = saveObject.getHighscore().gethighscoreList().get(i).getPoints();
+	    }
+	    
+	    highscoreWindow = new WindowModel();
+	    highscoreWindow.setVisible(true);
+	    
+	    JPanel hcPanel = new JPanel();
+	    JTable hcTable = new JTable(data,colNames);
+	    JScrollPane spTable = new JScrollPane(hcTable);
+	    hcPanel.add(spTable);
+	    
+	    highscoreWindow.add(hcPanel);
 	}
 	
 	

@@ -26,6 +26,7 @@ public class GameController extends Observable implements Observer{
 	private Player secondPlayer;
 	private Player currentPlayer;
 	
+	private SaveObject saveObject;
 	private Playerpool playerpool;
 	private Highscore highscore;
 	private boolean createNewPlayer1;
@@ -49,6 +50,7 @@ public class GameController extends Observable implements Observer{
 			gameField.aList.get(i).addObserver(this);
 		}
 		
+		this.saveObject = saveObject;
 		this.highscore = saveObject.getHighscore();
 		this.playerpool = saveObject.getPlayerpool();
 		this.createNewPlayer1 = createNewPlayer1;
@@ -273,6 +275,7 @@ public class GameController extends Observable implements Observer{
 	        highscore.addToHighscore(data1);
 	        highscore.addToHighscore(data2);
 	        highscore.sortHighscore();
+	        saveObject.saveToDisk();
 	        
 	        for(int i=0; i<highscore.gethighscoreList().size(); i++)
 	        {

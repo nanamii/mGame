@@ -18,6 +18,11 @@ public class HighscoreData implements Comparable<HighscoreData>, Serializable{
 	    return player;
 	}
 	
+	public int getPoints()
+	{
+	    return points;
+	}
+	
 	
 	@Override
 	public int compareTo(HighscoreData data)
