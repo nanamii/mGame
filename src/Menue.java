@@ -130,7 +130,8 @@ public class Menue extends JPanel{
 	    east.setLayout(new BoxLayout(east, BoxLayout.PAGE_AXIS));
 	    east.setBorder(BorderFactory.createEmptyBorder(70,10,10,130));
 	    
-	    JPanel bottom = new JPanel(); //per default FlowLayout
+	    JPanel bottom = new JPanel((new FlowLayout(FlowLayout.TRAILING))); 
+	    //per default FlowLayout
 	    
 	    JLabel numPlayer = new JLabel(new ImageIcon("../gfx/radPlayer.png"));
 	    JLabel namePlayer = new JLabel(new ImageIcon("../gfx/name1.png"));
@@ -345,7 +346,8 @@ public class Menue extends JPanel{
 	    //top,left,bottom,right
 	    east.setBorder(BorderFactory.createEmptyBorder(70,10,10,300));
 	    
-	    JPanel bottom = new JPanel(); //per default FlowLayout
+	    JPanel bottom = new JPanel((new FlowLayout(FlowLayout.TRAILING))); 
+	    //per default FlowLayout
 	    
 	    JButton back2 = new JButton("zurück");
 	    JButton start = new JButton("START");
@@ -426,7 +428,7 @@ public class Menue extends JPanel{
 	    String [] colNames = {"Platz","Name","Punkte"};
 	    Object [][] data = new Object [10][3];
 	    
-	    for(int i=0; i<2; i++)
+	    for(int i=0; i<4; i++)
 	    {   
 	        data [i][0] = i;
 	        data [i][1] = saveObject.getHighscore().gethighscoreList().get(i).getPlayer().getName();
@@ -439,9 +441,21 @@ public class Menue extends JPanel{
 	    JPanel hcPanel = new JPanel();
 	    JTable hcTable = new JTable(data,colNames);
 	    JScrollPane spTable = new JScrollPane(hcTable);
+	    JButton backToMenue = new JButton("zurück");
 	    hcPanel.add(spTable);
 	    
+	    JPanel buttonPanel = new JPanel((new FlowLayout(FlowLayout.TRAILING)));
+	    buttonPanel.add(backToMenue);
+	    
 	    highscoreWindow.add(hcPanel);
+	    highscoreWindow.panel.add(buttonPanel, BorderLayout.SOUTH);
+	    
+	    backToMenue.addActionListener(new ActionListener(){
+		  public void actionPerformed( ActionEvent e )
+        {   
+            highscoreWindow.setVisible(false);
+            mainMenueWindow.setVisible(true);
+        }});
 	}
 	
 	

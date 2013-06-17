@@ -85,6 +85,3 @@ public class Card extends Observable implements ActionListener, Comparable {
             return -1;
     }
 }
-    
-
-

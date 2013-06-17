@@ -35,7 +35,7 @@ public class GameController extends Observable implements Observer{
 	private int count = 0;
 	
 	private LinkedList <Card> list;
-	private ArrayList <Card> PCchoiceList;
+	private ArrayList <Integer> pcChoiceList;
 	boolean isComputer;
 	
 	
@@ -94,13 +94,7 @@ public class GameController extends Observable implements Observer{
 		
 		list = new LinkedList<Card>();
 		
-		//Kopie von aList aus Class GameField
-		PCchoiceList = new ArrayList <Card>();
-		for(int i=0; i<gameField.aList.size(); i++)
-		{
-		    Card card = gameField.aList.get(i);
-		    PCchoiceList.add(card);
-		}
+		pcChoiceList = new ArrayList <Integer>();
 		
 		this.isComputer = isComputer;
 		
@@ -149,11 +143,20 @@ public class GameController extends Observable implements Observer{
 			
 			list.get(0).button.setVisible(false);
 			list.get(1).button.setVisible(false);
-			list.clear();
 			currentPlayer.addPoints();
 			System.out.println(currentPlayer.getPoints());
 			count = count+2;
 			System.out.println("Counter:"+count);
+			editPcChoiceList();
+			list.clear();
+			
+			if(currentPlayer.equals(secondPlayer))
+			{
+			    if(isComputer == true)
+			    {
+			        computerMove();
+			    }
+			}
 			
 			
 			
@@ -219,6 +222,14 @@ public class GameController extends Observable implements Observer{
 			list.clear();
 			currentPlayer = switchPlayer(currentPlayer);
 			
+			if(currentPlayer.equals(secondPlayer))
+			{
+			    if(isComputer == true)
+			    {
+			        computerMove();
+			    }
+			}
+			
 			setChanged();
 			notifyObservers(this);
 			return false;
@@ -230,15 +241,7 @@ public class GameController extends Observable implements Observer{
 	{
 	   if (currentPlayer.equals(firstPlayer))
         {
-            if( isComputer == true)
-            {
-                computerMove();
-                return secondPlayer;
-            }
-            else
-            {
-                return secondPlayer;
-            }
+            return secondPlayer;
         }
         else
         {
@@ -246,24 +249,58 @@ public class GameController extends Observable implements Observer{
         }
 	}
 	
+	
 	public void computerMove()
 	{
-	  // Karten not clickable --> gesperrt für Spieler 1
-	  double random1 = (Math.random()*(PCchoiceList.size())-1);
-	  int randLong1 =(int) Math.round(random1);
-	  double random2 = (Math.random()*(PCchoiceList.size()-2));
-      int randLong2 = (int) Math.round(random2); 
+	    int randLong1;
+	    int randLong2;
+	  
+	  do
+	  {
+	    // Karten not clickable --> gesperrt für Spieler 1 ergänzen
+	    double random1 = (Math.random()*(gameField.aList.size())-1);
+	    randLong1 =(int) Math.round(random1);
+	    double random2 = (Math.random()*(gameField.aList.size()-1));
+        randLong2 = (int) Math.round(random2); 
+      }
+      while (checkIndex(randLong1,randLong2)==true);
+      
       Card card1 = gameField.aList.get(randLong1);
       Card card2 = gameField.aList.get(randLong2);
       card1.turnCard();
       card2.turnCard();
+      System.out.println(randLong1);
+      System.out.println(randLong2);
+      
       // Karten LinkedList hinzufügen, compareCards() bedient sich daraus
       list.push(card1);
       list.push(card2);
       compareCards();
-      	  
-	    
 	}
+	
+	
+	public boolean checkIndex(int randLong1, int randLong2)
+	{
+	    if(pcChoiceList.contains(randLong1) || pcChoiceList.contains(randLong2) || randLong1 == randLong2)
+	    {
+	        return true;
+	    }
+	    else
+	    {
+	        return false;
+	    }
+	}
+	
+	
+	public void editPcChoiceList()
+	{
+	    int index1 = gameField.aList.indexOf(list.get(0));
+	    int index2 = gameField.aList.indexOf(list.get(1));
+	  
+	    pcChoiceList.add(index1);
+	    pcChoiceList.add(index2);
+	}
+	
 	
 	public boolean gameEnd()
 	{

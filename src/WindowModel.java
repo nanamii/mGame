@@ -20,7 +20,7 @@ public class WindowModel extends JFrame{
 		setTitle("myMemo");
 		setSize(800,650);
 		setLocationRelativeTo(null);
-		setResizable(true);
+		setResizable(false);
 		
 		//frame.setLocation( 0, 0 );
 		//frame.setSize( Toolkit.getDefaultToolkit().getScreenSize() );		
