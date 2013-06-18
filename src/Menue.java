@@ -38,6 +38,7 @@ public class Menue extends JPanel{
     Player player1;
     Player player2;
     boolean isComputer = false;
+    int themeChoice;
     
 	
 	public Menue(SaveObject saveObject)
@@ -116,7 +117,7 @@ public class Menue extends JPanel{
         }});
 	}
 
-    
+    //############################################################################
     public void newGameMenue()
     {
         newGameWindow = new WindowModel();
@@ -217,13 +218,12 @@ public class Menue extends JPanel{
 	    newGameWindow.panel.add(bottom, BorderLayout.SOUTH);
 	    
 	    
-	    
-	    
-	    
 	    //***********************************************************
 	    //ActionListener
 	    //***********************************************************
 	    
+	   //RadioButtons
+	   
 	   radio1.addActionListener(new ActionListener(){
 		  public void actionPerformed( ActionEvent e )
         {   
@@ -232,7 +232,6 @@ public class Menue extends JPanel{
             newNameRB2.setEnabled(false);
             savedNameRB2.setEnabled(false);
             isComputer = true;
-            
         }});
         
         radio2.addActionListener(new ActionListener(){
@@ -281,9 +280,7 @@ public class Menue extends JPanel{
            
         }});
         
-        
-        
-	    
+	    // zurück-Button
 	    buttonBack.addActionListener(new ActionListener(){
 		  public void actionPerformed( ActionEvent e )
         {   
@@ -291,7 +288,7 @@ public class Menue extends JPanel{
             mainMenueWindow.setVisible(true);
         }});
         
-        
+        // weiter-Button
         buttonNext.addActionListener(new ActionListener(){
 		  public void actionPerformed( ActionEvent e )
         {   
@@ -299,11 +296,10 @@ public class Menue extends JPanel{
             name2 = textName2.getText();
             System.out.println(name1+name2);
             
-            
             String savedName1 = (String)selectList1.getSelectedItem();
             System.out.println(savedName1);
             
-            for(int i=0; i<playerList.size(); i++ )
+            for(int i=0; i<playerList.size(); i++)
             {
                 if(playerList.get(i).getName().equals(savedName1))
                 {
@@ -323,13 +319,78 @@ public class Menue extends JPanel{
                 }
             }
             
-            newGameWindow.setVisible(false);
-            newGameMenueNEXT();
             
-        }});
-	    
+            
+             //Test, ob Name bereits existiert oder 2x der gleiche erstellt werden will
+            if(isComputer == true)
+            {
+                for(int i=0; i<playerList.size();i++)
+                {
+                    if(playerList.get(i).getName().equals(name1))
+                    {
+                        JOptionPane.showMessageDialog(newGameWindow, 
+                        "Name für Spieler 1 bereits vorhanden. Wähle einen anderen.");
+                    }
+                    else
+                    {
+                        newGameWindow.setVisible(false);
+                        newGameMenueNEXT();
+                    }
+                }
+            }
+            else
+            {
+                if(createNewPlayer1 == true)
+                {
+                    for(int i=0; i<playerList.size();i++)
+                    {
+                        if(playerList.get(i).getName().equals(name1))
+                        {
+                            JOptionPane.showMessageDialog(newGameWindow, 
+                            "Name für Spieler 1 bereits vorhanden. Wähle einen anderen.");
+                        }
+                        else
+                        {
+                            newGameWindow.setVisible(false);
+                            newGameMenueNEXT();
+                        }
+                    }
+                }
+                if(createNewPlayer2 == true)
+                 {
+                    for(int i=0; i<playerList.size();i++)
+                    {
+                        if(playerList.get(i).getName().equals(name2))
+                        {
+                            JOptionPane.showMessageDialog(newGameWindow, 
+                            "Name für Spieler 2 bereits vorhanden. Wähle einen anderen.");
+                        }
+                    }
+                }
+                if(createNewPlayer1 == true && createNewPlayer2 == true)
+                {
+                     if(name1.equals(name2))
+                    {
+                        JOptionPane.showMessageDialog(newGameWindow, 
+                        "Name für Spieler 1 und 2 müssen sich unterscheiden.");
+                    }
+                }
+                if(createNewPlayer1 == false && createNewPlayer2 == false)
+                {
+                     if(player1.getName().equals(player2.getName()))
+                    {
+                        JOptionPane.showMessageDialog(newGameWindow, 
+                        "Es wurde 2x der selbe Spieler gewählt. Bitte neue Auswahl treffen");
+                    }
+                }
+                else
+                {
+                    newGameWindow.setVisible(false);
+                    newGameMenueNEXT();
+                }
+            }
 	}
-	
+	});}
 	
 	public void newGameMenueNEXT()
 	{
@@ -355,17 +416,17 @@ public class Menue extends JPanel{
 	    JLabel theme = new JLabel(new ImageIcon("../gfx/thema.png"));
 	    JLabel size = new JLabel(new ImageIcon("../gfx/spielfeldgroesse.png"));
 	    
-	    JRadioButton b1 = new JRadioButton("Tiere");
-	    JRadioButton b2 = new JRadioButton("Pflanzen");
-	    JRadioButton b3 = new JRadioButton("Flaggen");
+	    JRadioButton themeRB1 = new JRadioButton("Tiere");
+	    JRadioButton themeRB2 = new JRadioButton("Pflanzen");
+	    JRadioButton themeRB3 = new JRadioButton("Flaggen");
 	    
 	    JRadioButton b4 = new JRadioButton(" 4 x 4");
 	    JRadioButton b5 = new JRadioButton(" 8 x 8");
 	    
 	    ButtonGroup butGroup = new ButtonGroup();
-	    butGroup.add(b1);
-	    butGroup.add(b2);
-	    butGroup.add(b3);
+	    butGroup.add(themeRB1);
+	    butGroup.add(themeRB2);
+	    butGroup.add(themeRB3);
 	    
 	    ButtonGroup butGroup2 = new ButtonGroup();
 	    butGroup2.add(b4);
@@ -375,9 +436,9 @@ public class Menue extends JPanel{
 	    west.add(Box.createRigidArea(new Dimension(0,60)));
 	    west.add(size);
 	    
-	    east.add(b1);
-	    east.add(b2);
-	    east.add(b3);
+	    east.add(themeRB1);
+	    east.add(themeRB2);
+	    east.add(themeRB3);
 	    east.add(Box.createRigidArea(new Dimension(0,80)));
 	    east.add(b4);
 	    east.add(b5);
@@ -389,14 +450,36 @@ public class Menue extends JPanel{
 	    nextWindow.add(east, BorderLayout.EAST);
 	    nextWindow.add(bottom, BorderLayout.SOUTH);
 	    
-	   back2.addActionListener(new ActionListener(){
+	  
+	    
+	    themeRB1.addActionListener(new ActionListener(){
+		  public void actionPerformed( ActionEvent e )
+        {   
+            themeChoice = 1;
+        }});
+        
+         themeRB2.addActionListener(new ActionListener(){
+		  public void actionPerformed( ActionEvent e )
+        {   
+            themeChoice = 2;
+        }});
+        
+         themeRB3.addActionListener(new ActionListener(){
+		  public void actionPerformed( ActionEvent e )
+        {   
+            themeChoice = 3;
+        }});
+	    
+	    
+	    
+	    back2.addActionListener(new ActionListener(){
 		  public void actionPerformed( ActionEvent e )
         {   
             nextWindow.setVisible(false);
             mainMenueWindow.setVisible(true);
         }});
         
-          start.addActionListener(new ActionListener(){
+        start.addActionListener(new ActionListener(){
 		  public void actionPerformed( ActionEvent e )
         {   
             nextWindow.setVisible(false);
@@ -464,10 +547,15 @@ public class Menue extends JPanel{
 	    WindowModel wModel = new WindowModel();
 		GameLayout layout = new GameLayout(wModel, name1, name2);
 		System.out.println("startGame-Methode, Namen:"+name1+name2);
-		GameField field = new GameField(layout);
+		GameField field = new GameField(layout,themeChoice);
 		wModel.setVisible(true);
 		
-		GameController obs = new GameController(field, layout,name1, name2, saveObject, createNewPlayer1, createNewPlayer2, player1, player2, isComputer);
+		InputData inputData = new InputData();
+		inputData.setNames(name1,name2);
+		inputData.setPlayer(player1,player2);
+		inputData.setCreateNewPlayer(createNewPlayer1,createNewPlayer2);
+		inputData.setIsComputer(isComputer);
+		
+		GameController obs = new GameController(field, layout, saveObject, inputData);
 	}
-	
 }

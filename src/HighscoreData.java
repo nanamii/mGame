@@ -1,9 +1,11 @@
 import java.io.Serializable;
+import java.lang.System;
 
 public class HighscoreData implements Comparable<HighscoreData>, Serializable{
 	
 	private Player player;
 	private int points;
+	private long time;
 	
 	
 	public HighscoreData(Player player, int points)
@@ -17,6 +19,7 @@ public class HighscoreData implements Comparable<HighscoreData>, Serializable{
 	{
 	    return player;
 	}
+	
 	
 	public int getPoints()
 	{

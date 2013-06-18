@@ -39,9 +39,7 @@ public class GameController extends Observable implements Observer{
 	boolean isComputer;
 	
 	
-	public GameController(GameField gameField, GameLayout layout, String name1, 
-	String name2, SaveObject saveObject, boolean createNewPlayer1, 
-	boolean createNewPlayer2, Player player1, Player player2, boolean isComputer)
+	public GameController(GameField gameField, GameLayout layout, SaveObject saveObject, InputData inputData)
 	{
 		this.gameField = gameField;
 		
@@ -53,39 +51,39 @@ public class GameController extends Observable implements Observer{
 		this.saveObject = saveObject;
 		this.highscore = saveObject.getHighscore();
 		this.playerpool = saveObject.getPlayerpool();
-		this.createNewPlayer1 = createNewPlayer1;
-		this.createNewPlayer2 = createNewPlayer2;
+		this.createNewPlayer1 = inputData.getCreateNewPlayer1();
+		this.createNewPlayer2 = inputData.getCreateNewPlayer2();
 		
 		if(createNewPlayer1 == true)
 		{
-		    firstPlayer = new Player(name1, 1);
+		    firstPlayer = new Player(inputData.getName1(), 1);
 		    playerpool.addPlayer(firstPlayer);
 		}
 		else
 		{
-		    this.firstPlayer = player1;
+		    this.firstPlayer = inputData.getPlayer1();
 		    System.out.println("Else-Teil");
 		}
 		
 		
 		if(createNewPlayer2 == true)
 		{
-		    secondPlayer = new Player(name2, 2);
+		    secondPlayer = new Player(inputData.getName2(), 2);
 		    playerpool.addPlayer(secondPlayer);
 		}
 		else
 		{
-		    this.secondPlayer = player2;
+		    this.secondPlayer = inputData.getPlayer2();
 		    System.out.println("Else-Teil");
 		}
 		
+		//Testprint
 		System.out.println("nameplayer1"+firstPlayer.getName());
 		System.out.println("nameplayer2"+secondPlayer.getName());
 		
 		currentPlayer = new Player("currPl", 0);
 		currentPlayer = firstPlayer;
 		
-		//playerpool.saveToDisk();
 		saveObject.saveToDisk();
 		
 		firstPlayer.addObserver(layout);
@@ -96,7 +94,7 @@ public class GameController extends Observable implements Observer{
 		
 		pcChoiceList = new ArrayList <Integer>();
 		
-		this.isComputer = isComputer;
+		this.isComputer = inputData.getIsComputer();
 		
 	}
 	
