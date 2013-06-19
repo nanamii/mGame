@@ -320,51 +320,33 @@ public class Menue extends JPanel{
             }
             
             
-            
              //Test, ob Name bereits existiert oder 2x der gleiche erstellt werden will
             if(isComputer == true)
             {
-                for(int i=0; i<playerList.size();i++)
-                {
-                    if(playerList.get(i).getName().equals(name1))
-                    {
-                        JOptionPane.showMessageDialog(newGameWindow, 
-                        "Name für Spieler 1 bereits vorhanden. Wähle einen anderen.");
-                    }
-                    else
-                    {
-                        newGameWindow.setVisible(false);
-                        newGameMenueNEXT();
-                    }
-                }
+                        if(checkNames(name1) == true)
+                        {
+                            JOptionPane.showMessageDialog(newGameWindow, 
+                            "Name für Spieler 1 bereits vorhanden. Wähle einen anderen.");
+                        }
             }
             else
             {
                 if(createNewPlayer1 == true)
                 {
-                    for(int i=0; i<playerList.size();i++)
-                    {
-                        if(playerList.get(i).getName().equals(name1))
+                        if(checkNames(name1) == true)
                         {
                             JOptionPane.showMessageDialog(newGameWindow, 
                             "Name für Spieler 1 bereits vorhanden. Wähle einen anderen.");
+                            name1ok = false;
                         }
-                        else
-                        {
-                            newGameWindow.setVisible(false);
-                            newGameMenueNEXT();
-                        }
-                    }
                 }
                 if(createNewPlayer2 == true)
                  {
-                    for(int i=0; i<playerList.size();i++)
+                    if(checkNames(name2) == true)
                     {
-                        if(playerList.get(i).getName().equals(name2))
-                        {
-                            JOptionPane.showMessageDialog(newGameWindow, 
-                            "Name für Spieler 2 bereits vorhanden. Wähle einen anderen.");
-                        }
+                        JOptionPane.showMessageDialog(newGameWindow, 
+                        "Name für Spieler 2 bereits vorhanden. Wähle einen anderen.");
+                        name2ok = false;
                     }
                 }
                 if(createNewPlayer1 == true && createNewPlayer2 == true)
@@ -373,6 +355,7 @@ public class Menue extends JPanel{
                     {
                         JOptionPane.showMessageDialog(newGameWindow, 
                         "Name für Spieler 1 und 2 müssen sich unterscheiden.");
+                        name1ok = false;
                     }
                 }
                 if(createNewPlayer1 == false && createNewPlayer2 == false)
@@ -381,6 +364,7 @@ public class Menue extends JPanel{
                     {
                         JOptionPane.showMessageDialog(newGameWindow, 
                         "Es wurde 2x der selbe Spieler gewählt. Bitte neue Auswahl treffen");
+                        name1ok = false;
                     }
                 }
                 else
@@ -503,6 +487,20 @@ public class Menue extends JPanel{
         button.setFocusPainted(false);  
         button.setOpaque(false);  
         button.addMouseListener(new RolloverListener(button,picNormal,picRoll)); 
+	}
+	
+	
+	public boolean checkNames(String name)
+	{
+	    for(int i=0; i<playerList.size();i++)
+            {
+                if(playerList.get(i).getName().equals(name))
+                {
+                    return true;
+                }
+           
+            }
+         return false;   
 	}
 	
 	
