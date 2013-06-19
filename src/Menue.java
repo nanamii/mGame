@@ -337,34 +337,33 @@ public class Menue extends JPanel{
                         {
                             JOptionPane.showMessageDialog(newGameWindow, 
                             "Name für Spieler 1 bereits vorhanden. Wähle einen anderen.");
-                            name1ok = false;
                         }
                 }
+                
                 if(createNewPlayer2 == true)
                  {
                     if(checkNames(name2) == true)
                     {
                         JOptionPane.showMessageDialog(newGameWindow, 
                         "Name für Spieler 2 bereits vorhanden. Wähle einen anderen.");
-                        name2ok = false;
                     }
                 }
+                
                 if(createNewPlayer1 == true && createNewPlayer2 == true)
                 {
                      if(name1.equals(name2))
                     {
                         JOptionPane.showMessageDialog(newGameWindow, 
                         "Name für Spieler 1 und 2 müssen sich unterscheiden.");
-                        name1ok = false;
                     }
                 }
+                
                 if(createNewPlayer1 == false && createNewPlayer2 == false)
                 {
                      if(player1.getName().equals(player2.getName()))
                     {
                         JOptionPane.showMessageDialog(newGameWindow, 
                         "Es wurde 2x der selbe Spieler gewählt. Bitte neue Auswahl treffen");
-                        name1ok = false;
                     }
                 }
                 else
@@ -498,9 +497,8 @@ public class Menue extends JPanel{
                 {
                     return true;
                 }
-           
             }
-         return false;   
+        return false;   
 	}
 	
 	
