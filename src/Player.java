@@ -6,7 +6,6 @@ public class Player extends Observable implements Serializable{
 	private String name;
 	private int num;
 	private int points;
-	private boolean isComputer = false;
 	
 	
 	public Player(String name, int num)
@@ -31,6 +30,7 @@ public class Player extends Observable implements Serializable{
 	public void addPoints()
 	{
 	    points = points +10;
+	    System.out.println("PUNKTE addiert");
 	    setChanged();
         notifyObservers(this);
 	}

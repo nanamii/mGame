@@ -17,12 +17,15 @@ public class Menue extends JPanel{
     WindowModel newGameWindow;
     WindowModel nextWindow;
     WindowModel highscoreWindow;
-    JRadioButton radio1;
-    JRadioButton radio2;
+    JRadioButton isComputerRB;
+    JRadioButton twoPlayerRB;
     JRadioButton newNameRB1;
     JRadioButton savedNameRB1;
     JRadioButton newNameRB2;
     JRadioButton savedNameRB2;
+    JRadioButton themeRB1;
+    JRadioButton themeRB2;
+    JRadioButton themeRB3;
     JTextField textName1;
     JTextField textName2;
     JComboBox selectList1;
@@ -39,6 +42,7 @@ public class Menue extends JPanel{
     Player player2;
     boolean isComputer = false;
     int themeChoice;
+    
     
 	
 	public Menue(SaveObject saveObject)
@@ -129,7 +133,7 @@ public class Menue extends JPanel{
 	    west.setBorder(BorderFactory.createEmptyBorder(60,70,10,10));
 	    JPanel east = new JPanel();
 	    east.setLayout(new BoxLayout(east, BoxLayout.PAGE_AXIS));
-	    east.setBorder(BorderFactory.createEmptyBorder(70,10,10,130));
+	    east.setBorder(BorderFactory.createEmptyBorder(70,5,10,180));
 	    
 	    JPanel bottom = new JPanel((new FlowLayout(FlowLayout.TRAILING))); 
 	    //per default FlowLayout
@@ -138,15 +142,16 @@ public class Menue extends JPanel{
 	    JLabel namePlayer = new JLabel(new ImageIcon("../gfx/name1.png"));
 	    JLabel namePlayer2 = new JLabel(new ImageIcon("../gfx/name2.png"));
 	    
-	    radio1 = new JRadioButton("Alleine vs. Computer");
-	    radio1.doClick();
-	    radio2 = new JRadioButton("2 Spieler");
+	    isComputerRB = new JRadioButton("Alleine vs. Computer");
+	    twoPlayerRB = new JRadioButton("2 Spieler");
 	    ButtonGroup bg_playerQuantity = new ButtonGroup();
-	    bg_playerQuantity.add(radio1);
-	    bg_playerQuantity.add(radio2);
+	    bg_playerQuantity.add(isComputerRB);
+	    bg_playerQuantity.add(twoPlayerRB);
 	    
-	    textName1 = new JTextField(10);
-	    textName2 = new JTextField(10);
+	    textName1 = new JTextField(20);
+	    textName2 = new JTextField(20);
+	    
+	    
 	    
 	    
 	    // CompoBox füllen
@@ -189,8 +194,8 @@ public class Menue extends JPanel{
 	    west.add(namePlayer2);
 	    west.add(Box.createRigidArea(new Dimension(0,20)));
 	    
-	    east.add(radio1);
-	    east.add(radio2);
+	    east.add(isComputerRB);
+	    east.add(twoPlayerRB);
 	    east.add(Box.createRigidArea(new Dimension(0,90)));
 	    east.add(newNameRB1);
 	    east.add(Box.createRigidArea(new Dimension(0,5)));
@@ -217,6 +222,23 @@ public class Menue extends JPanel{
 	    newGameWindow.panel.add(east, BorderLayout.EAST);
 	    newGameWindow.panel.add(bottom, BorderLayout.SOUTH);
 	    
+	    isComputerRB.setAlignmentX(Component.LEFT_ALIGNMENT);
+	    twoPlayerRB.setAlignmentX(Component.LEFT_ALIGNMENT);
+	    textName1.setAlignmentX(Component.LEFT_ALIGNMENT);
+	    textName2.setAlignmentX(Component.LEFT_ALIGNMENT);
+	    savedNameRB1.setAlignmentX(Component.LEFT_ALIGNMENT);
+	    savedNameRB2.setAlignmentX(Component.LEFT_ALIGNMENT);
+	    selectList1.setAlignmentX(Component.LEFT_ALIGNMENT);
+	    selectList2.setAlignmentX(Component.LEFT_ALIGNMENT);
+	    
+	    //Default-Zustand der RadioButtons herstellen
+	    isComputerRB.setSelected(true);
+	    newNameRB1.setSelected(true);
+	    newNameRB2.setEnabled(false);
+	    savedNameRB1.setEnabled(true);
+	    savedNameRB2.setEnabled(false);
+	    selectList1.setEnabled(false);
+	    selectList2.setEnabled(false);
 	    
 	    //***********************************************************
 	    //ActionListener
@@ -224,7 +246,7 @@ public class Menue extends JPanel{
 	    
 	   //RadioButtons
 	   
-	   radio1.addActionListener(new ActionListener(){
+	   isComputerRB.addActionListener(new ActionListener(){
 		  public void actionPerformed( ActionEvent e )
         {   
             textName2.setEnabled(false);
@@ -232,18 +254,16 @@ public class Menue extends JPanel{
             newNameRB2.setEnabled(false);
             savedNameRB2.setEnabled(false);
             isComputer = true;
+            
         }});
         
-        radio2.addActionListener(new ActionListener(){
+        twoPlayerRB.addActionListener(new ActionListener(){
 		  public void actionPerformed( ActionEvent e )
         {   
             textName2.setEnabled(true);
-            selectList2.setEnabled(true);
+            selectList2.setEnabled(false);
             newNameRB2.setEnabled(true);
             savedNameRB2.setEnabled(true);
-            isComputer = false;
-            name1 = "Computer";
-            createNewPlayer2 = true;
         }});
         
         newNameRB1.addActionListener(new ActionListener(){
@@ -268,7 +288,6 @@ public class Menue extends JPanel{
             selectList1.setEnabled(true);
             textName1.setEnabled(false);
             createNewPlayer1 = false;
-           
         }});
         
         savedNameRB2.addActionListener(new ActionListener(){
@@ -277,7 +296,6 @@ public class Menue extends JPanel{
             selectList2.setEnabled(true);
             textName2.setEnabled(false);
             createNewPlayer2 = false;
-           
         }});
         
 	    // zurück-Button
@@ -320,45 +338,53 @@ public class Menue extends JPanel{
             }
             
             
-             //Test, ob Name bereits existiert oder 2x der gleiche erstellt werden will
-            if(isComputer == true)
+            if(newNameRB1.isSelected() == true)
             {
-                        if(checkNames(name1) == true)
-                        {
-                            JOptionPane.showMessageDialog(newGameWindow, 
-                            "Name für Spieler 1 bereits vorhanden. Wähle einen anderen.");
-                        }
+            	createNewPlayer1 = true;
+            }
+            if(newNameRB2.isSelected() == true)
+            {
+            	createNewPlayer2 = true;
+            }
+            
+            
+             //Test, ob Name bereits existiert oder 2x der gleiche erstellt werden will
+            if(isComputerRB.isSelected() == true && newNameRB1.isSelected() == true)
+            {
+            	if(checkNames(name1) == true)
+                {
+                    JOptionPane.showMessageDialog(newGameWindow, 
+                    "Name für Spieler 1 bereits vorhanden. Wähle einen anderen.");
+                }
+                else
+                {
+                    isComputer = true;
+                    name2 = "Computer";
+                    newGameWindow.setVisible(false);
+                    newGameMenueNEXT();
+               	}
             }
             else
             {
-                if(createNewPlayer1 == true)
+                if(newNameRB1.isSelected() == true && checkNames(name1) == true)
                 {
-                        if(checkNames(name1) == true)
-                        {
-                            JOptionPane.showMessageDialog(newGameWindow, 
-                            "Name für Spieler 1 bereits vorhanden. Wähle einen anderen.");
-                        }
+                	JOptionPane.showMessageDialog(newGameWindow, 
+                	"Name für Spieler 1 bereits vorhanden. Wähle einen anderen.");
                 }
                 
-                if(createNewPlayer2 == true)
-                 {
-                    if(checkNames(name2) == true)
-                    {
-                        JOptionPane.showMessageDialog(newGameWindow, 
-                        "Name für Spieler 2 bereits vorhanden. Wähle einen anderen.");
-                    }
-                }
-                
-                if(createNewPlayer1 == true && createNewPlayer2 == true)
+                if(newNameRB2.isSelected() == true && checkNames(name2) == true)
                 {
-                     if(name1.equals(name2))
-                    {
-                        JOptionPane.showMessageDialog(newGameWindow, 
-                        "Name für Spieler 1 und 2 müssen sich unterscheiden.");
-                    }
+                	JOptionPane.showMessageDialog(newGameWindow, 
+                	"Name für Spieler 2 bereits vorhanden. Wähle einen anderen.");
                 }
                 
-                if(createNewPlayer1 == false && createNewPlayer2 == false)
+                if(newNameRB1.isSelected() == true && newNameRB2.isSelected() == true && name1.equals(name2) )
+                {
+                     JOptionPane.showMessageDialog(newGameWindow, 
+                     "Name für Spieler 1 und 2 müssen sich unterscheiden.");
+                }
+                
+                if(savedNameRB1.isSelected() == true && savedNameRB2.isSelected() == true)
                 {
                      if(player1.getName().equals(player2.getName()))
                     {
@@ -368,6 +394,7 @@ public class Menue extends JPanel{
                 }
                 else
                 {
+                	isComputer = false;
                     newGameWindow.setVisible(false);
                     newGameMenueNEXT();
                 }
@@ -399,11 +426,13 @@ public class Menue extends JPanel{
 	    JLabel theme = new JLabel(new ImageIcon("../gfx/thema.png"));
 	    JLabel size = new JLabel(new ImageIcon("../gfx/spielfeldgroesse.png"));
 	    
-	    JRadioButton themeRB1 = new JRadioButton("Tiere");
-	    JRadioButton themeRB2 = new JRadioButton("Pflanzen");
-	    JRadioButton themeRB3 = new JRadioButton("Flaggen");
+	    themeRB1 = new JRadioButton("Tiere");
+	    themeRB1.setSelected(true);
+	    themeRB2 = new JRadioButton("Pflanzen");
+	    themeRB3 = new JRadioButton("Flaggen");
 	    
 	    JRadioButton b4 = new JRadioButton(" 4 x 4");
+	    b4.setSelected(true);
 	    JRadioButton b5 = new JRadioButton(" 8 x 8");
 	    
 	    ButtonGroup butGroup = new ButtonGroup();
@@ -433,27 +462,6 @@ public class Menue extends JPanel{
 	    nextWindow.add(east, BorderLayout.EAST);
 	    nextWindow.add(bottom, BorderLayout.SOUTH);
 	    
-	  
-	    
-	    themeRB1.addActionListener(new ActionListener(){
-		  public void actionPerformed( ActionEvent e )
-        {   
-            themeChoice = 1;
-        }});
-        
-         themeRB2.addActionListener(new ActionListener(){
-		  public void actionPerformed( ActionEvent e )
-        {   
-            themeChoice = 2;
-        }});
-        
-         themeRB3.addActionListener(new ActionListener(){
-		  public void actionPerformed( ActionEvent e )
-        {   
-            themeChoice = 3;
-        }});
-	    
-	    
 	    
 	    back2.addActionListener(new ActionListener(){
 		  public void actionPerformed( ActionEvent e )
@@ -465,8 +473,31 @@ public class Menue extends JPanel{
         start.addActionListener(new ActionListener(){
 		  public void actionPerformed( ActionEvent e )
         {   
-            nextWindow.setVisible(false);
-            startGame();
+            
+            if(themeRB1.isSelected()==true)
+            {
+            	themeChoice = 1;
+            }
+            else if(themeRB2.isSelected()==true)
+            {
+            	themeChoice = 2;
+            }
+            else
+            {
+            	themeChoice = 3;
+            }
+            
+            
+            if(themeChoice ==1 || themeChoice ==2 || themeChoice ==3)
+            {
+            	nextWindow.setVisible(false);
+            	startGame();
+            }
+            else
+            {
+            	JOptionPane.showMessageDialog(newGameWindow, 
+                "Wähle Thema und Spielfeldgröße");
+            }
         }});
 	    
 	}
@@ -493,7 +524,7 @@ public class Menue extends JPanel{
 	{
 	    for(int i=0; i<playerList.size();i++)
             {
-                if(playerList.get(i).getName().equals(name))
+                if(playerList.get(i).getName().equals(name) || name.length() == 0)
                 {
                     return true;
                 }

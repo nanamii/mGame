@@ -11,7 +11,7 @@ public class InputData{
     
     public void setNames(String name1, String name2)
     {
-        this.name1 = name2;
+        this.name1 = name1;
         this.name2 = name2;
     }
     

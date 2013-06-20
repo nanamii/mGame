@@ -53,6 +53,7 @@ public class GameController extends Observable implements Observer{
 		this.playerpool = saveObject.getPlayerpool();
 		this.createNewPlayer1 = inputData.getCreateNewPlayer1();
 		this.createNewPlayer2 = inputData.getCreateNewPlayer2();
+		this.isComputer = inputData.getIsComputer();
 		
 		if(createNewPlayer1 == true)
 		{
@@ -66,12 +67,12 @@ public class GameController extends Observable implements Observer{
 		}
 		
 		
-		if(createNewPlayer2 == true)
+		if(createNewPlayer2 == true || isComputer == true)
 		{
 		    secondPlayer = new Player(inputData.getName2(), 2);
 		    playerpool.addPlayer(secondPlayer);
 		}
-		else
+		else if(isComputer == false)
 		{
 		    this.secondPlayer = inputData.getPlayer2();
 		    System.out.println("Else-Teil");
@@ -93,8 +94,6 @@ public class GameController extends Observable implements Observer{
 		list = new LinkedList<Card>();
 		
 		pcChoiceList = new ArrayList <Integer>();
-		
-		this.isComputer = inputData.getIsComputer();
 		
 	}
 	
@@ -165,7 +164,7 @@ public class GameController extends Observable implements Observer{
                 //Dialog - The Winner is ......
                 
                 Object[] options = {"Revanche",
-                    "Neues Spiel",
+                    "Highscore",
                     "Hauptmenue"};
                 
                 System.out.println("ITS OVER");
@@ -250,6 +249,12 @@ public class GameController extends Observable implements Observer{
 	
 	public void computerMove()
 	{
+	    try
+			{
+		        Thread.sleep(2000);
+		    }
+		    catch(Exception e){}
+	    
 	    int randLong1;
 	    int randLong2;
 	  
