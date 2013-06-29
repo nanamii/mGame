@@ -23,7 +23,7 @@
 \contentsline {section}{\numberline {4.7}Vokabeltraining - $\delimiter "026E30F $LF70$\delimiter "026E30F $}{14}{section.4.7}
 \contentsline {section}{\numberline {4.8}Audiodaten abspielen - $\delimiter "026E30F $LF80$\delimiter "026E30F $}{15}{section.4.8}
 \contentsline {chapter}{\numberline {5}Use Case Beschreibungen}{16}{chapter.5}
-\contentsline {section}{\numberline {5.1}}{16}{section.5.1}
+\contentsline {section}{\numberline {5.1}Spieler erstellen}{16}{section.5.1}
 \contentsline {section}{\numberline {5.2}}{16}{section.5.2}
 \contentsline {chapter}{\numberline {6}Projektplan}{17}{chapter.6}
 \contentsline {section}{\numberline {6.1}}{17}{section.6.1}

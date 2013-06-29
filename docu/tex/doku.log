@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.10.16)  19 JUN 2013 21:09
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.10.16)  29 JUN 2013 14:21
 entering extended mode
  %&-line parsing enabled.
 **doku.tex
@@ -1627,6 +1627,11 @@ File: ./SpielerVerwalten.png Graphic file (type png)
 
 ]
 Kapitel 5.
+
+Overfull \hbox (236.18239pt too wide) in paragraph at lines 7--28
+[] 
+ []
+
 ) (./projektplan.tex [16
 
 
@@ -1680,20 +1685,21 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 19783 strings out of 495021
- 367132 string characters out of 1181034
+ 19785 strings out of 495021
+ 367156 string characters out of 1181034
  503177 words of memory out of 3000000
- 22197 multiletter control sequences out of 15000+50000
- 12074 words of font info for 47 fonts, out of 3000000 for 9000
+ 22198 multiletter control sequences out of 15000+50000
+ 12382 words of font info for 48 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  61i,7n,65p,778b,455s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/shar
-e/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texl
-ive/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-texlive/fonts
-/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on doku.pdf (22 pages, 230724 bytes).
+</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/sha
+re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-tex
+live/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/t
+ype1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-texlive/fonts/type1/publ
+ic/amsfonts/cm/cmsy10.pfb>
+Output written on doku.pdf (22 pages, 247588 bytes).
 PDF statistics:
- 350 PDF objects out of 1000 (max. 8388607)
+ 354 PDF objects out of 1000 (max. 8388607)
  65 named destinations out of 1000 (max. 500000)
  371 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -31,14 +31,14 @@ public class GameLayout extends JPanel implements Observer{
 	JLabel l1;
 	JLabel l2;
 	
-	String name1;
-	String name2;
+	Player player1;
+	Player player2;
 	
-	public GameLayout(WindowModel wModel, String name1, String name2)
+	public GameLayout(WindowModel wModel, Player player1, Player player2)
 	{
 		this.wModel = wModel;
-		this.name1 = name1;
-		this.name2 = name2;
+		this.player1 = player1;
+		this.player2 = player2;
 		createLayout();	
 	}
 	
@@ -88,9 +88,8 @@ public class GameLayout extends JPanel implements Observer{
         points2 = new JLabel (new ImageIcon("../gfx/punkte.png"));
         points2Num = new JLabel("0");
         
-        JLabel namePlayer1 = new JLabel(name1);
-        JLabel namePlayer2 = new JLabel(name2);
-        System.out.println("NAME in GameLayout:"+name1);
+        JLabel namePlayer1 = new JLabel(player1.getName());
+        JLabel namePlayer2 = new JLabel(player2.getName());
         
         JButton b1 = new JButton("Menue");
         JButton end = new JButton("Beenden");

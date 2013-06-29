@@ -39,7 +39,7 @@ public class GameController extends Observable implements Observer{
 	boolean isComputer;
 	
 	
-	public GameController(GameField gameField, GameLayout layout, SaveObject saveObject, InputData inputData)
+	public GameController(GameField gameField, GameLayout layout, SaveObject saveObject, Player player1, Player player2)
 	{
 		this.gameField = gameField;
 		
@@ -51,39 +51,18 @@ public class GameController extends Observable implements Observer{
 		this.saveObject = saveObject;
 		this.highscore = saveObject.getHighscore();
 		this.playerpool = saveObject.getPlayerpool();
-		this.createNewPlayer1 = inputData.getCreateNewPlayer1();
-		this.createNewPlayer2 = inputData.getCreateNewPlayer2();
-		this.isComputer = inputData.getIsComputer();
+		//this.createNewPlayer1 = inputData.getCreateNewPlayer1();
+		//this.createNewPlayer2 = inputData.getCreateNewPlayer2();
+		//this.isComputer = inputData.getIsComputer();
 		
-		if(createNewPlayer1 == true)
-		{
-		    firstPlayer = new Player(inputData.getName1(), 1);
-		    playerpool.addPlayer(firstPlayer);
-		}
-		else
-		{
-		    this.firstPlayer = inputData.getPlayer1();
-		    System.out.println("Else-Teil");
-		}
-		
-		
-		if(createNewPlayer2 == true || isComputer == true)
-		{
-		    secondPlayer = new Player(inputData.getName2(), 2);
-		    playerpool.addPlayer(secondPlayer);
-		}
-		else if(isComputer == false)
-		{
-		    this.secondPlayer = inputData.getPlayer2();
-		    System.out.println("Else-Teil");
-		}
+		firstPlayer = player1;
+		secondPlayer = player2;
+		currentPlayer = new Player("currPl", 0);
+		currentPlayer = firstPlayer;
 		
 		//Testprint
 		System.out.println("nameplayer1"+firstPlayer.getName());
 		System.out.println("nameplayer2"+secondPlayer.getName());
-		
-		currentPlayer = new Player("currPl", 0);
-		currentPlayer = firstPlayer;
 		
 		saveObject.saveToDisk();
 		
