@@ -5,7 +5,6 @@ public class HighscoreData implements Comparable<HighscoreData>, Serializable{
 	
 	private Player player;
 	private int points;
-	private long time;
 	
 	
 	public HighscoreData(Player player, int points)
