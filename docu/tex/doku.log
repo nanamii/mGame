@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.10.16)  29 JUN 2013 14:21
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.10.16)  30 JUN 2013 21:24
 entering extended mode
  %&-line parsing enabled.
 **doku.tex
@@ -1107,6 +1107,27 @@ LaTeX Warning: Label `layout_gesamt' multiply defined.
 
 LaTeX Warning: Label `layout_gesamt' multiply defined.
 
+
+LaTeX Warning: Label `layout_gesamt' multiply defined.
+
+
+LaTeX Warning: Label `layout_gesamt' multiply defined.
+
+
+LaTeX Warning: Label `layout_gesamt' multiply defined.
+
+
+LaTeX Warning: Label `layout_gesamt' multiply defined.
+
+
+LaTeX Warning: Label `layout_gesamt' multiply defined.
+
+
+LaTeX Warning: Label `layout_gesamt' multiply defined.
+
+
+LaTeX Warning: Label `layout_gesamt' multiply defined.
+
 )
 \openout1 = `doku.aux'.
 
@@ -1213,7 +1234,7 @@ Class scrreprt Info: You've told me to use the font selection of the element
 (scrreprt)            on input line 25.
 Class scrreprt Info: You've told me to use the font selection of the element
 (scrreprt)           `sectioning' that is an alias of element `disposition'
-(scrreprt)            on input line 28.
+(scrreprt)            on input line 30.
  [2
 
 ]
@@ -1225,10 +1246,16 @@ Class scrreprt Info: You've told me to use the font selection of the element
 (scrreprt)            on input line 34.
 Class scrreprt Info: You've told me to use the font selection of the element
 (scrreprt)           `sectioning' that is an alias of element `disposition'
-(scrreprt)            on input line 37.
+(scrreprt)            on input line 38.
 Class scrreprt Info: You've told me to use the font selection of the element
 (scrreprt)           `sectioning' that is an alias of element `disposition'
-(scrreprt)            on input line 40.
+(scrreprt)            on input line 39.
+Class scrreprt Info: You've told me to use the font selection of the element
+(scrreprt)           `sectioning' that is an alias of element `disposition'
+(scrreprt)            on input line 42.
+Class scrreprt Info: You've told me to use the font selection of the element
+(scrreprt)           `sectioning' that is an alias of element `disposition'
+(scrreprt)            on input line 45.
 )
 \tf@toc=\write7
 \openout7 = `doku.toc'.
@@ -1390,7 +1417,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 6.
 
-<./SpielerVerwalten.png, id=246, 660.58363pt x 168.43091pt>
+<./SpielerVerwalten.png, id=261, 660.58363pt x 168.43091pt>
 File: ./SpielerVerwalten.png Graphic file (type png)
 
 <use ./SpielerVerwalten.png> [8
@@ -1421,7 +1448,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 14.
 
-<./AnzahlSpieler.png, id=253, 422.27182pt x 165.44455pt>
+<./AnzahlSpieler.png, id=268, 422.27182pt x 165.44455pt>
 File: ./AnzahlSpieler.png Graphic file (type png)
 
 <use ./AnzahlSpieler.png> [9
@@ -1451,7 +1478,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 22.
 
-<./Thema.png, id=259, 327.90273pt x 88.99364pt>
+<./Thema.png, id=274, 327.90273pt x 88.99364pt>
 File: ./Thema.png Graphic file (type png)
  <use ./Thema.png> [10
 
@@ -1480,7 +1507,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 31.
 
-<./Spielfeldgroesse.png, id=265, 393.00545pt x 88.99364pt>
+<./Spielfeldgroesse.png, id=280, 393.00545pt x 88.99364pt>
 File: ./Spielfeldgroesse.png Graphic file (type png)
 
 <use ./Spielfeldgroesse.png> [11
@@ -1510,7 +1537,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 39.
 
-<./SpielStarten.png, id=271, 495.13908pt x 209.04546pt>
+<./SpielStarten.png, id=286, 495.13908pt x 209.04546pt>
 File: ./SpielStarten.png Graphic file (type png)
 
 <use ./SpielStarten.png> [12
@@ -1564,7 +1591,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 47.
 
-<./Highscore.png, id=276, 223.38pt x 117.66272pt>
+<./Highscore.png, id=291, 223.38pt x 117.66272pt>
 File: ./Highscore.png Graphic file (type png)
  <use ./Highscore.png>
 [13
@@ -1632,32 +1659,96 @@ Overfull \hbox (236.18239pt too wide) in paragraph at lines 7--28
 [] 
  []
 
-) (./projektplan.tex [16
+[16
 
+
+] [17
+
+] [18
+
+]) (./projektplan.tex [19
 
 ]
 Kapitel 6.
-) (./klassendiagramm1.tex [17
+<./projektplan.pdf, id=324, 845.1575pt x 597.23125pt>
+File: ./projektplan.pdf Graphic file (type pdf)
+ <use ./projektplan.pdf>)
+(./klassendiagramm1.tex [20
 
 
-]
+ <./projektplan.pdf>]
 Kapitel 7.
-) (./sequenzdiagramme.tex [18
+) (./sequenzdiagramme.tex [21
 
 
 ]
 Kapitel 8.
-) (./klassendiagramm2.tex [19
+[22
 
 
-]
+] <./SD_Spieler_erstellen.png, id=349, 465.27545pt x 670.14pt>
+File: ./SD_Spieler_erstellen.png Graphic file (type png)
+
+<use ./SD_Spieler_erstellen.png>
+
+LaTeX Warning: Float too large for page by 16.53107pt on input line 14.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[23
+
+] [24 <./SD_Spieler_erstellen.png>]
+<./SD_Spieler_laden.png, id=359, 416.29909pt x 281.31546pt>
+File: ./SD_Spieler_laden.png Graphic file (type png)
+
+<use ./SD_Spieler_laden.png> [25
+
+ <./SD_Spieler_laden.png>]
+<./SD_Spiel_starten.png, id=366, 646.24908pt x 792.5809pt>
+File: ./SD_Spiel_starten.png Graphic file (type png)
+
+<use ./SD_Spiel_starten.png>) (./klassendiagramm2.tex [26
+
+ <./SD_Spiel_starten.png>]
 Kapitel 9.
-) (./implementierung.tex [20
+<./Klassendiagramm.png, id=372, 705.37909pt x 1011.18272pt>
+File: ./Klassendiagramm.png Graphic file (type png)
+
+<use ./Klassendiagramm.png>
+
+LaTeX Warning: Float too large for page by 13.43878pt on input line 9.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) (./weitereDiagramme.tex [27
+
+
+] [28 <./Klassendiagramm.png>]
+Kapitel 10.
+[29
+
+
+] <./ZD_Memorykarte.png, id=386, 377.47636pt x 201.87819pt>
+File: ./ZD_Memorykarte.png Graphic file (type png)
+
+<use ./ZD_Memorykarte.png> [30
+
+ <./ZD_Memorykarte.png>]
+<./AD_Spielablauf.png, id=392, 578.16pt x 652.81909pt>
+File: ./AD_Spielablauf.png Graphic file (type png)
+
+<use ./AD_Spielablauf.png>) (./implementierung.tex [31
+
+ <./AD_Spielablauf.png>]
+Kapitel 11.
+) (./test.tex [32
 
 
 ]
-Kapitel 10.
-) (./test.tex) [21
+Kapitel 12.
+) [33
 
 
 ]
@@ -1677,7 +1768,7 @@ Package minitoc(hints) Warning: W0024
 (minitoc(hints))                Some hints have been written 
 (minitoc(hints))                in the doku.log file.
 
-[22
+[34
 
 ] (./doku.aux)
 
@@ -1685,10 +1776,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 19785 strings out of 495021
- 367156 string characters out of 1181034
- 503177 words of memory out of 3000000
- 22198 multiletter control sequences out of 15000+50000
+ 19849 strings out of 495021
+ 368344 string characters out of 1181034
+ 504177 words of memory out of 3000000
+ 22232 multiletter control sequences out of 15000+50000
  12382 words of font info for 48 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  61i,7n,65p,778b,455s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1697,9 +1788,9 @@ re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-tex
 live/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/t
 ype1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-texlive/fonts/type1/publ
 ic/amsfonts/cm/cmsy10.pfb>
-Output written on doku.pdf (22 pages, 247588 bytes).
+Output written on doku.pdf (34 pages, 612354 bytes).
 PDF statistics:
- 354 PDF objects out of 1000 (max. 8388607)
- 65 named destinations out of 1000 (max. 500000)
- 371 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 448 PDF objects out of 1000 (max. 8388607)
+ 80 named destinations out of 1000 (max. 500000)
+ 430 words of extra memory for PDF output out of 10000 (max. 10000000)
 
