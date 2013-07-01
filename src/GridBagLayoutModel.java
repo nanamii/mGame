@@ -1,7 +1,7 @@
 import java.awt.*;
 import javax.swing.*;
 
-class GridBagLayoutModel
+public class GridBagLayoutModel
 {
 
 

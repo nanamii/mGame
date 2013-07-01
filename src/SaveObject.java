@@ -30,7 +30,12 @@ public class SaveObject implements Serializable{
     
     public void saveToDisk()
     {
+        for (Player item : playerpool.getPlayerList())
+        {
+            item.resetPoints();
+        }
         hddSave.saveToDisk(this);
     }	
+
 
 }
