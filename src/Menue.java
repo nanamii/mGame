@@ -317,7 +317,7 @@ public class Menue extends JPanel{
         {
             System.out.println(player1.getName());
             System.out.println(player2.getName());
-            showWarningPlayerExists("warnung blah");
+            showWarningPlayerExists("2x gleichen Player gewählt");
         }
         else
         {
@@ -337,6 +337,7 @@ public class Menue extends JPanel{
         if (isComputerRB.isSelected() == true && value == 2)
         {
             p = getComputerPlayer();
+            isComputer = true;
         }
         else
         {
@@ -349,35 +350,34 @@ public class Menue extends JPanel{
     Player readPlayerFromGui(int value)
     {
         JTextField tf = null;
-        JRadioButton rb = null;
+        JRadioButton newName = null;
         JComboBox sl = null;
 
         if (value == 1)
         {
-            
             tf = textName1;
-            rb = newNameRB1;
+            newName = newNameRB1;
             sl = selectList1;
         }
         else if (value == 2)
         {
             tf = textName2;
-            rb = newNameRB2;
+            newName = newNameRB2;
             sl = selectList2;
         }
 
-        Player p1 = null;
-        if (rb.isSelected() == true)    
+        Player player = null;
+        if (newName.isSelected() == true)    
         {
-            p1 = new Player(tf.getText(), 1);
-            System.out.println("Player:" + tf.getText());
+            player = new Player(tf.getText(), value);
+            System.out.println("Player:" + tf.getText() + "erstellt");
 
-            if (checkNames(p1.getName()) == true)
+            if (checkNames(player.getName()) == true)
             {
-                showWarningPlayerExists("inside readPlayer");
-                return new Player("lalala",1);
+                showWarningPlayerExists("Player existiert bereits");
+                return null;
             }
-            saveObject.getPlayerpool().addPlayer(p1);
+            saveObject.getPlayerpool().addPlayer(player);
         }
         else
         {
@@ -387,11 +387,11 @@ public class Menue extends JPanel{
             {
                 if(playerList.get(i).getName().equals(sl.getSelectedItem()))
                 {
-                    p1 = playerList.get(i);
+                    player = playerList.get(i);
                 }
             }
         }
-        return p1;
+        return player;
     }
 
 
@@ -542,13 +542,27 @@ public class Menue extends JPanel{
     {
         String [] colNames = {"Platz","Name","Punkte"};
         Object [][] data = new Object [10][3];
-
-        for(int i=0; i<4; i++)
-        {   
-            data [i][0] = i;
-            data [i][1] = saveObject.getHighscore().gethighscoreList().get(i).getPlayer().getName();
-            data [i][2] = saveObject.getHighscore().gethighscoreList().get(i).getPoints();
-        }
+        int highscoreSize = saveObject.getHighscore().gethighscoreList().size();
+		int ranges;
+        
+       	if(highscoreSize > 0)
+        {
+        	if(highscoreSize >= 10)
+        	{
+       			ranges = 10; 		
+        	}
+        	else
+        	{
+        		ranges = highscoreSize;
+        	}
+        	
+        	for(int i=1; i<highscoreSize+1; i++)
+        	{   
+            	data [i][0] = i;
+            	data [i][1] = saveObject.getHighscore().gethighscoreList().get(i-1).getPlayer().getName();
+            	data [i][2] = saveObject.getHighscore().gethighscoreList().get(i-1).getPoints();
+        	}
+		}
 
         highscoreWindow = new WindowModel();
         highscoreWindow.setVisible(true);
@@ -587,6 +601,6 @@ public class Menue extends JPanel{
         System.out.println("startGame-Methode, Namen:"+name1+name2);
         GameField field = new GameField(layout,themeChoice);
         wModel.setVisible(true);
-        GameController obs = new GameController(field, layout, saveObject, player1, player2);
+        GameController obs = new GameController(field, layout, saveObject, player1, player2, inputData);
     }
 }

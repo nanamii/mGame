@@ -1,8 +1,5 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.geom.*;
-import javax.swing.border.Border;
-import javax.swing.border.LineBorder;
 import java.util.*;
 
 
@@ -31,7 +28,7 @@ public class GameField {
 			aList.add(card2);			
 		}
 		
-		// ArrayList mischen
+		// ArrayList mischen d.h. Karten mischen
 		Collections.shuffle(aList);
 		
 		for(int i=0; i<cards*2; i++)

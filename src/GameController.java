@@ -39,7 +39,7 @@ public class GameController extends Observable implements Observer{
 	boolean isComputer;
 	
 	
-	public GameController(GameField gameField, GameLayout layout, SaveObject saveObject, Player player1, Player player2)
+	public GameController(GameField gameField, GameLayout layout, SaveObject saveObject, Player player1, Player player2, InputData inputData)
 	{
 		this.gameField = gameField;
 		
@@ -53,7 +53,7 @@ public class GameController extends Observable implements Observer{
 		this.playerpool = saveObject.getPlayerpool();
 		//this.createNewPlayer1 = inputData.getCreateNewPlayer1();
 		//this.createNewPlayer2 = inputData.getCreateNewPlayer2();
-		//this.isComputer = inputData.getIsComputer();
+		this.isComputer = inputData.getIsComputer();
 		
 		firstPlayer = player1;
 		secondPlayer = player2;
@@ -120,7 +120,7 @@ public class GameController extends Observable implements Observer{
 			list.get(0).button.setVisible(false);
 			list.get(1).button.setVisible(false);
 			currentPlayer.addPoints();
-			System.out.println(currentPlayer.getPoints());
+			System.out.println(currentPlayer.getPoints() + currentPlayer.getName());
 			count = count+2;
 			System.out.println("Counter:"+count);
 			editPcChoiceList();
@@ -179,9 +179,17 @@ public class GameController extends Observable implements Observer{
                 else if (winner == 0)
                 {
                     System.out.println("Unentschieden");
+                    
+                    int n = JOptionPane.showOptionDialog(null,
+                                                    "Unentschieden - Gleiche Punktzahl",
+                                                    "The Winner is ...",
+                                                    JOptionPane.YES_NO_CANCEL_OPTION,
+                                                    JOptionPane.QUESTION_MESSAGE,
+                                                    null,
+                                                    options,
+                                                    options[2]);
                 }
             }
-            
 			return true;
 		}
 		// Cards doesn't match
@@ -196,7 +204,9 @@ public class GameController extends Observable implements Observer{
 			list.get(0).button.setIcon(list.get(0).getImage());
 			list.get(1).button.setIcon(list.get(1).getImage());
 			list.clear();
+			System.out.println("Spielername vor Wechsel"+currentPlayer.getName());
 			currentPlayer = switchPlayer(currentPlayer);
+			System.out.println("Spielername nach Wechsel"+currentPlayer.getName());
 			
 			if(currentPlayer.equals(secondPlayer))
 			{
@@ -229,10 +239,10 @@ public class GameController extends Observable implements Observer{
 	public void computerMove()
 	{
 	    try
-			{
-		        Thread.sleep(2000);
-		    }
-		    catch(Exception e){}
+		{
+			Thread.sleep(2000);
+		}
+		catch(Exception e){}
 	    
 	    int randLong1;
 	    int randLong2;

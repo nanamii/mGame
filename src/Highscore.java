@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 public class Highscore implements Serializable{
 	
+	
 	private ArrayList <HighscoreData> highscoreList;
 	
 	
@@ -29,5 +30,4 @@ public class Highscore implements Serializable{
 	{
 	    return highscoreList;
 	}
-	
 }
