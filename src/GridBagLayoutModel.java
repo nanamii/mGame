@@ -4,7 +4,6 @@ import javax.swing.*;
 public class GridBagLayoutModel
 {
 
-
   static void addComponent( Container cont,
                             GridBagLayout gbl,
                             Component c,

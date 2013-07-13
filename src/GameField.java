@@ -11,11 +11,11 @@ public class GameField {
     public GameField(GameLayout layout, int theme)
     {
         this.layout = layout;
-        createPlayField(8,theme);           
+        createGameField(8,theme);           
     }
     
     
-    public void createPlayField(int cards, int theme)
+    public void createGameField(int cards, int theme)
     {       
         aList = new ArrayList<Card>(cards);
     

@@ -34,10 +34,6 @@ public class Menue extends JPanel{
     ArrayList <Player> playerList;
     SaveObject saveObject;
 
-    String name1;
-    String name2;
-    boolean createNewPlayer1 = false;
-    boolean createNewPlayer2 = false;
     Player player1;
     Player player2;
     boolean isComputer = false;
@@ -129,7 +125,6 @@ public class Menue extends JPanel{
 
         JPanel west = new JPanel();
         west.setLayout(new BoxLayout(west, BoxLayout.PAGE_AXIS));
-        //west.setAlignmentX(Component.CENTER_ALIGNMENT );
         west.setBorder(BorderFactory.createEmptyBorder(60,70,10,10));
         JPanel east = new JPanel();
         east.setLayout(new BoxLayout(east, BoxLayout.PAGE_AXIS));
@@ -271,7 +266,6 @@ public class Menue extends JPanel{
         {   
             selectList1.setEnabled(false);
             textName1.setEnabled(true);
-            createNewPlayer1 = true;
         }});
 
         newNameRB2.addActionListener(new ActionListener(){
@@ -279,7 +273,6 @@ public class Menue extends JPanel{
         {   
             selectList2.setEnabled(false);
             textName2.setEnabled(true);
-            createNewPlayer2 = true;
         }});
 
         savedNameRB1.addActionListener(new ActionListener(){
@@ -287,7 +280,6 @@ public class Menue extends JPanel{
         {   
             selectList1.setEnabled(true);
             textName1.setEnabled(false);
-            createNewPlayer1 = false;
         }});
 
         savedNameRB2.addActionListener(new ActionListener(){
@@ -295,7 +287,6 @@ public class Menue extends JPanel{
         {   
             selectList2.setEnabled(true);
             textName2.setEnabled(false);
-            createNewPlayer2 = false;
         }});
 
         // zurück-Button
@@ -416,7 +407,6 @@ public class Menue extends JPanel{
 
             JPanel west = new JPanel();
             west.setLayout(new BoxLayout(west, BoxLayout.PAGE_AXIS));
-            //west.setAlignmentX(Component.CENTER_ALIGNMENT );
             west.setBorder(BorderFactory.createEmptyBorder(60,70,10,10));
 
             JPanel east = new JPanel();
@@ -570,11 +560,16 @@ public class Menue extends JPanel{
             highscoreWindow.setVisible(true);
 
             JPanel hcPanel = new JPanel();
+            hcPanel.setLayout(new BoxLayout(hcPanel, BoxLayout.PAGE_AXIS));
             JTable hcTable = new JTable(data,colNames);
             JScrollPane spTable = new JScrollPane(hcTable);
+            JLabel highscoreLabel = new JLabel(new ImageIcon("../gfx/highscoreLabel.png"));
             JButton backToMenue = new JButton("zurück");
+            hcPanel.add(highscoreLabel);
+            hcPanel.add(Box.createRigidArea(new Dimension(0,40)));
             hcPanel.add(spTable);
-
+			highscoreLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
+			
             JPanel buttonPanel = new JPanel((new FlowLayout(FlowLayout.TRAILING)));
             buttonPanel.add(backToMenue);
 
@@ -593,16 +588,13 @@ public class Menue extends JPanel{
         public void startGame()
         {
             InputData inputData = new InputData();
-            //inputData.setNames(name1,name2);
             inputData.setPlayer(player1,player2);
-            inputData.setCreateNewPlayer(createNewPlayer1,createNewPlayer2);
             inputData.setIsComputer(isComputer);
 
             WindowModel wModel = new WindowModel();
             GameLayout layout = new GameLayout(wModel, player1, player2);
-            System.out.println("startGame-Methode, Namen:"+name1+name2);
             GameField field = new GameField(layout,themeChoice);
             wModel.setVisible(true);
-            GameController obs = new GameController(field, layout, saveObject, player1, player2, inputData);
+            GameController obs = new GameController(field, layout, saveObject,inputData);
         }
 }

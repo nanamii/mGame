@@ -30,12 +30,11 @@ public class SaveObject implements Serializable{
     
     public void saveToDisk()
     {
+        // Setze erreichte Punktzahl nach Spielende auf 0
         for (Player item : playerpool.getPlayerList())
         {
             item.resetPoints();
         }
         hddSave.saveToDisk(this);
     }	
-
-
 }

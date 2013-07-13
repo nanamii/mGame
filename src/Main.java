@@ -9,6 +9,8 @@ public class Main{
         HddSave hdd = new HddSave();
         saveObject = hdd.loadFromDisk();
         
+        /* Enthält saveObject noch keine Daten (erster Aufruf),
+           erstelle Playerpool, Highscore*/
         if(saveObject == null)
         {
             Playerpool playerPool = new Playerpool();

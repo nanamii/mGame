@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.10.16)  1 JUL 2013 09:12
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.10.16)  13 JUL 2013 20:23
 entering extended mode
  %&-line parsing enabled.
 **doku.tex
@@ -1237,31 +1237,31 @@ Class scrreprt Info: You've told me to use the font selection of the element
 (scrreprt)            on input line 16.
 Class scrreprt Info: You've told me to use the font selection of the element
 (scrreprt)           `sectioning' that is an alias of element `disposition'
-(scrreprt)            on input line 25.
+(scrreprt)            on input line 33.
 Class scrreprt Info: You've told me to use the font selection of the element
 (scrreprt)           `sectioning' that is an alias of element `disposition'
-(scrreprt)            on input line 30.
+(scrreprt)            on input line 38.
  [2
 
 ]
 Class scrreprt Info: You've told me to use the font selection of the element
 (scrreprt)           `sectioning' that is an alias of element `disposition'
-(scrreprt)            on input line 31.
-Class scrreprt Info: You've told me to use the font selection of the element
-(scrreprt)           `sectioning' that is an alias of element `disposition'
-(scrreprt)            on input line 34.
-Class scrreprt Info: You've told me to use the font selection of the element
-(scrreprt)           `sectioning' that is an alias of element `disposition'
-(scrreprt)            on input line 38.
-Class scrreprt Info: You've told me to use the font selection of the element
-(scrreprt)           `sectioning' that is an alias of element `disposition'
 (scrreprt)            on input line 39.
 Class scrreprt Info: You've told me to use the font selection of the element
 (scrreprt)           `sectioning' that is an alias of element `disposition'
-(scrreprt)            on input line 43.
+(scrreprt)            on input line 42.
+Class scrreprt Info: You've told me to use the font selection of the element
+(scrreprt)           `sectioning' that is an alias of element `disposition'
+(scrreprt)            on input line 46.
 Class scrreprt Info: You've told me to use the font selection of the element
 (scrreprt)           `sectioning' that is an alias of element `disposition'
 (scrreprt)            on input line 47.
+Class scrreprt Info: You've told me to use the font selection of the element
+(scrreprt)           `sectioning' that is an alias of element `disposition'
+(scrreprt)            on input line 51.
+Class scrreprt Info: You've told me to use the font selection of the element
+(scrreprt)           `sectioning' that is an alias of element `disposition'
+(scrreprt)            on input line 55.
 )
 \tf@toc=\write7
 \openout7 = `doku.toc'.
@@ -1287,37 +1287,17 @@ zu []ubertragen. Zus[]atzlich zum Ged[]achtnistraining
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 14--17
+Underfull \hbox (badness 10000) in paragraph at lines 14--23
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 14--17
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--21
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 26--27
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 28--30
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 31--33
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 31--33
+Underfull \hbox (badness 10000) in paragraph at lines 26--30
 
  []
 
@@ -1325,22 +1305,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--33
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 37--39
+Underfull \hbox (badness 10000) in paragraph at lines 34--36
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--39
+Underfull \hbox (badness 10000) in paragraph at lines 34--36
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--39
+Underfull \hbox (badness 10000) in paragraph at lines 34--36
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 45--52
+Underfull \hbox (badness 10000) in paragraph at lines 42--49
 
  []
 
@@ -1363,346 +1343,356 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 Kapitel 4.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6.
+(hyperref)                removing `math shift' on input line 7.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\delimiter' on input line 6.
+(hyperref)                removing `\delimiter' on input line 7.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6.
+(hyperref)                removing `math shift' on input line 7.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6.
+(hyperref)                removing `math shift' on input line 7.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\delimiter' on input line 6.
+(hyperref)                removing `\delimiter' on input line 7.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6.
+(hyperref)                removing `math shift' on input line 7.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6.
+(hyperref)                removing `math shift' on input line 7.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\delimiter' on input line 6.
+(hyperref)                removing `\delimiter' on input line 7.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6.
+(hyperref)                removing `math shift' on input line 7.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6.
+(hyperref)                removing `math shift' on input line 7.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\delimiter' on input line 6.
+(hyperref)                removing `\delimiter' on input line 7.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6.
+(hyperref)                removing `math shift' on input line 7.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6.
+(hyperref)                removing `math shift' on input line 7.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\delimiter' on input line 6.
+(hyperref)                removing `\delimiter' on input line 7.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6.
+(hyperref)                removing `math shift' on input line 7.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6.
+(hyperref)                removing `math shift' on input line 7.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\delimiter' on input line 6.
+(hyperref)                removing `\delimiter' on input line 7.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6.
+(hyperref)                removing `math shift' on input line 7.
 
-<./SpielerVerwalten.png, id=280, 660.58363pt x 168.43091pt>
+<./SpielerVerwalten.png, id=280, 465.27545pt x 168.43091pt>
 File: ./SpielerVerwalten.png Graphic file (type png)
 
-<use ./SpielerVerwalten.png> [9
+<use ./SpielerVerwalten.png>
+Underfull \hbox (badness 10000) in paragraph at lines 15--16
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--18
+
+ []
+
+[9
 
 
  <./SpielerVerwalten.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 14.
+(hyperref)                removing `math shift' on input line 25.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\delimiter' on input line 14.
+(hyperref)                removing `\delimiter' on input line 25.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 14.
+(hyperref)                removing `math shift' on input line 25.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 14.
+(hyperref)                removing `math shift' on input line 25.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\delimiter' on input line 14.
+(hyperref)                removing `\delimiter' on input line 25.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 14.
+(hyperref)                removing `math shift' on input line 25.
 
-<./AnzahlSpieler.png, id=287, 422.27182pt x 165.44455pt>
+<./AnzahlSpieler.png, id=289, 284.8991pt x 96.1609pt>
 File: ./AnzahlSpieler.png Graphic file (type png)
 
-<use ./AnzahlSpieler.png> [10
-
- <./AnzahlSpieler.png>]
+<use ./AnzahlSpieler.png>
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 22.
+(hyperref)                removing `math shift' on input line 38.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\delimiter' on input line 22.
+(hyperref)                removing `\delimiter' on input line 38.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 22.
+(hyperref)                removing `math shift' on input line 38.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 22.
+(hyperref)                removing `math shift' on input line 38.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\delimiter' on input line 22.
+(hyperref)                removing `\delimiter' on input line 38.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 22.
+(hyperref)                removing `math shift' on input line 38.
 
-<./Thema.png, id=293, 327.90273pt x 88.99364pt>
+<./Thema.png, id=290, 350.00182pt x 88.99364pt>
 File: ./Thema.png Graphic file (type png)
- <use ./Thema.png> [11
+ <use ./Thema.png> [10
 
- <./Thema.png>]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 31.
-
+ <./AnzahlSpieler.png> <./Thema.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\delimiter' on input line 31.
+(hyperref)                removing `math shift' on input line 51.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 31.
+(hyperref)                removing `\delimiter' on input line 51.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 31.
+(hyperref)                removing `math shift' on input line 51.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\delimiter' on input line 31.
+(hyperref)                removing `math shift' on input line 51.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 31.
+(hyperref)                removing `\delimiter' on input line 51.
 
-<./Spielfeldgroesse.png, id=299, 393.00545pt x 88.99364pt>
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 51.
+
+<./Spielfeldgroesse.png, id=299, 422.27182pt x 88.99364pt>
 File: ./Spielfeldgroesse.png Graphic file (type png)
 
-<use ./Spielfeldgroesse.png> [12
+<use ./Spielfeldgroesse.png> [11
 
  <./Spielfeldgroesse.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 39.
+(hyperref)                removing `math shift' on input line 63.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\delimiter' on input line 39.
+(hyperref)                removing `\delimiter' on input line 63.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 39.
+(hyperref)                removing `math shift' on input line 63.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 39.
+(hyperref)                removing `math shift' on input line 63.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\delimiter' on input line 39.
+(hyperref)                removing `\delimiter' on input line 63.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 39.
+(hyperref)                removing `math shift' on input line 63.
 
-<./SpielStarten.png, id=305, 495.13908pt x 209.04546pt>
+<./SpielStarten.png, id=306, 387.63pt x 186.94637pt>
 File: ./SpielStarten.png Graphic file (type png)
+ <use ./SpielStarten.png>
+[12
 
-<use ./SpielStarten.png> [13
-
- <./SpielStarten.png (PNG copy)>]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 47.
-
+ <./SpielStarten.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\delimiter' on input line 47.
+(hyperref)                removing `math shift' on input line 75.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 47.
+(hyperref)                removing `\delimiter' on input line 75.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 47.
+(hyperref)                removing `math shift' on input line 75.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\delimiter' on input line 47.
+(hyperref)                removing `math shift' on input line 75.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 47.
+(hyperref)                removing `\delimiter' on input line 75.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 47.
+(hyperref)                removing `math shift' on input line 75.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\delimiter' on input line 47.
+(hyperref)                removing `math shift' on input line 75.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 47.
+(hyperref)                removing `\delimiter' on input line 75.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 47.
+(hyperref)                removing `math shift' on input line 75.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\delimiter' on input line 47.
+(hyperref)                removing `math shift' on input line 75.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 47.
+(hyperref)                removing `\delimiter' on input line 75.
 
-<./Highscore.png, id=311, 223.38pt x 117.66272pt>
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 75.
+
+<./Highscore.png, id=313, 228.15819pt x 129.60818pt>
 File: ./Highscore.png Graphic file (type png)
  <use ./Highscore.png>
-[14
+[13
 
  <./Highscore.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 55.
+(hyperref)                removing `math shift' on input line 88.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\delimiter' on input line 55.
+(hyperref)                removing `\delimiter' on input line 88.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 55.
+(hyperref)                removing `math shift' on input line 88.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 55.
+(hyperref)                removing `math shift' on input line 88.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\delimiter' on input line 55.
+(hyperref)                removing `\delimiter' on input line 88.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 55.
+(hyperref)                removing `math shift' on input line 88.
 
-File: ./SpielerVerwalten.png Graphic file (type png)
-<use ./SpielerVerwalten.png> [15
+<./Vokabeltraining.png, id=321, 284.8991pt x 96.1609pt>
+File: ./Vokabeltraining.png Graphic file (type png)
 
-]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 63.
-
+<use ./Vokabeltraining.png>
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\delimiter' on input line 63.
+(hyperref)                removing `math shift' on input line 100.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 63.
+(hyperref)                removing `\delimiter' on input line 100.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 63.
+(hyperref)                removing `math shift' on input line 100.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\delimiter' on input line 63.
+(hyperref)                removing `math shift' on input line 100.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 63.
+(hyperref)                removing `\delimiter' on input line 100.
 
-File: ./SpielerVerwalten.png Graphic file (type png)
-<use ./SpielerVerwalten.png>) (./use_case_beschreibung.tex [16
 
-]
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 100.
+
+<./Audiodaten.png, id=322, 284.8991pt x 96.1609pt>
+File: ./Audiodaten.png Graphic file (type png)
+ <use ./Audiodaten.png>)
+(./use_case_beschreibung.tex [14
+
+ <./Vokabeltraining.png> <./Audiodaten.png>]
 Kapitel 5.
 
 Overfull \hbox (236.18239pt too wide) in paragraph at lines 7--28
 [] 
  []
 
-[17
+[15
 
 
-] [18
+] [16
 
-] [19
+] [17
 
-]) (./projektplan.tex [20
+]) (./projektplan.tex [18
 
 ]
 Kapitel 6.
-<./projektplan.pdf, id=343, 845.1575pt x 597.23125pt>
+<./projektplan.pdf, id=347, 845.1575pt x 597.23125pt>
 File: ./projektplan.pdf Graphic file (type pdf)
  <use ./projektplan.pdf>)
-(./klassendiagramm1.tex [21
+(./klassendiagramm1.tex [19
 
 
  <./projektplan.pdf>]
 Kapitel 7.
-) (./sequenzdiagramme.tex [22
+) (./sequenzdiagramme.tex [20
 
 
 ]
 Kapitel 8.
-[23
+[21
 
 
-] <./SD_Spieler_erstellen.png, id=368, 465.27545pt x 670.14pt>
+] <./SD_Spieler_erstellen.png, id=373, 465.27545pt x 670.14pt>
 File: ./SD_Spieler_erstellen.png Graphic file (type png)
 
 <use ./SD_Spieler_erstellen.png>
@@ -1712,23 +1702,23 @@ LaTeX Warning: Float too large for page by 16.53107pt on input line 14.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[24
+[22
 
-] [25 <./SD_Spieler_erstellen.png>]
-<./SD_Spieler_laden.png, id=379, 416.29909pt x 281.31546pt>
+] [23 <./SD_Spieler_erstellen.png>]
+<./SD_Spieler_laden.png, id=383, 416.29909pt x 281.31546pt>
 File: ./SD_Spieler_laden.png Graphic file (type png)
 
-<use ./SD_Spieler_laden.png> [26
+<use ./SD_Spieler_laden.png> [24
 
  <./SD_Spieler_laden.png>]
-<./SD_Spiel_starten.png, id=385, 646.24908pt x 792.5809pt>
+<./SD_Spiel_starten.png, id=389, 646.24908pt x 792.5809pt>
 File: ./SD_Spiel_starten.png Graphic file (type png)
 
-<use ./SD_Spiel_starten.png>) (./klassendiagramm2.tex [27
+<use ./SD_Spiel_starten.png>) (./klassendiagramm2.tex [25
 
  <./SD_Spiel_starten.png>]
 Kapitel 9.
-<./Klassendiagramm.png, id=391, 705.37909pt x 1011.18272pt>
+<./Klassendiagramm.png, id=396, 705.37909pt x 1011.18272pt>
 File: ./Klassendiagramm.png Graphic file (type png)
 
 <use ./Klassendiagramm.png>
@@ -1738,34 +1728,34 @@ LaTeX Warning: Float too large for page by 13.43878pt on input line 9.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) (./weitereDiagramme.tex [28
+) (./weitereDiagramme.tex [26
 
 
-] [29 <./Klassendiagramm.png>]
+] [27 <./Klassendiagramm.png>]
 Kapitel 10.
-<./ZD_Memorykarte.png, id=401, 377.47636pt x 201.87819pt>
+<./ZD_Memorykarte.png, id=406, 377.47636pt x 201.87819pt>
 File: ./ZD_Memorykarte.png Graphic file (type png)
 
-<use ./ZD_Memorykarte.png> [30
+<use ./ZD_Memorykarte.png> [28
 
 
  <./ZD_Memorykarte.png>]
-<./AD_Spielablauf.png, id=408, 578.16pt x 652.81909pt>
+<./AD_Spielablauf.png, id=413, 578.16pt x 652.81909pt>
 File: ./AD_Spielablauf.png Graphic file (type png)
 
-<use ./AD_Spielablauf.png>) (./implementierung.tex [31
+<use ./AD_Spielablauf.png>) (./implementierung.tex [29
 
  <./AD_Spielablauf.png>]
 Kapitel 11.
-<./cloc.png, id=415, 640.3925pt x 130.4875pt>
+<./cloc.png, id=419, 640.3925pt x 130.4875pt>
 File: ./cloc.png Graphic file (type png)
  <use ./cloc.png>) (./test.tex
-[32
+[30
 
 
  <./cloc.png (PNG copy)>]
 Kapitel 12.
-) [33
+) [31
 
 
 ]
@@ -1785,7 +1775,7 @@ Package minitoc(hints) Warning: W0024
 (minitoc(hints))                Some hints have been written 
 (minitoc(hints))                in the doku.log file.
 
-[34
+[32
 
 ] (./doku.aux)
 
@@ -1793,21 +1783,21 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 19863 strings out of 495021
- 368617 string characters out of 1181034
+ 19879 strings out of 495021
+ 368950 string characters out of 1181034
  504177 words of memory out of 3000000
- 22242 multiletter control sequences out of 15000+50000
+ 22250 multiletter control sequences out of 15000+50000
  12676 words of font info for 49 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 61i,7n,65p,778b,455s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 61i,7n,65p,782b,455s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/sha
 re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-tex
 live/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/t
 ype1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-texlive/fonts/type1/publ
 ic/amsfonts/cm/cmsy10.pfb>
-Output written on doku.pdf (34 pages, 641347 bytes).
+Output written on doku.pdf (32 pages, 650362 bytes).
 PDF statistics:
- 465 PDF objects out of 1000 (max. 8388607)
- 82 named destinations out of 1000 (max. 500000)
- 448 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 471 PDF objects out of 1000 (max. 8388607)
+ 88 named destinations out of 1000 (max. 500000)
+ 458 words of extra memory for PDF output out of 10000 (max. 10000000)
 

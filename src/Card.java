@@ -15,10 +15,10 @@ import java.lang.*;
 
 public class Card extends Observable implements ActionListener, Comparable {
     
-    JButton button;
-    ImageIcon image_front;
-    ImageIcon image_back;
-    String name;
+    private JButton button;
+    private ImageIcon image_front;
+    private ImageIcon image_back;
+    private String name;
     
     
     public Card(String name)

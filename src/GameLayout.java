@@ -46,17 +46,14 @@ public class GameLayout extends JPanel implements Observer{
 	public void createLayout()
 	{
 		top = new JPanel();
-		//top.setPreferredSize(new Dimension(5,800));
 		wModel.panel.add(top, BorderLayout.NORTH);
 		top.setLayout(new BorderLayout(0, 0));
 		
 		bottom = new JPanel();
-		//top.setPreferredSize(new Dimension(5,800));
 		wModel.panel.add(bottom, BorderLayout.SOUTH);
 		bottom.setLayout(new BorderLayout(0, 0));
 		
 		center = new JPanel();
-		//top.setPreferredSize(new Dimension(5,800));
 		wModel.panel.add(center, BorderLayout.CENTER);
 		center.setLayout(new BorderLayout(0, 0));
 		

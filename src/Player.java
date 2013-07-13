@@ -16,27 +16,6 @@ public class Player extends Observable implements Serializable{
     }
     
 
-    public void resetPoints()
-    {
-        this.points = 0;
-    }
-
-    public void setNum(int value)
-    {
-        this.num = value;
-    }
-
-    public String getName()
-    {
-        return name;
-    }
-
-    
-    public void setName(String name)
-    {
-        this.name = name;
-    }
-    
     public void addPoints()
     {
         points = points +10;
@@ -50,8 +29,28 @@ public class Player extends Observable implements Serializable{
         return points;
     }
     
+    public void resetPoints()
+    {
+        this.points = 0;
+    }
+
+    public String getName()
+    {
+        return name;
+    }
+    
+    public void setName(String name)
+    {
+        this.name = name;
+    }
+    
     public int getNum()
     {
         return num;
+    }
+    
+     public void setNum(int value)
+    {
+        this.num = value;
     }
 }

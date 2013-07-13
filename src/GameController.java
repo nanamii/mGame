@@ -29,17 +29,15 @@ public class GameController extends Observable implements Observer{
     private SaveObject saveObject;
     private Playerpool playerpool;
     private Highscore highscore;
-    private boolean createNewPlayer1;
-    private boolean createNewPlayer2;
     
-    private int count = 0;
+    private int countGameEnd = 0;
     
     private LinkedList <Card> list;
     private ArrayList <Integer> pcChoiceList;
     boolean isComputer;
     
     
-    public GameController(GameField gameField, GameLayout layout, SaveObject saveObject, Player player1, Player player2, InputData inputData)
+    public GameController(GameField gameField, GameLayout layout, SaveObject saveObject, InputData inputData)
     {
         this.gameField = gameField;
         
@@ -51,13 +49,10 @@ public class GameController extends Observable implements Observer{
         this.saveObject = saveObject;
         this.highscore = saveObject.getHighscore();
         this.playerpool = saveObject.getPlayerpool();
-        //this.createNewPlayer1 = inputData.getCreateNewPlayer1();
-        //this.createNewPlayer2 = inputData.getCreateNewPlayer2();
         this.isComputer = inputData.getIsComputer();
         
-        firstPlayer = player1;
-        secondPlayer = player2;
-        //currentPlayer = new Player("currPl", 0);
+        firstPlayer = inputData.getPlayer1();
+        secondPlayer = inputData.getPlayer2();
         currentPlayer = firstPlayer;
         
         
@@ -114,6 +109,8 @@ public class GameController extends Observable implements Observer{
     
     public boolean compareCards()
     {
+        System.out.println("Computermodus: " + isComputer);
+        
         //Cards match
         if(list.get(0).compareTo(list.get(1)) == 0)
         {
@@ -123,12 +120,12 @@ public class GameController extends Observable implements Observer{
             }
             catch(Exception e){}
             
-            list.get(0).button.setVisible(false);
-            list.get(1).button.setVisible(false);
+            list.get(0).getButton().setVisible(false);
+            list.get(1).getButton().setVisible(false);
             currentPlayer.addPoints();
             System.out.println(currentPlayer.getPoints() + currentPlayer.getName());
-            count = count+2;
-            System.out.println("Counter:"+count);
+            countGameEnd = countGameEnd+2;
+            System.out.println("Counter:"+countGameEnd);
             editPcChoiceList();
             list.clear();
             
@@ -148,7 +145,7 @@ public class GameController extends Observable implements Observer{
                 //*****************************************
                 //Dialog - The Winner is ......
                 
-                Object[] options = {"Revanche",
+                Object[] options = {"Beenden",
                     "Highscore",
                     "Hauptmenue"};
                 
@@ -159,10 +156,10 @@ public class GameController extends Observable implements Observer{
                     System.out.println("Gewinner:"+firstPlayer.getName());
                     
                     int n = JOptionPane.showOptionDialog(null,
-                                                    firstPlayer.getName()+"hat gewonnen",
-                                                    "The Winner is ...",
+                                                    firstPlayer.getName()+" hat gewonnen",
+                                                    "Spielende",
                                                     JOptionPane.YES_NO_CANCEL_OPTION,
-                                                    JOptionPane.QUESTION_MESSAGE,
+                                                    JOptionPane.PLAIN_MESSAGE,
                                                     null,
                                                     options,
                                                     options[2]);
@@ -174,10 +171,10 @@ public class GameController extends Observable implements Observer{
                      System.out.println("Gewinner:"+secondPlayer.getName());
                      
                      int n = JOptionPane.showOptionDialog(null,
-                                                    secondPlayer.getName()+"hat gewonnen",
-                                                    "The Winner is ...",
+                                                    secondPlayer.getName()+" hat gewonnen",
+                                                    "Spielende",
                                                     JOptionPane.YES_NO_CANCEL_OPTION,
-                                                    JOptionPane.QUESTION_MESSAGE,
+                                                    JOptionPane.PLAIN_MESSAGE,
                                                     null,
                                                     options,
                                                     options[2]);
@@ -190,13 +187,13 @@ public class GameController extends Observable implements Observer{
                     
                     int n = JOptionPane.showOptionDialog(null,
                                                     "Unentschieden - Gleiche Punktzahl",
-                                                    "The Winner is ...",
+                                                    "Spielende",
                                                     JOptionPane.YES_NO_CANCEL_OPTION,
-                                                    JOptionPane.QUESTION_MESSAGE,
+                                                    JOptionPane.PLAIN_MESSAGE,
                                                     null,
                                                     options,
                                                     options[2]);
-            saveObject.saveToDisk();
+            	saveObject.saveToDisk();
                 }
             }
             return true;
@@ -210,8 +207,8 @@ public class GameController extends Observable implements Observer{
             }
             catch(Exception e){}
            
-            list.get(0).button.setIcon(list.get(0).getImage());
-            list.get(1).button.setIcon(list.get(1).getImage());
+            list.get(0).getButton().setIcon(list.get(0).getImage());
+            list.get(1).getButton().setIcon(list.get(1).getImage());
             list.clear();
             System.out.println("Spielername vor Wechsel"+currentPlayer.getName());
             currentPlayer = switchPlayer(currentPlayer);
@@ -258,7 +255,6 @@ public class GameController extends Observable implements Observer{
       
       do
       {
-        // Karten not clickable --> gesperrt für Spieler 1 ergänzen
         double random1 = (Math.random()*(gameField.aList.size())-1);
         randLong1 =(int) Math.round(random1);
         double random2 = (Math.random()*(gameField.aList.size()-1));
@@ -306,7 +302,7 @@ public class GameController extends Observable implements Observer{
     public boolean gameEnd()
     {
 
-        if(count==16)
+        if(countGameEnd==16)
         {
             System.out.println("Spiel vorbei");
             HighscoreData data1 = new HighscoreData(firstPlayer, firstPlayer.getPoints());

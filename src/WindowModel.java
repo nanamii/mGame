@@ -21,10 +21,5 @@ public class WindowModel extends JFrame{
 		setSize(800,650);
 		setLocationRelativeTo(null);
 		setResizable(false);
-		
-		//frame.setLocation( 0, 0 );
-		//frame.setSize( Toolkit.getDefaultToolkit().getScreenSize() );		
 	}
-	
-	
 }

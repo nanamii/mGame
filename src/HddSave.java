@@ -42,7 +42,7 @@ public class HddSave implements Serializable{
 		    }
 		    catch(Exception e)
 		    {
-			    System.out.print("Fehler beim Lesen");
+			    System.out.print("1. Programmstart, saveObject.dat erzeugt");
 			    return null;
 		    }
 	}
