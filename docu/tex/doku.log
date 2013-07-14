@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.10.16)  13 JUL 2013 20:23
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.10.16)  15 JUL 2013 00:40
 entering extended mode
  %&-line parsing enabled.
 **doku.tex
@@ -621,6 +621,24 @@ Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \TX@cols=\count112
 \TX@ftn=\toks27
 )
+(/usr/share/texmf-texlive/tex/latex/pbox/pbox.sty
+Package: pbox 2003/04/06 v1.0 Dynamic parboxes
+
+(/usr/share/texmf-texlive/tex/latex/tools/calc.sty
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count113
+\calc@Bcount=\count114
+\calc@Adimen=\dimen139
+\calc@Bdimen=\dimen140
+\calc@Askip=\skip56
+\calc@Bskip=\skip57
+LaTeX Info: Redefining \setlength on input line 76.
+LaTeX Info: Redefining \addtolength on input line 77.
+\calc@Ccount=\count115
+\calc@Cskip=\skip58
+)
+\pb@xlen=\skip59
+)
 (/usr/share/texmf-texlive/tex/latex/chngcntr/chngcntr.sty
 Package: chngcntr 2009/09/02 v1.0a change counter resetting
 )
@@ -673,20 +691,20 @@ Package: pgfsys 2010/06/30 v2.10 (rcs-revision 1.37)
 (/usr/share/texmf/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
 \pgfkeys@tmptoks=\toks31
 ))
-\pgf@x=\dimen139
-\pgf@y=\dimen140
-\pgf@xa=\dimen141
-\pgf@ya=\dimen142
-\pgf@xb=\dimen143
-\pgf@yb=\dimen144
-\pgf@xc=\dimen145
-\pgf@yc=\dimen146
+\pgf@x=\dimen141
+\pgf@y=\dimen142
+\pgf@xa=\dimen143
+\pgf@ya=\dimen144
+\pgf@xb=\dimen145
+\pgf@yb=\dimen146
+\pgf@xc=\dimen147
+\pgf@yc=\dimen148
 \w@pgf@writea=\write4
 \r@pgf@reada=\read1
-\c@pgf@counta=\count113
-\c@pgf@countb=\count114
-\c@pgf@countc=\count115
-\c@pgf@countd=\count116
+\c@pgf@counta=\count116
+\c@pgf@countb=\count117
+\c@pgf@countc=\count118
+\c@pgf@countd=\count119
 
 (/usr/share/texmf/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
@@ -701,8 +719,8 @@ File: pgfsys-common-pdf.def 2008/05/19  (rcs-revision 1.10)
 )))
 (/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2008/07/18  (rcs-revision 1.7)
-\pgfsyssoftpath@smallbuffer@items=\count117
-\pgfsyssoftpath@bigbuffer@items=\count118
+\pgfsyssoftpath@smallbuffer@items=\count120
+\pgfsyssoftpath@bigbuffer@items=\count121
 )
 (/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
@@ -714,8 +732,8 @@ Package: pgfcore 2010/04/11 v2.10 (rcs-revision 1.7)
 (/usr/share/texmf/tex/generic/pgf/math/pgfmathcalc.code.tex
 (/usr/share/texmf/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/share/texmf/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen147
-\pgfmath@count=\count119
+\pgfmath@dimen=\dimen149
+\pgfmath@count=\count122
 \pgfmath@box=\box33
 \pgfmath@toks=\toks32
 \pgfmath@stack@operand=\toks33
@@ -730,51 +748,51 @@ Package: pgfcore 2010/04/11 v2.10 (rcs-revision 1.7)
 (/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.round.code.tex)
 (/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex)))
 (/usr/share/texmf/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count120
+\c@pgfmathroundto@lastzeros=\count123
 ))
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2010/04/09  (rcs-revision 1.20)
-\pgf@picminx=\dimen148
-\pgf@picmaxx=\dimen149
-\pgf@picminy=\dimen150
-\pgf@picmaxy=\dimen151
-\pgf@pathminx=\dimen152
-\pgf@pathmaxx=\dimen153
-\pgf@pathminy=\dimen154
-\pgf@pathmaxy=\dimen155
-\pgf@xx=\dimen156
-\pgf@xy=\dimen157
-\pgf@yx=\dimen158
-\pgf@yy=\dimen159
-\pgf@zx=\dimen160
-\pgf@zy=\dimen161
+\pgf@picminx=\dimen150
+\pgf@picmaxx=\dimen151
+\pgf@picminy=\dimen152
+\pgf@picmaxy=\dimen153
+\pgf@pathminx=\dimen154
+\pgf@pathmaxx=\dimen155
+\pgf@pathminy=\dimen156
+\pgf@pathmaxy=\dimen157
+\pgf@xx=\dimen158
+\pgf@xy=\dimen159
+\pgf@yx=\dimen160
+\pgf@yy=\dimen161
+\pgf@zx=\dimen162
+\pgf@zy=\dimen163
 )
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2010/08/03  (rcs-revision 1.24)
-\pgf@path@lastx=\dimen162
-\pgf@path@lasty=\dimen163
+\pgf@path@lastx=\dimen164
+\pgf@path@lasty=\dimen165
 )
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2008/04/22  (rcs-revision 1.12)
-\pgf@shorten@end@additional=\dimen164
-\pgf@shorten@start@additional=\dimen165
+\pgf@shorten@end@additional=\dimen166
+\pgf@shorten@start@additional=\dimen167
 )
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2010/09/08  (rcs-revision 1.34)
 \pgfpic=\box34
 \pgf@hbox=\box35
 \pgf@layerbox@main=\box36
-\pgf@picture@serial@count=\count121
+\pgf@picture@serial@count=\count124
 )
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2008/04/22  (rcs-revision 1.9)
-\pgflinewidth=\dimen166
+\pgflinewidth=\dimen168
 )
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
 File: pgfcoretransformations.code.tex 2009/06/10  (rcs-revision 1.11)
-\pgf@pt@x=\dimen167
-\pgf@pt@y=\dimen168
-\pgf@pt@temp=\dimen169
+\pgf@pt@x=\dimen169
+\pgf@pt@y=\dimen170
+\pgf@pt@temp=\dimen171
 )
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
@@ -790,8 +808,8 @@ File: pgfcorearrows.code.tex 2008/04/23  (rcs-revision 1.11)
 )
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2008/11/23  (rcs-revision 1.13)
-\pgf@max=\dimen170
-\pgf@sys@shading@range@num=\count122
+\pgf@max=\dimen172
+\pgf@sys@shading@range@num=\count125
 )
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2010/03/25  (rcs-revision 1.16)
@@ -818,8 +836,8 @@ File: pgfmoduleplot.code.tex 2010/10/22  (rcs-revision 1.8)
 )
 (/usr/share/texmf/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2007/07/03 v2.10 (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen171
-\pgf@nodesepend=\dimen172
+\pgf@nodesepstart=\dimen173
+\pgf@nodesepend=\dimen174
 )
 (/usr/share/texmf/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2007/07/23 v2.10 (rcs-revision 1.1)
@@ -829,8 +847,8 @@ Package: pgfcomp-version-1-18 2007/07/23 v2.10 (rcs-revision 1.1)
 (/usr/share/texmf/tex/generic/pgf/utilities/pgfkeys.code.tex))
 (/usr/share/texmf/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2010/03/23 v2.10 (rcs-revision 1.18)
-\pgffor@iter=\dimen173
-\pgffor@skip=\dimen174
+\pgffor@iter=\dimen175
+\pgffor@skip=\dimen176
 \pgffor@stack=\toks35
 \pgffor@toks=\toks36
 ))
@@ -839,29 +857,29 @@ Package: tikz 2010/10/13 v2.10 (rcs-revision 1.76)
 
 (/usr/share/texmf/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2010/05/31 v2.10 (rcs-revision 1.15)
-\pgf@plot@mark@count=\count123
-\pgfplotmarksize=\dimen175
+\pgf@plot@mark@count=\count126
+\pgfplotmarksize=\dimen177
 )
-\tikz@lastx=\dimen176
-\tikz@lasty=\dimen177
-\tikz@lastxsaved=\dimen178
-\tikz@lastysaved=\dimen179
-\tikzleveldistance=\dimen180
-\tikzsiblingdistance=\dimen181
+\tikz@lastx=\dimen178
+\tikz@lasty=\dimen179
+\tikz@lastxsaved=\dimen180
+\tikz@lastysaved=\dimen181
+\tikzleveldistance=\dimen182
+\tikzsiblingdistance=\dimen183
 \tikz@figbox=\box39
 \tikz@tempbox=\box40
-\tikztreelevel=\count124
-\tikznumberofchildren=\count125
-\tikznumberofcurrentchild=\count126
-\tikz@fig@count=\count127
+\tikztreelevel=\count127
+\tikznumberofchildren=\count128
+\tikznumberofcurrentchild=\count129
+\tikz@fig@count=\count130
 
 (/usr/share/texmf/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
-\pgfmatrixcurrentrow=\count128
-\pgfmatrixcurrentcolumn=\count129
-\pgf@matrix@numberofcolumns=\count130
+\pgfmatrixcurrentrow=\count131
+\pgfmatrixcurrentcolumn=\count132
+\pgf@matrix@numberofcolumns=\count133
 )
-\tikz@expandcount=\count131
+\tikz@expandcount=\count134
 
 (/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopat
 hs.code.tex
@@ -949,14 +967,14 @@ ations.pathmorphing.code.tex
 (/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecor
 ations.code.tex
 (/usr/share/texmf/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
-\pgfdecoratedcompleteddistance=\dimen182
-\pgfdecoratedremainingdistance=\dimen183
-\pgfdecoratedinputsegmentcompleteddistance=\dimen184
-\pgfdecoratedinputsegmentremainingdistance=\dimen185
-\pgf@decorate@distancetomove=\dimen186
-\pgf@decorate@repeatstate=\count132
-\pgfdecorationsegmentamplitude=\dimen187
-\pgfdecorationsegmentlength=\dimen188
+\pgfdecoratedcompleteddistance=\dimen184
+\pgfdecoratedremainingdistance=\dimen185
+\pgfdecoratedinputsegmentcompleteddistance=\dimen186
+\pgfdecoratedinputsegmentremainingdistance=\dimen187
+\pgf@decorate@distancetomove=\dimen188
+\pgf@decorate@repeatstate=\count135
+\pgfdecorationsegmentamplitude=\dimen189
+\pgfdecorationsegmentlength=\dimen190
 )
 \tikz@lib@dec@box=\box61
 )
@@ -971,20 +989,20 @@ ations.shapes.code.tex
 (/usr/share/texmf/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.s
 hapes.code.tex))) (/usr/share/texmf-texlive/tex/latex/tools/multicol.sty
 Package: multicol 2008/12/05 v1.6h multicolumn formatting (FMi)
-\c@tracingmulticols=\count133
+\c@tracingmulticols=\count136
 \mult@box=\box62
-\multicol@leftmargin=\dimen189
-\c@unbalance=\count134
-\c@collectmore=\count135
-\doublecol@number=\count136
-\multicoltolerance=\count137
-\multicolpretolerance=\count138
-\full@width=\dimen190
-\page@free=\dimen191
-\premulticols=\dimen192
-\postmulticols=\dimen193
-\multicolsep=\skip56
-\multicolbaselineskip=\skip57
+\multicol@leftmargin=\dimen191
+\c@unbalance=\count137
+\c@collectmore=\count138
+\doublecol@number=\count139
+\multicoltolerance=\count140
+\multicolpretolerance=\count141
+\full@width=\dimen192
+\page@free=\dimen193
+\premulticols=\dimen194
+\postmulticols=\dimen195
+\multicolsep=\skip60
+\multicolbaselineskip=\skip61
 \partial@page=\box63
 \last@line=\box64
 \mult@rightbox=\box65
@@ -1008,11 +1026,11 @@ Package: multicol 2008/12/05 v1.6h multicolumn formatting (FMi)
 \@tempa=\box83
 \@tempa=\box84
 \@tempa=\box85
-\c@columnbadness=\count139
-\c@finalcolumnbadness=\count140
-\last@try=\dimen194
-\multicolovershoot=\dimen195
-\multicolundershoot=\dimen196
+\c@columnbadness=\count142
+\c@finalcolumnbadness=\count143
+\last@try=\dimen196
+\multicolovershoot=\dimen197
+\multicolundershoot=\dimen198
 \mult@nat@firstbox=\box86
 \colbreak@box=\box87
 )
@@ -1021,17 +1039,17 @@ Package: dirtree 2006/01/25 v0.2 package wrapper for dirtree
 
 (/usr/share/texmf-texlive/tex/generic/dirtree/dirtree.tex
 `dirtree' v0.2, 2006/01/25 (jcc)
-\DT@offset=\dimen197
-\DT@width=\dimen198
-\DT@sep=\dimen199
-\DT@all=\dimen200
-\DT@rulewidth=\dimen201
-\DT@dotwidth=\dimen202
-\DTbaselineskip=\dimen203
-\DT@counti=\count141
-\DT@countii=\count142
-\DT@countiii=\count143
-\DT@countiv=\count144
+\DT@offset=\dimen199
+\DT@width=\dimen200
+\DT@sep=\dimen201
+\DT@all=\dimen202
+\DT@rulewidth=\dimen203
+\DT@dotwidth=\dimen204
+\DTbaselineskip=\dimen205
+\DT@counti=\count144
+\DT@countii=\count145
+\DT@countiii=\count146
+\DT@countiv=\count147
 )
 File: dirtree.tex 2006/01/25 v0.2 `dirtree' (jcc)
 )
@@ -1044,8 +1062,8 @@ Package: mtcmess 2006/03/14
 Package minitoc Info: I0001
 (minitoc)             *** minitoc package, version 60 ***.
 \tf@mtc=\write5
-\mtcindent=\skip58
-\mtcskipamount=\skip59
+\mtcindent=\skip62
+\mtcskipamount=\skip63
 Package minitoc Info: I0005
 (minitoc)             compatible with hyperref.
 Package minitoc Info: I0023
@@ -1071,11 +1089,11 @@ Package minitoc Info: I0031
 
 \openout5 = `doku.mtc0'.
 
-\c@mtc=\count145
-\c@minitocdepth=\count146
-\c@ptc=\count147
-\c@parttocdepth=\count148
-\ptcindent=\skip60
+\c@mtc=\count148
+\c@minitocdepth=\count149
+\c@ptc=\count150
+\c@parttocdepth=\count151
+\ptcindent=\skip64
 Package minitoc Info: I0010
 (minitoc)             The english language is selected.
 (minitoc)              on input line 4910.
@@ -1114,6 +1132,42 @@ LaTeX Warning: Label `layout_gesamt' multiply defined.
 LaTeX Warning: Label `layout_gesamt' multiply defined.
 
 
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `layout_gesamt' multiply defined.
+
+
+LaTeX Warning: Label `layout_gesamt' multiply defined.
+
+
+LaTeX Warning: Label `layout_gesamt' multiply defined.
+
+
+LaTeX Warning: Label `layout_gesamt' multiply defined.
+
+
+LaTeX Warning: Label `layout_gesamt' multiply defined.
+
+
 LaTeX Warning: Label `layout_gesamt' multiply defined.
 
 
@@ -1130,6 +1184,39 @@ LaTeX Warning: Label `layout_gesamt' multiply defined.
 
 
 LaTeX Warning: Label `layout_gesamt' multiply defined.
+
+
+LaTeX Warning: Label `layout_gesamt' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
 
 
 LaTeX Warning: Label `layout_gesamt' multiply defined.
@@ -1137,44 +1224,44 @@ LaTeX Warning: Label `layout_gesamt' multiply defined.
 )
 \openout1 = `doku.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
  (/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count149
-\scratchdimen=\dimen204
+\scratchcounter=\count152
+\scratchdimen=\dimen206
 \scratchbox=\box90
-\nofMPsegments=\count150
-\nofMParguments=\count151
+\nofMPsegments=\count153
+\nofMParguments=\count154
 \everyMPshowfont=\toks38
-\MPscratchCnt=\count152
-\MPscratchDim=\dimen205
-\MPnumerator=\count153
+\MPscratchCnt=\count155
+\MPscratchDim=\dimen207
+\MPnumerator=\count156
 \everyMPtoPDFconversion=\toks39
 )
-Package hyperref Info: Link coloring OFF on input line 61.
+Package hyperref Info: Link coloring OFF on input line 62.
  (/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
 Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
 
 (/usr/share/texmf-texlive/tex/latex/oberdiek/refcount.sty
 Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 )
-\c@section@level=\count154
+\c@section@level=\count157
 )
-LaTeX Info: Redefining \ref on input line 61.
-LaTeX Info: Redefining \pageref on input line 61.
+LaTeX Info: Redefining \ref on input line 62.
+LaTeX Info: Redefining \pageref on input line 62.
  (./doku.out)
 (./doku.out)
 \@outlinefile=\write6
@@ -1210,11 +1297,11 @@ Package minitoc(hints) Warning: W0023
 (minitoc(hints))                --- It may be the consequence 
 (minitoc(hints))                of loading the ``hyperref'' package.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 63.
+LaTeX Font Info:    Try loading font information for U+msa on input line 64.
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 63.
+LaTeX Font Info:    Try loading font information for U+msb on input line 64.
 
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
@@ -1234,34 +1321,31 @@ Class scrreprt Info: You've told me to use the font selection of the element
 (scrreprt)            on input line 13.
 Class scrreprt Info: You've told me to use the font selection of the element
 (scrreprt)           `sectioning' that is an alias of element `disposition'
+(scrreprt)            on input line 15.
+Class scrreprt Info: You've told me to use the font selection of the element
+(scrreprt)           `sectioning' that is an alias of element `disposition'
 (scrreprt)            on input line 16.
 Class scrreprt Info: You've told me to use the font selection of the element
 (scrreprt)           `sectioning' that is an alias of element `disposition'
 (scrreprt)            on input line 33.
-Class scrreprt Info: You've told me to use the font selection of the element
-(scrreprt)           `sectioning' that is an alias of element `disposition'
-(scrreprt)            on input line 38.
  [2
 
 ]
 Class scrreprt Info: You've told me to use the font selection of the element
 (scrreprt)           `sectioning' that is an alias of element `disposition'
-(scrreprt)            on input line 39.
+(scrreprt)            on input line 43.
 Class scrreprt Info: You've told me to use the font selection of the element
 (scrreprt)           `sectioning' that is an alias of element `disposition'
-(scrreprt)            on input line 42.
-Class scrreprt Info: You've told me to use the font selection of the element
-(scrreprt)           `sectioning' that is an alias of element `disposition'
-(scrreprt)            on input line 46.
-Class scrreprt Info: You've told me to use the font selection of the element
-(scrreprt)           `sectioning' that is an alias of element `disposition'
-(scrreprt)            on input line 47.
+(scrreprt)            on input line 44.
 Class scrreprt Info: You've told me to use the font selection of the element
 (scrreprt)           `sectioning' that is an alias of element `disposition'
 (scrreprt)            on input line 51.
 Class scrreprt Info: You've told me to use the font selection of the element
 (scrreprt)           `sectioning' that is an alias of element `disposition'
-(scrreprt)            on input line 55.
+(scrreprt)            on input line 62.
+Class scrreprt Info: You've told me to use the font selection of the element
+(scrreprt)           `sectioning' that is an alias of element `disposition'
+(scrreprt)            on input line 86.
 )
 \tf@toc=\write7
 \openout7 = `doku.toc'.
@@ -1326,21 +1410,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--49
 
 ) (./aufwandskalkulation.tex [6]
 Kapitel 3.
-<./FunctionPoint_filled.pdf, id=261, 597.23125pt x 845.1575pt>
+[7
+
+
+] <./FunctionPoint_filled.pdf, id=286, 597.23125pt x 845.1575pt>
 File: ./FunctionPoint_filled.pdf Graphic file (type pdf)
 
-<use ./FunctionPoint_filled.pdf>
+<use ./FunctionPoint_filled.pdf>) (./projektplan.tex [8
 
-LaTeX Warning: Float too large for page by 5.10405pt on input line 12.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-) (./use_case_diagramme.tex [7
-
-
-] [8 <./FunctionPoint_filled.pdf>]
+ <./FunctionPoint_filled.pdf>]
 Kapitel 4.
+<./projektplan.pdf, id=300, 845.1575pt x 597.23125pt>
+File: ./projektplan.pdf Graphic file (type pdf)
+ <use ./projektplan.pdf>)
+(./use_case_diagramme.tex [9
+
+
+ <./projektplan.pdf>]
+Kapitel 5.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 7.
@@ -1413,7 +1500,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 7.
 
-<./SpielerVerwalten.png, id=280, 465.27545pt x 168.43091pt>
+<./SpielerVerwalten.png, id=317, 465.27545pt x 168.43091pt>
 File: ./SpielerVerwalten.png Graphic file (type png)
 
 <use ./SpielerVerwalten.png>
@@ -1426,7 +1513,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
  []
 
-[9
+[10
 
 
  <./SpielerVerwalten.png>]
@@ -1454,7 +1541,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 25.
 
-<./AnzahlSpieler.png, id=289, 284.8991pt x 96.1609pt>
+<./AnzahlSpieler.png, id=326, 284.8991pt x 96.1609pt>
 File: ./AnzahlSpieler.png Graphic file (type png)
 
 <use ./AnzahlSpieler.png>
@@ -1482,9 +1569,9 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 38.
 
-<./Thema.png, id=290, 350.00182pt x 88.99364pt>
+<./Thema.png, id=327, 350.00182pt x 88.99364pt>
 File: ./Thema.png Graphic file (type png)
- <use ./Thema.png> [10
+ <use ./Thema.png> [11
 
  <./AnzahlSpieler.png> <./Thema.png>]
 
@@ -1511,10 +1598,10 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 51.
 
-<./Spielfeldgroesse.png, id=299, 422.27182pt x 88.99364pt>
+<./Spielfeldgroesse.png, id=336, 422.27182pt x 88.99364pt>
 File: ./Spielfeldgroesse.png Graphic file (type png)
 
-<use ./Spielfeldgroesse.png> [11
+<use ./Spielfeldgroesse.png> [12
 
  <./Spielfeldgroesse.png>]
 
@@ -1541,10 +1628,10 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 63.
 
-<./SpielStarten.png, id=306, 387.63pt x 186.94637pt>
+<./SpielStarten.png, id=343, 387.63pt x 186.94637pt>
 File: ./SpielStarten.png Graphic file (type png)
  <use ./SpielStarten.png>
-[12
+[13
 
  <./SpielStarten.png>]
 
@@ -1595,10 +1682,10 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 75.
 
-<./Highscore.png, id=313, 228.15819pt x 129.60818pt>
+<./Highscore.png, id=351, 228.15819pt x 129.60818pt>
 File: ./Highscore.png Graphic file (type png)
  <use ./Highscore.png>
-[13
+[14
 
  <./Highscore.png>]
 
@@ -1625,7 +1712,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 88.
 
-<./Vokabeltraining.png, id=321, 284.8991pt x 96.1609pt>
+<./Vokabeltraining.png, id=358, 284.8991pt x 96.1609pt>
 File: ./Vokabeltraining.png Graphic file (type png)
 
 <use ./Vokabeltraining.png>
@@ -1653,112 +1740,331 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 100.
 
-<./Audiodaten.png, id=322, 284.8991pt x 96.1609pt>
+<./Audiodaten.png, id=359, 284.8991pt x 96.1609pt>
 File: ./Audiodaten.png Graphic file (type png)
  <use ./Audiodaten.png>)
-(./use_case_beschreibung.tex [14
+(./use_case_beschreibung.tex [15
 
  <./Vokabeltraining.png> <./Audiodaten.png>]
-Kapitel 5.
+Kapitel 6.
+<./ucbSpielerErstellen.png, id=368, 920.43875pt x 899.36pt>
+File: ./ucbSpielerErstellen.png Graphic file (type png)
 
-Overfull \hbox (236.18239pt too wide) in paragraph at lines 7--28
-[] 
+<use ./ucbSpielerErstellen.png>
+<./ucbAbgleichPlayerpool.png, id=369, 786.94pt x 789.95125pt>
+File: ./ucbAbgleichPlayerpool.png Graphic file (type png)
+
+<use ./ucbAbgleichPlayerpool.png> [16
+
+
+ <./ucbSpielerErstellen.png (PNG copy)>]
+[17 <./ucbAbgleichPlayerpool.png (PNG copy)>]
+<./ucbSpielerLaden.png, id=378, 936.49875pt x 850.17625pt>
+File: ./ucbSpielerLaden.png Graphic file (type png)
+
+<use ./ucbSpielerLaden.png> [18
+
+ <./ucbSpielerLaden.png (PNG copy)>]
+<./ucbSpielmodus.png, id=383, 927.465pt x 825.0825pt>
+File: ./ucbSpielmodus.png Graphic file (type png)
+
+<use ./ucbSpielmodus.png> [19
+
+ <./ucbSpielmodus.png (PNG copy)>]
+<./ucbThema.png, id=389, 923.45pt x 824.07875pt>
+File: ./ucbThema.png Graphic file (type png)
+ <use ./ucbThema.png> [20
+
+ <./ucbThema.png (PNG copy)>]
+<./ucbSpielfeldgroesse.png, id=394, 932.48375pt x 824.07875pt>
+File: ./ucbSpielfeldgroesse.png Graphic file (type png)
+
+<use ./ucbSpielfeldgroesse.png> [21
+
+ <./ucbSpielfeldgroesse.png (PNG copy)>]
+<./ucbSpielStarten.png, id=399, 923.45pt x 931.48pt>
+File: ./ucbSpielStarten.png Graphic file (type png)
+
+<use ./ucbSpielStarten.png> [22
+
+ <./ucbSpielStarten.png (PNG copy)>]
+<./ucbHighscore.png, id=405, 919.435pt x 818.05624pt>
+File: ./ucbHighscore.png Graphic file (type png)
+ <use ./ucbHighscore.png>) (./klassendiagramm.tex [23
+
+ <./ucbHighscore.png (PNG copy)>]
+Kapitel 7.
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
+
  []
 
-[15
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--21
+
+ []
 
 
-] [16
+Underfull \hbox (badness 10000) in paragraph at lines 6--21
 
-] [17
-
-]) (./projektplan.tex [18
-
-]
-Kapitel 6.
-<./projektplan.pdf, id=347, 845.1575pt x 597.23125pt>
-File: ./projektplan.pdf Graphic file (type pdf)
- <use ./projektplan.pdf>)
-(./klassendiagramm1.tex [19
+ []
 
 
- <./projektplan.pdf>]
-Kapitel 7.
-) (./sequenzdiagramme.tex [20
+Underfull \hbox (badness 10000) in paragraph at lines 6--21
+
+ []
 
 
-]
-Kapitel 8.
-[21
+Underfull \hbox (badness 10000) in paragraph at lines 6--21
+
+ []
 
 
-] <./SD_Spieler_erstellen.png, id=373, 465.27545pt x 670.14pt>
-File: ./SD_Spieler_erstellen.png Graphic file (type png)
+Underfull \hbox (badness 10000) in paragraph at lines 6--21
 
-<use ./SD_Spieler_erstellen.png>
-
-LaTeX Warning: Float too large for page by 16.53107pt on input line 14.
+ []
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+Underfull \hbox (badness 10000) in paragraph at lines 6--21
 
-[22
+ []
 
-] [23 <./SD_Spieler_erstellen.png>]
-<./SD_Spieler_laden.png, id=383, 416.29909pt x 281.31546pt>
-File: ./SD_Spieler_laden.png Graphic file (type png)
 
-<use ./SD_Spieler_laden.png> [24
+Underfull \hbox (badness 10000) in paragraph at lines 6--21
 
- <./SD_Spieler_laden.png>]
-<./SD_Spiel_starten.png, id=389, 646.24908pt x 792.5809pt>
-File: ./SD_Spiel_starten.png Graphic file (type png)
+ []
 
-<use ./SD_Spiel_starten.png>) (./klassendiagramm2.tex [25
 
- <./SD_Spiel_starten.png>]
-Kapitel 9.
-<./Klassendiagramm.png, id=396, 705.37909pt x 1011.18272pt>
+Underfull \hbox (badness 10000) in paragraph at lines 6--21
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--21
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--21
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--21
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--21
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--21
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--21
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--21
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--21
+
+ []
+
+[24
+
+
+] <./Klassendiagramm.png, id=414, 705.37909pt x 1011.18272pt>
 File: ./Klassendiagramm.png Graphic file (type png)
 
 <use ./Klassendiagramm.png>
 
-LaTeX Warning: Float too large for page by 13.43878pt on input line 9.
+LaTeX Warning: Float too large for page by 13.43878pt on input line 29.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) (./weitereDiagramme.tex [26
+<./Klassendiagramm2.png, id=415, 722.7pt x 1083.04625pt>
+File: ./Klassendiagramm2.png Graphic file (type png)
+
+<use ./Klassendiagramm2.png>
+
+LaTeX Warning: Float too large for page by 42.91232pt on input line 35.
 
 
-] [27 <./Klassendiagramm.png>]
-Kapitel 10.
-<./ZD_Memorykarte.png, id=406, 377.47636pt x 201.87819pt>
-File: ./ZD_Memorykarte.png Graphic file (type png)
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<use ./ZD_Memorykarte.png> [28
+<./Klassendiagramm3.png, id=416, 481.8pt x 360.34625pt>
+File: ./Klassendiagramm3.png Graphic file (type png)
 
+<use ./Klassendiagramm3.png>
 
- <./ZD_Memorykarte.png>]
-<./AD_Spielablauf.png, id=413, 578.16pt x 652.81909pt>
-File: ./AD_Spielablauf.png Graphic file (type png)
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<use ./AD_Spielablauf.png>) (./implementierung.tex [29
+) (./sequenzdiagramme.tex [25] [26 <./Klassendiagramm.png>] [27 <./Klassendiagr
+amm2.png (PNG copy)>] [28 <./Klassendiagramm3.png (PNG copy)>]
+Kapitel 8.
 
- <./AD_Spielablauf.png>]
-Kapitel 11.
-<./cloc.png, id=419, 640.3925pt x 130.4875pt>
-File: ./cloc.png Graphic file (type png)
- <use ./cloc.png>) (./test.tex
-[30
+Underfull \hbox (badness 10000) in paragraph at lines 4--7
+
+ []
 
 
- <./cloc.png (PNG copy)>]
-Kapitel 12.
-) [31
+Underfull \hbox (badness 10000) in paragraph at lines 4--7
+
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 8.
+(/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 8.
+ [29
 
 
 ]
+<./SD_Spieler_erstellen.png, id=439, 416.29909pt x 657.0pt>
+File: ./SD_Spieler_erstellen.png Graphic file (type png)
+
+<use ./SD_Spieler_erstellen.png> [30
+
+ <./SD_Spieler_erstellen.png>] [31]
+<./SD_Spieler_laden.png, id=451, 351.19637pt x 281.31546pt>
+File: ./SD_Spieler_laden.png Graphic file (type png)
+
+<use ./SD_Spieler_laden.png> [32
+
+ <./SD_Spieler_laden.png>]
+<./SD_Spiel_starten.png, id=458, 575.17363pt x 765.10637pt>
+File: ./SD_Spiel_starten.png Graphic file (type png)
+
+<use ./SD_Spiel_starten.png> [33
+
+ <./SD_Spiel_starten.png>])
+(./weitereDiagramme.tex [34]
+Kapitel 9.
+<./ZD_Memorykarte.png, id=469, 377.47636pt x 201.87819pt>
+File: ./ZD_Memorykarte.png Graphic file (type png)
+
+<use ./ZD_Memorykarte.png> [35
+
+
+ <./ZD_Memorykarte.png>]
+<./AD_Spielablauf.png, id=476, 578.16pt x 652.81909pt>
+File: ./AD_Spielablauf.png Graphic file (type png)
+
+<use ./AD_Spielablauf.png> [36
+
+ <./AD_Spielablauf.png>] [37]
+<./komponentendiagramm.png, id=488, 582.34091pt x 558.45pt>
+File: ./komponentendiagramm.png Graphic file (type png)
+
+<use ./komponentendiagramm.png>
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--45
+
+ []
+
+[38
+
+ <./komponentendiagramm.png>] [39]
+<./paketdiagramm.png, id=499, 582.34091pt x 425.85545pt>
+File: ./paketdiagramm.png Graphic file (type png)
+
+<use ./paketdiagramm.png> [40
+
+ <./paketdiagramm.png>]
+<./verteilungsdiagramm.png, id=506, 185.15454pt x 143.94273pt>
+File: ./verteilungsdiagramm.png Graphic file (type png)
+
+<use ./verteilungsdiagramm.png>) (./implementierung.tex [41
+
+ <./verteilungsdiagramm.png>]
+Kapitel 10.
+<./cloc.png, id=513, 640.3925pt x 130.4875pt>
+File: ./cloc.png Graphic file (type png)
+ <use ./cloc.png> [42
+
+
+ <./cloc.png (PNG copy)>] <./guiHauptmenue.png, id=518, 796.9775pt x 650.43pt>
+File: ./guiHauptmenue.png Graphic file (type png)
+
+<use ./guiHauptmenue.png> [43
+
+ <./guiHauptmenue.png (PNG copy)>]
+<./guiSpieler.png, id=526, 793.96625pt x 645.41125pt>
+File: ./guiSpieler.png Graphic file (type png)
+ <use ./guiSpieler.png>
+[44
+
+ <./guiSpieler.png (PNG copy)>]
+<./guiSpielerNeu.png, id=533, 794.97pt x 645.41125pt>
+File: ./guiSpielerNeu.png Graphic file (type png)
+
+<use ./guiSpielerNeu.png> [45
+
+ <./guiSpielerNeu.png (PNG copy)>]
+<./guiSpielerListe.png, id=540, 795.97375pt x 643.40375pt>
+File: ./guiSpielerListe.png Graphic file (type png)
+
+<use ./guiSpielerListe.png> [46
+
+ <./guiSpielerListe.png (PNG copy)>]
+<./guiSpielerError.png, id=547, 796.9775pt x 646.415pt>
+File: ./guiSpielerError.png Graphic file (type png)
+
+<use ./guiSpielerError.png> [47
+
+ <./guiSpielerError.png (PNG copy)>]
+<./guiTiere.png, id=554, 794.97pt x 644.4075pt>
+File: ./guiTiere.png Graphic file (type png)
+ <use ./guiTiere.png> [48
+
+ <./guiTiere.png (PNG copy)>] <./guiSpielfeld.png, id=561, 792.9625pt x 647.418
+75pt>
+File: ./guiSpielfeld.png Graphic file (type png)
+
+<use ./guiSpielfeld.png> [49
+
+ <./guiSpielfeld.png (PNG copy)>]
+<./guiSpielCards.png, id=569, 803.0pt x 652.4375pt>
+File: ./guiSpielCards.png Graphic file (type png)
+ <use ./guiSpielCards.png>
+[50
+
+ <./guiSpielCards.png>] <./guiSpielende.png, id=577, 795.97375pt x 642.4pt>
+File: ./guiSpielende.png Graphic file (type png)
+
+<use ./guiSpielende.png> [51
+
+ <./guiSpielende.png (PNG copy)>]
+<./guiHighscore.png, id=584, 796.9775pt x 647.41875pt>
+File: ./guiHighscore.png Graphic file (type png)
+
+<use ./guiHighscore.png>) (./test.tex [52
+
+ <./guiHighscore.png (PNG copy)>]
+Kapitel 11.
+<./Testfall1.png, id=591, 1589.94pt x 853.1875pt>
+File: ./Testfall1.png Graphic file (type png)
+ <use ./Testfall1.png>)
+[53
+
+
+ <./Testfall1.png (PNG copy)>]
 Package minitoc Info: I0009
 (minitoc)             Listing minitoc auxiliary files. 
 (minitoc)             Creating the doku.maf file.
@@ -1775,7 +2081,7 @@ Package minitoc(hints) Warning: W0024
 (minitoc(hints))                Some hints have been written 
 (minitoc(hints))                in the doku.log file.
 
-[32
+[54
 
 ] (./doku.aux)
 
@@ -1783,21 +2089,21 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 19879 strings out of 495021
- 368950 string characters out of 1181034
- 504177 words of memory out of 3000000
- 22250 multiletter control sequences out of 15000+50000
+ 20170 strings out of 495021
+ 374013 string characters out of 1181034
+ 505386 words of memory out of 3000000
+ 22459 multiletter control sequences out of 15000+50000
  12676 words of font info for 49 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 61i,7n,65p,782b,455s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 61i,7n,65p,1089b,463s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/sha
 re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-tex
 live/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/t
 ype1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-texlive/fonts/type1/publ
 ic/amsfonts/cm/cmsy10.pfb>
-Output written on doku.pdf (32 pages, 650362 bytes).
+Output written on doku.pdf (54 pages, 2636775 bytes).
 PDF statistics:
- 471 PDF objects out of 1000 (max. 8388607)
- 88 named destinations out of 1000 (max. 500000)
- 458 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 650 PDF objects out of 1000 (max. 8388607)
+ 142 named destinations out of 1000 (max. 500000)
+ 610 words of extra memory for PDF output out of 10000 (max. 10000000)
 

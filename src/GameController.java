@@ -41,9 +41,9 @@ public class GameController extends Observable implements Observer{
     {
         this.gameField = gameField;
         
-        for(int i=0; i<gameField.aList.size();i++)
+        for(int i=0; i<gameField.getAList().size();i++)
         {
-            gameField.aList.get(i).addObserver(this);
+            gameField.getAList().get(i).addObserver(this);
         }
         
         this.saveObject = saveObject;
@@ -255,15 +255,15 @@ public class GameController extends Observable implements Observer{
       
       do
       {
-        double random1 = (Math.random()*(gameField.aList.size())-1);
+        double random1 = (Math.random()*(gameField.getAList().size())-1);
         randLong1 =(int) Math.round(random1);
-        double random2 = (Math.random()*(gameField.aList.size()-1));
+        double random2 = (Math.random()*(gameField.getAList().size()-1));
         randLong2 = (int) Math.round(random2); 
       }
       while (checkIndex(randLong1,randLong2)==true);
       
-      Card card1 = gameField.aList.get(randLong1);
-      Card card2 = gameField.aList.get(randLong2);
+      Card card1 = gameField.getAList().get(randLong1);
+      Card card2 = gameField.getAList().get(randLong2);
       card1.turnCard();
       card2.turnCard();
       System.out.println(randLong1);
@@ -291,8 +291,8 @@ public class GameController extends Observable implements Observer{
     
     public void editPcChoiceList()
     {
-        int index1 = gameField.aList.indexOf(list.get(0));
-        int index2 = gameField.aList.indexOf(list.get(1));
+        int index1 = gameField.getAList().indexOf(list.get(0));
+        int index2 = gameField.getAList().indexOf(list.get(1));
       
         pcChoiceList.add(index1);
         pcChoiceList.add(index2);
@@ -354,5 +354,6 @@ public class GameController extends Observable implements Observer{
     {
         return currentPlayer;
     }
+    
     
 }

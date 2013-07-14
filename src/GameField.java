@@ -5,8 +5,8 @@ import java.util.*;
 
 public class GameField {
     
-    GameLayout layout;
-    ArrayList <Card> aList;
+    private GameLayout layout;
+    private ArrayList <Card> aList;
     
     public GameField(GameLayout layout, int theme)
     {
@@ -33,7 +33,12 @@ public class GameField {
         
         for(int i=0; i<cards*2; i++)
         {
-            layout.gameField.add(aList.get(i).getButton()); 
+            layout.getGameFieldPanel().add(aList.get(i).getButton()); 
         }
+    }
+    
+    public ArrayList<Card> getAList()
+    {
+    	return aList;
     }   
 }

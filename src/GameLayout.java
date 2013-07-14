@@ -16,23 +16,23 @@ import javax.swing.border.EmptyBorder;
 
 public class GameLayout extends JPanel implements Observer{
 	
-	JPanel gameField;
-	JPanel dates;
-	JPanel top;
-	JPanel bottom;
-	JPanel center;
-	WindowModel wModel;
-	Image image;
+	private JPanel gameField;
+	private JPanel dates;
+	private JPanel top;
+	private JPanel bottom;
+	private JPanel center;
+	private WindowModel wModel;
+	private Image image;
 	
-	JLabel points1;
-	JLabel points1Num;
-	JLabel points2;
-	JLabel points2Num;
-	JLabel l1;
-	JLabel l2;
+	private JLabel points1;
+	private JLabel points1Num;
+	private JLabel points2;
+	private JLabel points2Num;
+	private JLabel l1;
+	private JLabel l2;
 	
-	Player player1;
-	Player player2;
+	private Player player1;
+	private Player player2;
 	
 	public GameLayout(WindowModel wModel, Player player1, Player player2)
 	{
@@ -154,5 +154,9 @@ public class GameLayout extends JPanel implements Observer{
   		        l1.setIcon(imageOldI);
   		    }
   		}
+ 	}
+ 	public JPanel getGameFieldPanel()
+ 	{
+ 		return gameField;
  	} 
 }

@@ -11,33 +11,33 @@ import java.util.*;
 
 public class Menue extends JPanel{
 
-    Image bg;
-    Dimension size;
-    WindowModel mainMenueWindow;
-    WindowModel newGameWindow;
-    WindowModel nextWindow;
-    WindowModel highscoreWindow;
-    JRadioButton isComputerRB;
-    JRadioButton twoPlayerRB;
-    JRadioButton newNameRB1;
-    JRadioButton savedNameRB1;
-    JRadioButton newNameRB2;
-    JRadioButton savedNameRB2;
-    JRadioButton themeRB1;
-    JRadioButton themeRB2;
-    JRadioButton themeRB3;
-    JTextField textName1;
-    JTextField textName2;
-    JComboBox selectList1;
-    JComboBox selectList2;
+    private Image bg;
+    private Dimension size;
+    private WindowModel mainMenueWindow;
+    private WindowModel newGameWindow;
+    private WindowModel nextWindow;
+    private WindowModel highscoreWindow;
+    private JRadioButton isComputerRB;
+    private JRadioButton twoPlayerRB;
+    private JRadioButton newNameRB1;
+    private JRadioButton savedNameRB1;
+    private JRadioButton newNameRB2;
+    private JRadioButton savedNameRB2;
+    private JRadioButton themeRB1;
+    private JRadioButton themeRB2;
+    private JRadioButton themeRB3;
+    private JTextField textName1;
+    private JTextField textName2;
+    private JComboBox selectList1;
+    private JComboBox selectList2;
 
-    ArrayList <Player> playerList;
-    SaveObject saveObject;
+    private ArrayList <Player> playerList;
+    private SaveObject saveObject;
 
-    Player player1;
-    Player player2;
-    boolean isComputer = false;
-    int themeChoice;
+    private Player player1;
+    private Player player2;
+    private boolean isComputer = false;
+    private int themeChoice;
 
 
 
@@ -321,7 +321,7 @@ public class Menue extends JPanel{
         });}
 
 
-        Player getPlayer(int value)
+        public Player getPlayer(int value)
         {
             Player p = null;
 
@@ -338,7 +338,7 @@ public class Menue extends JPanel{
         }
 
 
-        Player readPlayerFromGui(int value)
+        public Player readPlayerFromGui(int value)
         {
             JTextField tf = null;
             JRadioButton newName = null;
@@ -388,13 +388,13 @@ public class Menue extends JPanel{
         }
 
 
-        Player getComputerPlayer()
+        public Player getComputerPlayer()
         {
             return new Player("Computer", 2);
         }
 
 
-        void showWarningPlayerExists(String warning)
+        public void showWarningPlayerExists(String warning)
         {
             JOptionPane.showMessageDialog(newGameWindow, 
                     warning);
