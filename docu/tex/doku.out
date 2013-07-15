@@ -18,14 +18,14 @@
 \BOOKMARK [1][-]{section.5.3}{Thema w\344hlen - "026E30F LF30"026E30F }{chapter.5}
 \BOOKMARK [1][-]{section.5.4}{Spielfeldgr\366\337e w\344hlen - "026E30F LF40"026E30F }{chapter.5}
 \BOOKMARK [1][-]{section.5.5}{Spiel starten - "026E30F LF50"026E30F }{chapter.5}
-\BOOKMARK [1][-]{section.5.6}{Highscore - "026E30F LF60"026E30F ,"026E30F LF61"026E30F }{chapter.5}
-\BOOKMARK [1][-]{section.5.7}{Vokabeltraining - "026E30F LF70"026E30F }{chapter.5}
-\BOOKMARK [1][-]{section.5.8}{Audiodaten abspielen - "026E30F LF80"026E30F }{chapter.5}
+\BOOKMARK [1][-]{section.5.6}{Highscore - "026E30F LF60"026E30F ,"026E30F LF70"026E30F }{chapter.5}
+\BOOKMARK [1][-]{section.5.7}{Vokabeltraining - "026E30F LF80"026E30F }{chapter.5}
+\BOOKMARK [1][-]{section.5.8}{Audiodaten abspielen - "026E30F LF90"026E30F }{chapter.5}
 \BOOKMARK [0][-]{chapter.6}{Use Case Beschreibungen}{}
 \BOOKMARK [1][-]{section.6.1}{Spieler erstellen}{chapter.6}
 \BOOKMARK [1][-]{section.6.2}{Abgleich mit Playerpool}{chapter.6}
 \BOOKMARK [1][-]{section.6.3}{Spieler laden}{chapter.6}
-\BOOKMARK [1][-]{section.6.4}{Spielmodus w\344hlen}{chapter.6}
+\BOOKMARK [1][-]{section.6.4}{Spielmodus = Anzahl der Spieler w\344hlen}{chapter.6}
 \BOOKMARK [1][-]{section.6.5}{Thema w\344hlen}{chapter.6}
 \BOOKMARK [1][-]{section.6.6}{Spielfeldgr\366\337e w\344hlen}{chapter.6}
 \BOOKMARK [1][-]{section.6.7}{Spiel starten}{chapter.6}
@@ -36,7 +36,7 @@
 \BOOKMARK [1][-]{section.8.2}{SD Spieler laden}{chapter.8}
 \BOOKMARK [1][-]{section.8.3}{SD Spiel starten}{chapter.8}
 \BOOKMARK [0][-]{chapter.9}{Weitere Diagramme}{}
-\BOOKMARK [1][-]{section.9.1}{Zustandsdiagramm - Memorykarte}{chapter.9}
+\BOOKMARK [1][-]{section.9.1}{Zustandsdiagramm - Memorykarte \(Klasse Card\)}{chapter.9}
 \BOOKMARK [1][-]{section.9.2}{Aktivit\344tsdiagramm - Spielablauf}{chapter.9}
 \BOOKMARK [1][-]{section.9.3}{Komponentendiagramm}{chapter.9}
 \BOOKMARK [1][-]{section.9.4}{Paketdiagramm}{chapter.9}
@@ -47,3 +47,7 @@
 \BOOKMARK [1][-]{section.10.3}{Benutzerobefl\344che}{chapter.10}
 \BOOKMARK [0][-]{chapter.11}{Test}{}
 \BOOKMARK [1][-]{section.11.1}{Testfall 1 - Spielmodus: Gegen Computer}{chapter.11}
+\BOOKMARK [1][-]{section.11.2}{Testfall 2 - Spielmodus: 2 Spieler}{chapter.11}
+\BOOKMARK [1][-]{section.11.3}{Testfall 3 - Spieler aus Liste w\344hlen}{chapter.11}
+\BOOKMARK [1][-]{section.11.4}{Testfall 4 - Spielablauf testen}{chapter.11}
+\BOOKMARK [1][-]{section.11.5}{Testfall 5 - Highscore anzeigen}{chapter.11}

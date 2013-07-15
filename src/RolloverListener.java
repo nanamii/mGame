@@ -40,10 +40,5 @@ public final class RolloverListener extends MouseInputAdapter{
         {
             button.setIcon(new ImageIcon(picNormal));
         }  
-      
-	
-	
-	
-	
 	
 }

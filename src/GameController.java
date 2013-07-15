@@ -55,11 +55,6 @@ public class GameController extends Observable implements Observer{
         secondPlayer = inputData.getPlayer2();
         currentPlayer = firstPlayer;
         
-        
-        //Testprint
-        System.out.println("nameplayer1"+firstPlayer.getName());
-        System.out.println("nameplayer2"+secondPlayer.getName());
-        
         saveObject.saveToDisk();
         
         firstPlayer.addObserver(layout);
@@ -69,7 +64,6 @@ public class GameController extends Observable implements Observer{
         list = new LinkedList<Card>();
         
         pcChoiceList = new ArrayList <Integer>();
-        
     }
     
     
@@ -354,6 +348,4 @@ public class GameController extends Observable implements Observer{
     {
         return currentPlayer;
     }
-    
-    
 }

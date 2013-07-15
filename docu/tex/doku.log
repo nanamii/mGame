@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.10.16)  15 JUL 2013 00:40
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.10.16)  15 JUL 2013 13:46
 entering extended mode
  %&-line parsing enabled.
 **doku.tex
@@ -1221,6 +1221,18 @@ LaTeX Warning: Label `' multiply defined.
 
 LaTeX Warning: Label `layout_gesamt' multiply defined.
 
+
+LaTeX Warning: Label `layout_gesamt' multiply defined.
+
+
+LaTeX Warning: Label `layout_gesamt' multiply defined.
+
+
+LaTeX Warning: Label `layout_gesamt' multiply defined.
+
+
+LaTeX Warning: Label `layout_gesamt' multiply defined.
+
 )
 \openout1 = `doku.aux'.
 
@@ -1365,18 +1377,22 @@ Class scrreprt Warning: \float@addtolists detected!
 ]
 Kapitel 2.
 
-Overfull \hbox (30.74097pt too wide) in paragraph at lines 5--6
-\OT1/cmr/m/n/10.95 klas-si-schen Memory-Spiel auf ei-ne di-gi-ta-le Platt-form 
-zu []ubertragen. Zus[]atzlich zum Ged[]achtnistraining
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 14--23
+Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--25
+Underfull \hbox (badness 10000) in paragraph at lines 15--25
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--25
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--30
 
  []
 
@@ -1399,12 +1415,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--36
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 34--36
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 42--49
+Underfull \hbox (badness 10000) in paragraph at lines 43--50
 
  []
 
@@ -1413,14 +1424,24 @@ Kapitel 3.
 [7
 
 
-] <./FunctionPoint_filled.pdf, id=286, 597.23125pt x 845.1575pt>
+] <./FunctionPoint_filled.pdf, id=307, 597.23125pt x 845.1575pt>
 File: ./FunctionPoint_filled.pdf Graphic file (type pdf)
 
 <use ./FunctionPoint_filled.pdf>) (./projektplan.tex [8
 
  <./FunctionPoint_filled.pdf>]
 Kapitel 4.
-<./projektplan.pdf, id=300, 845.1575pt x 597.23125pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
+
+ []
+
+<./projektplan.pdf, id=321, 845.1575pt x 597.23125pt>
 File: ./projektplan.pdf Graphic file (type pdf)
  <use ./projektplan.pdf>)
 (./use_case_diagramme.tex [9
@@ -1500,7 +1521,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 7.
 
-<./SpielerVerwalten.png, id=317, 465.27545pt x 168.43091pt>
+<./SpielerVerwalten.png, id=338, 465.27545pt x 168.43091pt>
 File: ./SpielerVerwalten.png Graphic file (type png)
 
 <use ./SpielerVerwalten.png>
@@ -1541,7 +1562,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 25.
 
-<./AnzahlSpieler.png, id=326, 284.8991pt x 96.1609pt>
+<./AnzahlSpieler.png, id=346, 284.8991pt x 96.1609pt>
 File: ./AnzahlSpieler.png Graphic file (type png)
 
 <use ./AnzahlSpieler.png>
@@ -1569,7 +1590,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 38.
 
-<./Thema.png, id=327, 350.00182pt x 88.99364pt>
+<./Thema.png, id=347, 350.00182pt x 88.99364pt>
 File: ./Thema.png Graphic file (type png)
  <use ./Thema.png> [11
 
@@ -1598,7 +1619,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 51.
 
-<./Spielfeldgroesse.png, id=336, 422.27182pt x 88.99364pt>
+<./Spielfeldgroesse.png, id=356, 422.27182pt x 88.99364pt>
 File: ./Spielfeldgroesse.png Graphic file (type png)
 
 <use ./Spielfeldgroesse.png> [12
@@ -1628,7 +1649,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 63.
 
-<./SpielStarten.png, id=343, 387.63pt x 186.94637pt>
+<./SpielStarten.png, id=363, 387.63pt x 186.94637pt>
 File: ./SpielStarten.png Graphic file (type png)
  <use ./SpielStarten.png>
 [13
@@ -1682,7 +1703,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 75.
 
-<./Highscore.png, id=351, 228.15819pt x 129.60818pt>
+<./Highscore.png, id=371, 228.15819pt x 129.60818pt>
 File: ./Highscore.png Graphic file (type png)
  <use ./Highscore.png>
 [14
@@ -1712,7 +1733,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 88.
 
-<./Vokabeltraining.png, id=358, 284.8991pt x 96.1609pt>
+<./Vokabeltraining.png, id=378, 284.8991pt x 96.1609pt>
 File: ./Vokabeltraining.png Graphic file (type png)
 
 <use ./Vokabeltraining.png>
@@ -1740,18 +1761,18 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 100.
 
-<./Audiodaten.png, id=359, 284.8991pt x 96.1609pt>
+<./Audiodaten.png, id=379, 284.8991pt x 96.1609pt>
 File: ./Audiodaten.png Graphic file (type png)
  <use ./Audiodaten.png>)
 (./use_case_beschreibung.tex [15
 
  <./Vokabeltraining.png> <./Audiodaten.png>]
 Kapitel 6.
-<./ucbSpielerErstellen.png, id=368, 920.43875pt x 899.36pt>
+<./ucbSpielerErstellen.png, id=388, 920.43875pt x 899.36pt>
 File: ./ucbSpielerErstellen.png Graphic file (type png)
 
 <use ./ucbSpielerErstellen.png>
-<./ucbAbgleichPlayerpool.png, id=369, 786.94pt x 789.95125pt>
+<./ucbAbgleichPlayerpool.png, id=389, 786.94pt x 789.95125pt>
 File: ./ucbAbgleichPlayerpool.png Graphic file (type png)
 
 <use ./ucbAbgleichPlayerpool.png> [16
@@ -1759,38 +1780,39 @@ File: ./ucbAbgleichPlayerpool.png Graphic file (type png)
 
  <./ucbSpielerErstellen.png (PNG copy)>]
 [17 <./ucbAbgleichPlayerpool.png (PNG copy)>]
-<./ucbSpielerLaden.png, id=378, 936.49875pt x 850.17625pt>
+<./ucbSpielerLaden.png, id=398, 998.73125pt x 907.39pt>
 File: ./ucbSpielerLaden.png Graphic file (type png)
 
 <use ./ucbSpielerLaden.png> [18
 
  <./ucbSpielerLaden.png (PNG copy)>]
-<./ucbSpielmodus.png, id=383, 927.465pt x 825.0825pt>
+<./ucbSpielmodus.png, id=403, 927.465pt x 825.0825pt>
 File: ./ucbSpielmodus.png Graphic file (type png)
 
 <use ./ucbSpielmodus.png> [19
 
  <./ucbSpielmodus.png (PNG copy)>]
-<./ucbThema.png, id=389, 923.45pt x 824.07875pt>
+<./ucbThema.png, id=409, 985.6825pt x 877.2775pt>
 File: ./ucbThema.png Graphic file (type png)
  <use ./ucbThema.png> [20
 
  <./ucbThema.png (PNG copy)>]
-<./ucbSpielfeldgroesse.png, id=394, 932.48375pt x 824.07875pt>
+<./ucbSpielfeldgroesse.png, id=414, 1012.78375pt x 886.31125pt>
 File: ./ucbSpielfeldgroesse.png Graphic file (type png)
 
 <use ./ucbSpielfeldgroesse.png> [21
 
  <./ucbSpielfeldgroesse.png (PNG copy)>]
-<./ucbSpielStarten.png, id=399, 923.45pt x 931.48pt>
+<./ucbSpielStarten.png, id=419, 987.69pt x 930.47626pt>
 File: ./ucbSpielStarten.png Graphic file (type png)
 
 <use ./ucbSpielStarten.png> [22
 
  <./ucbSpielStarten.png (PNG copy)>]
-<./ucbHighscore.png, id=405, 919.435pt x 818.05624pt>
+<./ucbHighscore.png, id=425, 996.72375pt x 885.3075pt>
 File: ./ucbHighscore.png Graphic file (type png)
- <use ./ucbHighscore.png>) (./klassendiagramm.tex [23
+
+<use ./ucbHighscore.png>) (./klassendiagramm.tex [23
 
  <./ucbHighscore.png (PNG copy)>]
 Kapitel 7.
@@ -1882,17 +1904,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--21
 [24
 
 
-] <./Klassendiagramm.png, id=414, 705.37909pt x 1011.18272pt>
+] <./Klassendiagramm.png, id=434, 777.6491pt x 1032.68454pt>
 File: ./Klassendiagramm.png Graphic file (type png)
 
 <use ./Klassendiagramm.png>
 
-LaTeX Warning: Float too large for page by 13.43878pt on input line 29.
-
-
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./Klassendiagramm2.png, id=415, 722.7pt x 1083.04625pt>
+<./Klassendiagramm2.png, id=435, 722.7pt x 1083.04625pt>
 File: ./Klassendiagramm2.png Graphic file (type png)
 
 <use ./Klassendiagramm2.png>
@@ -1902,15 +1921,15 @@ LaTeX Warning: Float too large for page by 42.91232pt on input line 35.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./Klassendiagramm3.png, id=416, 481.8pt x 360.34625pt>
+<./Klassendiagramm3.png, id=436, 481.8pt x 360.34625pt>
 File: ./Klassendiagramm3.png Graphic file (type png)
 
-<use ./Klassendiagramm3.png>
+<use ./Klassendiagramm3.png>) (./sequenzdiagramme.tex [25]
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: Text page 26 contains only floats.
 
-) (./sequenzdiagramme.tex [25] [26 <./Klassendiagramm.png>] [27 <./Klassendiagr
-amm2.png (PNG copy)>] [28 <./Klassendiagramm3.png (PNG copy)>]
+[26 <./Klassendiagramm.png>] [27 <./Klassendiagramm2.png (PNG copy)>] [28 <./Kl
+assendiagramm3.png (PNG copy)>]
 Kapitel 8.
 
 Underfull \hbox (badness 10000) in paragraph at lines 4--7
@@ -1932,19 +1951,19 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 
 
 ]
-<./SD_Spieler_erstellen.png, id=439, 416.29909pt x 657.0pt>
+<./SD_Spieler_erstellen.png, id=459, 416.29909pt x 657.0pt>
 File: ./SD_Spieler_erstellen.png Graphic file (type png)
 
 <use ./SD_Spieler_erstellen.png> [30
 
  <./SD_Spieler_erstellen.png>] [31]
-<./SD_Spieler_laden.png, id=451, 351.19637pt x 281.31546pt>
+<./SD_Spieler_laden.png, id=471, 351.19637pt x 281.31546pt>
 File: ./SD_Spieler_laden.png Graphic file (type png)
 
 <use ./SD_Spieler_laden.png> [32
 
  <./SD_Spieler_laden.png>]
-<./SD_Spiel_starten.png, id=458, 575.17363pt x 765.10637pt>
+<./SD_Spiel_starten.png, id=478, 575.17363pt x 765.10637pt>
 File: ./SD_Spiel_starten.png Graphic file (type png)
 
 <use ./SD_Spiel_starten.png> [33
@@ -1952,20 +1971,20 @@ File: ./SD_Spiel_starten.png Graphic file (type png)
  <./SD_Spiel_starten.png>])
 (./weitereDiagramme.tex [34]
 Kapitel 9.
-<./ZD_Memorykarte.png, id=469, 377.47636pt x 201.87819pt>
+<./ZD_Memorykarte.png, id=489, 377.47636pt x 201.87819pt>
 File: ./ZD_Memorykarte.png Graphic file (type png)
 
 <use ./ZD_Memorykarte.png> [35
 
 
  <./ZD_Memorykarte.png>]
-<./AD_Spielablauf.png, id=476, 578.16pt x 652.81909pt>
+<./AD_Spielablauf.png, id=496, 578.16pt x 652.81909pt>
 File: ./AD_Spielablauf.png Graphic file (type png)
 
 <use ./AD_Spielablauf.png> [36
 
  <./AD_Spielablauf.png>] [37]
-<./komponentendiagramm.png, id=488, 582.34091pt x 558.45pt>
+<./komponentendiagramm.png, id=508, 582.34091pt x 558.45pt>
 File: ./komponentendiagramm.png Graphic file (type png)
 
 <use ./komponentendiagramm.png>
@@ -1981,90 +2000,114 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--45
 [38
 
  <./komponentendiagramm.png>] [39]
-<./paketdiagramm.png, id=499, 582.34091pt x 425.85545pt>
+<./paketdiagramm.png, id=519, 582.34091pt x 425.85545pt>
 File: ./paketdiagramm.png Graphic file (type png)
 
 <use ./paketdiagramm.png> [40
 
  <./paketdiagramm.png>]
-<./verteilungsdiagramm.png, id=506, 185.15454pt x 143.94273pt>
+<./verteilungsdiagramm.png, id=526, 185.15454pt x 143.94273pt>
 File: ./verteilungsdiagramm.png Graphic file (type png)
 
 <use ./verteilungsdiagramm.png>) (./implementierung.tex [41
 
  <./verteilungsdiagramm.png>]
 Kapitel 10.
-<./cloc.png, id=513, 640.3925pt x 130.4875pt>
+<./cloc.png, id=533, 640.3925pt x 130.4875pt>
 File: ./cloc.png Graphic file (type png)
  <use ./cloc.png> [42
 
 
- <./cloc.png (PNG copy)>] <./guiHauptmenue.png, id=518, 796.9775pt x 650.43pt>
+ <./cloc.png (PNG copy)>] <./guiHauptmenue.png, id=538, 796.9775pt x 650.43pt>
 File: ./guiHauptmenue.png Graphic file (type png)
 
 <use ./guiHauptmenue.png> [43
 
  <./guiHauptmenue.png (PNG copy)>]
-<./guiSpieler.png, id=526, 793.96625pt x 645.41125pt>
+<./guiSpieler.png, id=546, 793.96625pt x 645.41125pt>
 File: ./guiSpieler.png Graphic file (type png)
  <use ./guiSpieler.png>
 [44
 
  <./guiSpieler.png (PNG copy)>]
-<./guiSpielerNeu.png, id=533, 794.97pt x 645.41125pt>
+<./guiSpielerNeu.png, id=553, 794.97pt x 645.41125pt>
 File: ./guiSpielerNeu.png Graphic file (type png)
 
 <use ./guiSpielerNeu.png> [45
 
  <./guiSpielerNeu.png (PNG copy)>]
-<./guiSpielerListe.png, id=540, 795.97375pt x 643.40375pt>
+<./guiSpielerListe.png, id=560, 795.97375pt x 643.40375pt>
 File: ./guiSpielerListe.png Graphic file (type png)
 
 <use ./guiSpielerListe.png> [46
 
  <./guiSpielerListe.png (PNG copy)>]
-<./guiSpielerError.png, id=547, 796.9775pt x 646.415pt>
+<./guiSpielerError.png, id=567, 796.9775pt x 646.415pt>
 File: ./guiSpielerError.png Graphic file (type png)
 
 <use ./guiSpielerError.png> [47
 
  <./guiSpielerError.png (PNG copy)>]
-<./guiTiere.png, id=554, 794.97pt x 644.4075pt>
+<./guiTiere.png, id=574, 794.97pt x 644.4075pt>
 File: ./guiTiere.png Graphic file (type png)
  <use ./guiTiere.png> [48
 
- <./guiTiere.png (PNG copy)>] <./guiSpielfeld.png, id=561, 792.9625pt x 647.418
+ <./guiTiere.png (PNG copy)>] <./guiSpielfeld.png, id=581, 792.9625pt x 647.418
 75pt>
 File: ./guiSpielfeld.png Graphic file (type png)
 
 <use ./guiSpielfeld.png> [49
 
  <./guiSpielfeld.png (PNG copy)>]
-<./guiSpielCards.png, id=569, 803.0pt x 652.4375pt>
+<./guiSpielCards.png, id=589, 803.0pt x 652.4375pt>
 File: ./guiSpielCards.png Graphic file (type png)
  <use ./guiSpielCards.png>
 [50
 
- <./guiSpielCards.png>] <./guiSpielende.png, id=577, 795.97375pt x 642.4pt>
+ <./guiSpielCards.png>] <./guiSpielende.png, id=597, 795.97375pt x 642.4pt>
 File: ./guiSpielende.png Graphic file (type png)
 
 <use ./guiSpielende.png> [51
 
  <./guiSpielende.png (PNG copy)>]
-<./guiHighscore.png, id=584, 796.9775pt x 647.41875pt>
+<./guiHighscore.png, id=604, 796.9775pt x 647.41875pt>
 File: ./guiHighscore.png Graphic file (type png)
 
 <use ./guiHighscore.png>) (./test.tex [52
 
  <./guiHighscore.png (PNG copy)>]
 Kapitel 11.
-<./Testfall1.png, id=591, 1589.94pt x 853.1875pt>
+<./Testfall1.png, id=611, 1345.025pt x 736.7525pt>
 File: ./Testfall1.png Graphic file (type png)
- <use ./Testfall1.png>)
+ <use ./Testfall1.png>
 [53
 
 
  <./Testfall1.png (PNG copy)>]
+<./Testfall2.png, id=616, 1071.00125pt x 690.58pt>
+File: ./Testfall2.png Graphic file (type png)
+ <use ./Testfall2.png>
+[54
+
+ <./Testfall2.png (PNG copy)>]
+<./Testfall3.png, id=621, 1080.035pt x 691.58376pt>
+File: ./Testfall3.png Graphic file (type png)
+ <use ./Testfall3.png>
+[55
+
+ <./Testfall3.png (PNG copy)>]
+<./Testfall4.png, id=627, 1091.07625pt x 681.54625pt>
+File: ./Testfall4.png Graphic file (type png)
+ <use ./Testfall4.png>
+[56
+
+ <./Testfall4.png (PNG copy)>]
+<./Testfall5.png, id=632, 1117.17375pt x 527.9725pt>
+File: ./Testfall5.png Graphic file (type png)
+ <use ./Testfall5.png>)
+[57
+
+ <./Testfall5.png (PNG copy)>]
 Package minitoc Info: I0009
 (minitoc)             Listing minitoc auxiliary files. 
 (minitoc)             Creating the doku.maf file.
@@ -2081,7 +2124,7 @@ Package minitoc(hints) Warning: W0024
 (minitoc(hints))                Some hints have been written 
 (minitoc(hints))                in the doku.log file.
 
-[54
+[58
 
 ] (./doku.aux)
 
@@ -2089,10 +2132,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 20170 strings out of 495021
- 374013 string characters out of 1181034
- 505386 words of memory out of 3000000
- 22459 multiletter control sequences out of 15000+50000
+ 20202 strings out of 495021
+ 374513 string characters out of 1181034
+ 505388 words of memory out of 3000000
+ 22479 multiletter control sequences out of 15000+50000
  12676 words of font info for 49 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  61i,7n,65p,1089b,463s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2101,9 +2144,9 @@ re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-tex
 live/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/t
 ype1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-texlive/fonts/type1/publ
 ic/amsfonts/cm/cmsy10.pfb>
-Output written on doku.pdf (54 pages, 2636775 bytes).
+Output written on doku.pdf (58 pages, 3079045 bytes).
 PDF statistics:
- 650 PDF objects out of 1000 (max. 8388607)
- 142 named destinations out of 1000 (max. 500000)
- 610 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 693 PDF objects out of 1000 (max. 8388607)
+ 150 named destinations out of 1000 (max. 500000)
+ 662 words of extra memory for PDF output out of 10000 (max. 10000000)
 

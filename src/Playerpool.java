@@ -20,6 +20,7 @@ public class Playerpool implements Serializable{
     public void addPlayer(Player player)
     {
         playerList.add(player);
+        //Testprint
         System.out.println("Player dem Pool hinzugefügt"+player.getName());
     }
     
